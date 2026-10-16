@@ -885,39 +885,73 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
 /* 5-Platform Grid */
 .serial-platforms-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 16px;
   margin-top: 14px;
 }
 .serial-platform-card {
   background: #fff;
   border: 1.5px solid var(--line);
-  border-radius: 14px;
-  padding: 18px;
+  border-radius: 16px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  justify-content: space-between;
+  gap: 12px;
   transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
-  box-shadow: 0 4px 12px rgba(11,74,143,.04);
+  box-shadow: 0 4px 14px rgba(11,74,143,.04);
 }
 .serial-platform-card:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   border-color: var(--blue-l);
-  box-shadow: 0 8px 20px rgba(11,74,143,.1);
+  box-shadow: 0 10px 24px rgba(11,74,143,.1);
 }
 .sp-head {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
-  gap: 8px;
+  gap: 10px;
   flex-wrap: wrap;
 }
+.sp-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.sp-logo-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  background: var(--mist);
+  border: 1px solid var(--line);
+  box-shadow: 0 2px 6px rgba(0,0,0,.04);
+}
+.sp-logo-fb { background: rgba(24,119,242,.08); border-color: rgba(24,119,242,.2); }
+.sp-logo-web { background: rgba(226,98,46,.08); border-color: rgba(226,98,46,.2); }
+.sp-logo-tt { background: rgba(0,0,0,.05); border-color: rgba(0,0,0,.15); }
+.sp-logo-sp { background: rgba(29,185,84,.08); border-color: rgba(29,185,84,.2); }
+.sp-logo-yt { background: rgba(255,0,0,.08); border-color: rgba(255,0,0,.2); }
+
 .sp-title {
   font-family: var(--cond);
-  font-size: 19px;
+  font-size: 20px;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--blue-d);
+  line-height: 1.1;
+  display: block;
+}
+.sp-subtitle {
+  font-family: var(--cond);
+  font-size: 11px;
+  color: var(--slate);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .4px;
 }
 .sp-pill {
   font-family: var(--cond);
@@ -925,16 +959,35 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .5px;
-  padding: 3px 8px;
+  padding: 4px 9px;
   border-radius: 6px;
   background: var(--mist);
   color: var(--slate);
+  border: 1px solid var(--line);
 }
 .sp-desc {
   font-size: 14px;
   color: var(--slate);
   line-height: 1.45;
   margin: 0;
+}
+.sp-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+.sp-tag {
+  font-family: var(--cond);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .3px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: var(--mist);
+  color: var(--slate);
+  border: 1px solid rgba(0,0,0,.05);
 }
 
 
@@ -1713,47 +1766,134 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
         <div class="serial-platforms-grid">
           <!-- Facebook -->
           <div class="serial-platform-card" style="border-left:4px solid #1877f2">
-            <div class="sp-head">
-              <span class="sp-title">Facebook</span>
-              <span class="sp-pill">Visual Wire</span>
+            <div>
+              <div class="sp-head">
+                <div class="sp-brand">
+                  <div class="sp-logo-box sp-logo-fb">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="#1877F2">
+                      <path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="sp-title">Facebook</span>
+                    <span class="sp-subtitle">Visual Wire</span>
+                  </div>
+                </div>
+                <span class="sp-pill" style="color:#1877f2;background:rgba(24,119,242,.08);border-color:rgba(24,119,242,.2)">Visual Wire</span>
+              </div>
+              <p class="sp-desc" style="margin-top:10px">Photocards, match previews, and visual updates.</p>
             </div>
-            <p class="sp-desc">Photocards, match previews, and visual updates.</p>
+            <div class="sp-tags">
+              <span class="sp-tag">&#128444;&#65039; Photocards</span>
+              <span class="sp-tag">&#128202; Match Previews</span>
+              <span class="sp-tag">&#9889; Infographics</span>
+            </div>
           </div>
 
           <!-- Website -->
           <div class="serial-platform-card" style="border-left:4px solid var(--coral)">
-            <div class="sp-head">
-              <span class="sp-title">Website</span>
-              <span class="sp-pill" style="color:var(--coral);background:#fbeae8">Al Jazeera / Reuters Model</span>
+            <div>
+              <div class="sp-head">
+                <div class="sp-brand">
+                  <div class="sp-logo-box sp-logo-web">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e2622e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"/>
+                      <line x1="2" y1="12" x2="22" y2="12"/>
+                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="sp-title">Website</span>
+                    <span class="sp-subtitle">News Wire Hub</span>
+                  </div>
+                </div>
+                <span class="sp-pill" style="color:var(--coral);background:#fbeae8;border-color:rgba(226,98,46,.25)">Al Jazeera / Reuters Model</span>
+              </div>
+              <p class="sp-desc" style="margin-top:10px">Live news updates, match reports, and breaking news, following the fast-update approach.</p>
             </div>
-            <p class="sp-desc">Live news updates, match reports, and breaking news, following the fast-update approach.</p>
+            <div class="sp-tags">
+              <span class="sp-tag">&#128308; 24/7 Live Wire</span>
+              <span class="sp-tag">&#128240; Match Reports</span>
+              <span class="sp-tag">&#9889; Fast Updates</span>
+            </div>
           </div>
 
           <!-- TikTok -->
           <div class="serial-platform-card" style="border-left:4px solid #00f2fe">
-            <div class="sp-head">
-              <span class="sp-title">TikTok</span>
-              <span class="sp-pill">Short Reels</span>
+            <div>
+              <div class="sp-head">
+                <div class="sp-brand">
+                  <div class="sp-logo-box sp-logo-tt">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="#000">
+                      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.39 0 .76.08 1.1.22V9.06a6.37 6.37 0 0 0-1.1-.1A6.34 6.34 0 0 0 3 15.3a6.34 6.34 0 0 0 6.34 6.34c3.5 0 6.34-2.84 6.34-6.34V8.75a8.28 8.28 0 0 0 3.91 1V6.69z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="sp-title">TikTok</span>
+                    <span class="sp-subtitle">Short-Form Video</span>
+                  </div>
+                </div>
+                <span class="sp-pill" style="color:#008b94;background:rgba(0,242,254,.1);border-color:rgba(0,242,254,.3)">Short Reels</span>
+              </div>
+              <p class="sp-desc" style="margin-top:10px">Short reels, highlights, and quick updates.</p>
             </div>
-            <p class="sp-desc">Short reels, highlights, and quick updates.</p>
+            <div class="sp-tags">
+              <span class="sp-tag">&#128241; 9:16 Vertical</span>
+              <span class="sp-tag">&#9889; 15s Match Cuts</span>
+              <span class="sp-tag">&#128293; Viral Moments</span>
+            </div>
           </div>
 
           <!-- Spotify -->
           <div class="serial-platform-card" style="border-left:4px solid #1db954">
-            <div class="sp-head">
-              <span class="sp-title">Spotify</span>
-              <span class="sp-pill">Podcasts &amp; Audio</span>
+            <div>
+              <div class="sp-head">
+                <div class="sp-brand">
+                  <div class="sp-logo-box sp-logo-sp">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="#1DB954">
+                      <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424c-.18.295-.563.387-.857.207-2.35-1.435-5.308-1.76-8.794-.963-.335.077-.67-.133-.746-.469-.077-.334.132-.67.467-.746 3.808-.87 7.076-.496 9.723 1.121.294.18.386.563.207.85zM17.81 13.7c-.23.37-.714.49-1.085.26-2.69-1.653-6.79-2.133-9.972-1.168-.42.128-.865-.112-.993-.53-.128-.42.113-.866.53-.994 3.633-1.103 8.15-.567 11.26 1.348.37.23.49.714.26 1.084zm.156-2.855c-3.226-1.916-8.55-2.092-11.63-1.157-.495.15-1.02-.13-1.17-.625-.15-.494.13-1.02.624-1.17 3.54-1.074 9.42-.865 13.125 1.334.444.263.59.84.327 1.285-.264.444-.84.59-1.285.327z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="sp-title">Spotify</span>
+                    <span class="sp-subtitle">Audio &amp; Podcasts</span>
+                  </div>
+                </div>
+                <span class="sp-pill" style="color:#118c3c;background:rgba(29,185,84,.1);border-color:rgba(29,185,84,.3)">Podcasts &amp; Audio</span>
+              </div>
+              <p class="sp-desc" style="margin-top:10px">Women's cricket podcasts, expert discussions, and predictions.</p>
             </div>
-            <p class="sp-desc">Women's cricket podcasts, expert discussions, and predictions.</p>
+            <div class="sp-tags">
+              <span class="sp-tag">&#127897;&#65039; Dugout Podcasts</span>
+              <span class="sp-tag">&#129504; Expert Analysis</span>
+              <span class="sp-tag">&#127911; Audio Feed</span>
+            </div>
           </div>
 
           <!-- YouTube -->
           <div class="serial-platform-card" style="border-left:4px solid #ff0000">
-            <div class="sp-head">
-              <span class="sp-title">YouTube</span>
-              <span class="sp-pill">Flagship Shows</span>
+            <div>
+              <div class="sp-head">
+                <div class="sp-brand">
+                  <div class="sp-logo-box sp-logo-yt">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="#FF0000">
+                      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="sp-title">YouTube</span>
+                    <span class="sp-subtitle">Flagship Shows</span>
+                  </div>
+                </div>
+                <span class="sp-pill" style="color:#d90000;background:rgba(255,0,0,.08);border-color:rgba(255,0,0,.2)">Flagship Shows</span>
+              </div>
+              <p class="sp-desc" style="margin-top:10px">Documentary-style stories and our two original shows.</p>
             </div>
-            <p class="sp-desc">Documentary-style stories and our two original shows.</p>
+            <div class="sp-tags">
+              <span class="sp-tag">&#127916; 2 Original Shows</span>
+              <span class="sp-tag">&#128253;&#65039; Docuseries</span>
+              <span class="sp-tag">&#128308; Live Broadcast</span>
+            </div>
           </div>
         </div>
 
