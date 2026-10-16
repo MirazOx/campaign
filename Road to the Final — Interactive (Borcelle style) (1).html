@@ -113,8 +113,8 @@ section{position:relative;padding:92px 0;z-index:1}
 .actcard .detail ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:11px}
 .actcard .detail li{font-size:15.5px;line-height:1.35;padding-left:18px;position:relative;color:#eef3fa}
 .actcard .detail li::before{content:"";position:absolute;left:0;top:8px;width:8px;height:8px;border-radius:50%;background:var(--yellow)}
-.actcard .cue{margin-top:16px;font-family:var(--cond);font-size:15px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;
-  color:#fff;display:flex;align-items:center;gap:7px}
+.actcard .cue{margin-top:16px;font-family:var(--cond);font-size:16px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;
+  color:#fff;display:flex;align-items:center;justify-content:flex-end;gap:7px}
 .actcard .chev{transition:transform .35s}
 .actcard.open .chev{transform:rotate(180deg)}
 .a1 .top{background:var(--grass)} .a2 .top{background:var(--yellow)} .a3 .top{background:var(--coral)}
@@ -454,7 +454,7 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
   <div class="wrap">
     <span class="pill light pilltop">Independent Newsroom · Transmedia Pitch</span>
     <h1 class="disp" id="heroTitle"></h1>
-    <p class="sub">A coverage strategy for the <b>ICC&nbsp;Women's&nbsp;T20&nbsp;World&nbsp;Cup&nbsp;2028</b> — built as a universe, not a bulletin.</p>
+    <p class="sub"><b>ICC Women's T20 World Cup 2028</b></p>
     <div class="meta"><span class="bar"></span><span>Applying Henry Jenkins' 7 Principles of Transmedia Storytelling</span></div>
   </div>
   <div class="scrollcue">Scroll<i>&#8595;</i></div>
@@ -468,14 +468,14 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
   <div class="wrap">
     <p class="eyebrow reveal">Why transmedia works here</p>
     <h2 class="h-sec reveal d1">One story,<br>three acts,<br>many screens</h2>
-    <p class="lead reveal d2">Bangladesh's women's team competes internationally but suffers chronic under-coverage. We don't report the tournament — we build the world around it, tracking the team from the player hunt to the final ball. The audiences don't overlap, so <b>the spread is the strategy.</b></p>
+    
   </div>
 </section>
 
 <section id="acts">
   <div class="wrap">
     <p class="eyebrow blue reveal">The coverage spine</p>
-    <h2 class="h-sec reveal d1"><span class="b" style="white-space:nowrap">Three acts</span> — <span class="y" style="white-space:nowrap">tap to open</span></h2>
+    <h2 class="h-sec reveal d1"><span class="b" style="white-space:nowrap">Three acts</span></h2>
     <div class="acts" id="actsGrid"></div>
   </div>
 </section>
@@ -1073,21 +1073,21 @@ document.querySelectorAll('.reveal').forEach(x => ro.observe(x));
 
 // ACTS
 const acts = [
-  {cls:'a1',img:IMG.highfive,tag:'Act I',h:'Pre-tournament',when:'Sponsoring the player hunt',li:[
-    '<b>Sponsored selection matches</b> — media sponsor of the national trials that decide the squad.',
-    '<b>New & old faces</b> — hooks surface contenders, backstories, the \u201ccan she make the XI?\u201d tension.',
-    '<b>Inside the squad</b> — a docu-series on team dynamics and potential, with coach bites.'],
-    cue:'Worldbuilding + chapter one of seriality'},
+  {cls:'a1',img:IMG.highfive,tag:'Act I',h:'Pre-tournament',when:'Featuring the Players',li:[
+    'Sponsored selection matches',
+    'New & old faces',
+    'Inside the squad'],
+    cue:''},
   {cls:'a2',img:IMG.batfocus,tag:'Act II',h:'Post-selection',when:'Analysis & the paid launch',li:[
     '<b>Expert analysis series</b> — motion-graphic breakdowns on YouTube, cut for podcast.',
     '<b>Historical & prediction podcast</b> — experts use past cups to forecast each match.',
     '<b>Paid-streaming launch</b> — TV + Meta campaign seed the audience before the first ball.'],
-    cue:'The selection announcement is the hinge'},
+    cue:''},
   {cls:'a3',img:IMG.appeal,tag:'Act III',h:'Live event',when:'Coverage, data & the campaign',li:[
     '<b>One data sheet, many shows</b> — every programme runs on one canonical set of facts.',
     '<b>Immersion on the field</b> — ladder board, field map, Google game, influencer takeovers.',
     '<b>\u201cRoad to the Final\u201d</b> — subscribe to win a ticket; real fans filmed reacting.'],
-    cue:'Continuity, immersion & performance, live'},
+    cue:''},
 ];
 const ag = document.getElementById('actsGrid');
 acts.forEach(a => {
@@ -1097,7 +1097,7 @@ acts.forEach(a => {
   c.innerHTML = `<div class="ph" style="background-image:url(${a.img})"></div><div class="veil"></div><div class="top"></div>
     <div class="inner"><div class="tag">${a.tag}</div><h3>${a.h}</h3><div class="when">${a.when}</div>
     <div class="detail"><ul>${a.li.map(x=>`<li>${x}</li>`).join('')}</ul></div>
-    <div class="cue">${a.cue} <span class="chev">&#9662;</span></div></div>`;
+    <div class="cue">${a.cue ? a.cue + " " : ""}<span class="chev">&#9662;</span></div></div>`;
   const t = () => c.classList.toggle('open');
   c.addEventListener('click', t);
   c.addEventListener('keydown', e => {
