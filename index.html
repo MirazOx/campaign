@@ -855,6 +855,26 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
   margin: 0;
 }
 
+
+.bn-video-title {
+  display: block;
+  font-family: 'Kohinoor Bangla', 'SolaimanLipi', 'Bangla Sangam MN', 'Noto Sans Bengali', sans-serif;
+  font-size: clamp(22px, 2.6vw, 28px);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.25;
+  margin-bottom: 4px;
+}
+.video-subtitle-en {
+  display: block;
+  font-family: var(--cond);
+  font-size: 13.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--yellow);
+}
+
 </style>
 </head>
 <body>
@@ -977,15 +997,18 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
           </div>
           <div class="video-info-col">
             <div class="video-badge-row">
-              <span class="drill-badge">Drillability Element &middot; Video Breakdown</span>
+              <span class="drill-badge" style="font-family:'Kohinoor Bangla','SolaimanLipi','Noto Sans Bengali',sans-serif;font-size:12.5px;letter-spacing:.3px">ড্রিলিবিলিটি এলিমেন্ট &middot; ভিডিও বিশ্লেষণ</span>
               <span class="video-platform-badge">YouTube Embed &middot; Live Preview</span>
             </div>
-            <h4 class="video-title">Marufa Akter: The 115 kph Inswinger from Nilphamari</h4>
-            <p class="video-quote">&ldquo;When the seam strikes the turf, it nips back two full inches. Australia’s top order hasn’t faced this release angle yet.&rdquo;</p>
+            <h4 class="video-title">
+              <span class="bn-video-title">মারুফা আক্তার: নীলফামারীর ১১৫ কিমি ইনসুইঙ্গার</span>
+              <span class="video-subtitle-en">Marufa Akter: The 115 kph Inswinger from Nilphamari</span>
+            </h4>
+            <p class="video-quote" style="font-family:'Kohinoor Bangla','SolaimanLipi','Noto Sans Bengali',sans-serif;font-size:15.5px;line-height:1.45">&ldquo;টার্ফে বল ড্রপ পড়তেই দুই ইঞ্চি ভেতরে ঢুকে আসে। অস্ট্রেলিয়ার টপ অর্ডার এখনও এই রিলিজ অ্যাঙ্গেলের মুখোমুখি হয়নি।&rdquo;</p>
             <div style="display:flex;gap:10px;margin:6px 0;flex-wrap:wrap">
-              <span style="background:rgba(255,255,255,.1);padding:4px 10px;border-radius:6px;font-family:var(--cond);font-size:13.5px;color:#fff"><b style="color:var(--yellow)">115 kph</b> Release</span>
-              <span style="background:rgba(255,255,255,.1);padding:4px 10px;border-radius:6px;font-family:var(--cond);font-size:13.5px;color:#fff"><b style="color:var(--yellow)">2+ Inches</b> Late Inswing</span>
-              <span style="background:rgba(255,255,255,.1);padding:4px 10px;border-radius:6px;font-family:var(--cond);font-size:13.5px;color:#fff"><b style="color:var(--yellow)">Upright Seam</b> Grip</span>
+              <span style="background:rgba(255,255,255,.12);padding:5px 12px;border-radius:8px;font-family:'Kohinoor Bangla','SolaimanLipi',sans-serif;font-size:13.5px;color:#fff"><b style="color:var(--yellow)">১১৫ কিমি/ঘণ্টা</b> গতি</span>
+              <span style="background:rgba(255,255,255,.12);padding:5px 12px;border-radius:8px;font-family:'Kohinoor Bangla','SolaimanLipi',sans-serif;font-size:13.5px;color:#fff"><b style="color:var(--yellow)">২+ ইঞ্চি</b> লেট ইনসুইং</span>
+              <span style="background:rgba(255,255,255,.12);padding:5px 12px;border-radius:8px;font-family:'Kohinoor Bangla','SolaimanLipi',sans-serif;font-size:13.5px;color:#fff"><b style="color:var(--yellow)">আপরাইট সিম</b> গ্রিপ</span>
             </div>
             <div class="video-footer">
               <a href="https://www.youtube.com/watch?v=jbpddx8qM5s" target="_blank" rel="noopener noreferrer" class="yt-link-btn">
@@ -996,8 +1019,7 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
           </div>
         </div>
 
-        
-                <!-- Slide 1: Spreadability Programmes -->
+        <!-- Slide 1: Spreadability Programmes -->
         <div class="prog-container">
           <div class="prog-section-title">
             <div>
