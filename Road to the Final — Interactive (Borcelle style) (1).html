@@ -597,9 +597,14 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
 .prog-card-banner {
   position: relative;
   width: 100%;
-  height: 120px;
+  height: 230px;
   overflow: hidden;
   background-color: var(--blue-d);
+}
+@media (max-width: 600px) {
+  .prog-card-banner {
+    height: 180px;
+  }
 }
 .prog-card-banner-bg {
   position: absolute;
@@ -653,10 +658,10 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
 
 /* Card Body */
 .prog-card-body {
-  padding: 16px 18px 18px;
+  padding: 20px 22px 24px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
   flex: 1;
 }
 
@@ -671,6 +676,75 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
 .prog-card-highlight:hover {
   border-color: var(--yellow-d);
   box-shadow: 0 14px 34px rgba(245,185,33,.25);
+}
+
+
+/* ==========================================================================
+   STANDALONE HIGH-RES EDITORIAL PHOTO BREAKS (USUAL IMAGE · NO OVERLAY TEXT SCROLL)
+   ========================================================================== */
+.photo-editorial-break {
+  padding: 64px 0;
+  background: var(--bg);
+}
+.editorial-frame {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 16px 44px rgba(11,74,143,.14);
+  border: 1.5px solid var(--line);
+  background: #fff;
+}
+.editorial-img {
+  width: 100%;
+  height: auto;
+  max-height: 560px;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+  transition: transform .4s ease;
+}
+.editorial-frame:hover .editorial-img {
+  transform: scale(1.015);
+}
+.editorial-caption {
+  padding: 18px 26px;
+  background: #fff;
+  border-top: 1.5px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.caption-left {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.caption-tag {
+  font-family: var(--cond);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--yellow-d);
+}
+.caption-title {
+  font-family: var(--cond);
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--blue-d);
+  letter-spacing: .4px;
+  margin: 0;
+}
+.caption-right {
+  font-family: var(--cond);
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--slate);
+  letter-spacing: .5px;
+  text-transform: uppercase;
 }
 
 </style>
@@ -712,7 +786,7 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
     <circle cx="200" cy="200" r="130" fill="#0b4a8f"/>
   </svg>
   <div class="wrap">
-    <p class="eyebrow reveal">Why transmedia works here</p>
+    
     <h2 class="h-sec reveal d1">One story,<br>three acts,<br>many screens</h2>
     
   </div>
@@ -728,13 +802,21 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
 
 
 
-<!-- PHOTO BREATHER 01: THE MOMENTUM -->
-<section class="photo-breather" style="background-image:url('images/celebrate.jpg')">
-  <div class="photo-breather-scrim"></div>
-  <div class="photo-breather-content reveal">
-    <span class="photo-breather-tag">The Campaign Horizon &middot; Visual Pause</span>
-    <h2 class="photo-breather-title">One Universe. Every Screen.</h2>
-    <p class="photo-breather-sub">From grassroots contender trials to the World Cup final &mdash; transmedia storytelling built for 170 million fans.</p>
+<!-- STANDALONE EDITORIAL PHOTO BREAK 01: VICTORY MOMENTUM -->
+<section class="photo-editorial-break reveal">
+  <div class="wrap">
+    <div class="editorial-frame">
+      <img src="images/celebrate.jpg" alt="Bangladesh Women's National Cricket Team Victory Celebration" class="editorial-img" loading="lazy">
+      <div class="editorial-caption">
+        <div class="caption-left">
+          <span class="caption-tag">Historic Victory &middot; Visual Pause</span>
+          <h3 class="caption-title">Asia Cup Champions &middot; The Defiance on the Field</h3>
+        </div>
+        <div class="caption-right">
+          <span class="caption-meta">Mirpur &middot; Road to the 2028 World Cup</span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1210,15 +1292,7 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
       </article>
 
       
-<!-- PHOTO BREATHER 02: THE PASSION -->
-<section class="photo-breather" style="background-image:url('images/appeal.jpg');min-height:460px">
-  <div class="photo-breather-scrim"></div>
-  <div class="photo-breather-content reveal">
-    <span class="photo-breather-tag">The Passion on the Turf &middot; Visual Pause</span>
-    <h2 class="photo-breather-title">Every Ball Contested.</h2>
-    <p class="photo-breather-sub">Step inside the stadium narrative &mdash; interactive field maps, real-time prediction games, and fan performance.</p>
-  </div>
-</section>
+
 
       <!-- PRINCIPLE 03 -->
       <article class="p-card reveal" id="p3">
@@ -1552,13 +1626,21 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
 
 
 
-<!-- PHOTO BREATHER 03: THE PIONEERS -->
-<section class="photo-breather" style="background-image:url('images/squad.jpg')">
-  <div class="photo-breather-scrim"></div>
-  <div class="photo-breather-content reveal">
-    <span class="photo-breather-tag">The Deep Statistical Story &middot; Visual Pause</span>
-    <h2 class="photo-breather-title">80 Pioneers. One Canon.</h2>
-    <p class="photo-breather-sub">17 years of national women’s cricket documented across 8 home divisions.</p>
+<!-- STANDALONE EDITORIAL PHOTO BREAK 02: THE NATIONAL SQUAD -->
+<section class="photo-editorial-break reveal">
+  <div class="wrap">
+    <div class="editorial-frame">
+      <img src="images/squad.jpg" alt="Bangladesh Women's National Cricket Squad" class="editorial-img" loading="lazy">
+      <div class="editorial-caption">
+        <div class="caption-left">
+          <span class="caption-tag">The 80-Player Heritage &middot; Visual Pause</span>
+          <h3 class="caption-title">United Across 8 Home Divisions</h3>
+        </div>
+        <div class="caption-right">
+          <span class="caption-meta">The Lineup That Powers the Canonical Data Sheet</span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1613,13 +1695,21 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
 </section>
 
 
-<!-- PHOTO BREATHER 04: THE CAMARADERIE -->
-<section class="photo-breather" style="background-image:url('images/hug.jpg')">
-  <div class="photo-breather-scrim"></div>
-  <div class="photo-breather-content reveal">
-    <span class="photo-breather-tag">The Continuous Journey &middot; Visual Pause</span>
-    <h2 class="photo-breather-title">No Fan Left Behind.</h2>
-    <p class="photo-breather-sub">From free social discovery to live stadium celebration &mdash; every step connects.</p>
+<!-- STANDALONE EDITORIAL PHOTO BREAK 03: TEAM CAMARADERIE -->
+<section class="photo-editorial-break reveal">
+  <div class="wrap">
+    <div class="editorial-frame">
+      <img src="images/hug.jpg" alt="Teammate embrace after crucial victory" class="editorial-img" loading="lazy">
+      <div class="editorial-caption">
+        <div class="caption-left">
+          <span class="caption-tag">The Continuous Journey &middot; Visual Pause</span>
+          <h3 class="caption-title">No Fan Left Behind</h3>
+        </div>
+        <div class="caption-right">
+          <span class="caption-meta">From Grassroots Contender Trials to the World Cup Final</span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
