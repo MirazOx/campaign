@@ -680,71 +680,50 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
 
 
 /* ==========================================================================
-   STANDALONE HIGH-RES EDITORIAL PHOTO BREAKS (USUAL IMAGE · NO OVERLAY TEXT SCROLL)
+   FULL-SCREEN HIGH-RES PURE PHOTO DIVIDERS (EDGE-TO-EDGE · ZERO CAPTION)
    ========================================================================== */
-.photo-editorial-break {
-  padding: 64px 0;
-  background: var(--bg);
-}
-.editorial-frame {
-  position: relative;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 16px 44px rgba(11,74,143,.14);
-  border: 1.5px solid var(--line);
-  background: #fff;
-}
-.editorial-img {
+.fullscreen-photo-divider {
   width: 100%;
-  height: auto;
-  max-height: 560px;
-  object-fit: cover;
-  object-position: center 30%;
+  height: 100vh;
+  height: 100dvh;
+  min-height: 100vh;
+  min-height: 100dvh;
+  position: relative;
+  overflow: hidden;
+  background: #06111f;
   display: block;
-  transition: transform .4s ease;
-}
-.editorial-frame:hover .editorial-img {
-  transform: scale(1.015);
-}
-.editorial-caption {
-  padding: 18px 26px;
-  background: #fff;
-  border-top: 1.5px solid var(--line);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-.caption-left {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-.caption-tag {
-  font-family: var(--cond);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--yellow-d);
-}
-.caption-title {
-  font-family: var(--cond);
-  font-size: 22px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--blue-d);
-  letter-spacing: .4px;
   margin: 0;
+  padding: 0;
 }
-.caption-right {
-  font-family: var(--cond);
-  font-size: 13.5px;
-  font-weight: 600;
-  color: var(--slate);
-  letter-spacing: .5px;
-  text-transform: uppercase;
+
+.fullscreen-photo-divider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  image-rendering: auto;
+}
+
+.principles-flow {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.principles-flow .wrap {
+  padding-top: 54px;
+  padding-bottom: 54px;
+}
+
+#p1 .p-card-num, #p3 .p-card-num, #p5 .p-card-num, #p7 .p-card-num {
+  background: var(--blue);
+  color: #fff;
+}
+
+#p2 .p-card-num, #p4 .p-card-num, #p6 .p-card-num {
+  background: var(--yellow);
+  color: var(--blue-d);
 }
 
 
@@ -928,32 +907,11 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
   </div>
 </section>
 
-
-
-<!-- STANDALONE EDITORIAL PHOTO BREAK 01: VICTORY MOMENTUM -->
-<section class="photo-editorial-break reveal">
-  <div class="wrap">
-    <div class="editorial-frame">
-      <img src="images/celebrate.jpg" alt="Bangladesh Women's National Cricket Team Victory Celebration" class="editorial-img" loading="lazy">
-      <div class="editorial-caption">
-        <div class="caption-left">
-          <span class="caption-tag">Historic Victory &middot; Visual Pause</span>
-          <h3 class="caption-title">Asia Cup Champions &middot; The Defiance on the Field</h3>
-        </div>
-        <div class="caption-right">
-          <span class="caption-meta">Mirpur &middot; Road to the 2028 World Cup</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="principles" style="background:var(--mist);padding:92px 0">
+<section id="principles" style="background:var(--mist);padding:92px 0 0">
   <div class="wrap">
     <p class="eyebrow blue reveal">Jenkins' Transmedia Framework in Practice</p>
     <h2 class="h-sec reveal d1"><span class="y" style="white-space:nowrap">The 7 Principles</span></h2>
     
-
     <!-- Quick Principle Navigator -->
     <div class="pnav-bar reveal d2">
       <a href="#p1" class="pnav-pill active">01 Spread &amp; Drill</a>
@@ -964,9 +922,11 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
       <a href="#p6" class="pnav-pill">06 Subjectivity</a>
       <a href="#p7" class="pnav-pill">07 Performance</a>
     </div>
+  </div>
 
-    <div class="principles-stack">
-      <!-- PRINCIPLE 01 -->
+  <div class="principles-flow">
+    <!-- PRINCIPLE 01 -->
+    <div class="wrap">
       <article class="p-card reveal" id="p1">
         <div class="p-card-top">
           <div class="p-card-num">01</div>
@@ -1207,8 +1167,15 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
           </div>
         </div>
       </article>
+    </div>
 
-      <!-- PRINCIPLE 02 -->
+    <!-- FULL-SCREEN PHOTO 01: HIGH-VOLTAGE FAST BOWLING ACTION -->
+    <div class="fullscreen-photo-divider">
+      <img src="images/p1-action.jpg" alt="Women's Cricket High-Voltage Fast Bowling Action" loading="lazy">
+    </div>
+
+    <!-- PRINCIPLE 02 -->
+    <div class="wrap">
       <article class="p-card reveal" id="p2">
         <div class="p-card-top">
           <div class="p-card-num">02</div>
@@ -1420,11 +1387,15 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
           </div>
         </div>
       </article>
+    </div>
 
-      
+    <!-- FULL-SCREEN PHOTO 02: BANGLADESH WOMEN'S CRICKET TEAM UNITY -->
+    <div class="fullscreen-photo-divider">
+      <img src="images/p2-celebrate.jpg" alt="Bangladesh Women's National Cricket Team Celebration" loading="lazy">
+    </div>
 
-
-      <!-- PRINCIPLE 03 -->
+    <!-- PRINCIPLE 03 -->
+    <div class="wrap">
       <article class="p-card reveal" id="p3">
         <div class="p-card-top">
           <div class="p-card-num">03</div>
@@ -1546,8 +1517,15 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
           </div>
         </div>
       </article>
+    </div>
 
-      <!-- PRINCIPLE 04 -->
+    <!-- FULL-SCREEN PHOTO 03: SHER-E-BANGLA STADIUM MIRPUR -->
+    <div class="fullscreen-photo-divider">
+      <img src="images/p3-stadium.jpg" alt="Sher-e-Bangla National Cricket Stadium Mirpur" loading="lazy">
+    </div>
+
+    <!-- PRINCIPLE 04 -->
+    <div class="wrap">
       <article class="p-card reveal" id="p4">
         <div class="p-card-top">
           <div class="p-card-num">04</div>
@@ -1595,8 +1573,15 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
           <b>2011 Milestone:</b> Bangladesh defeated Ireland by 82 runs in Savar to earn official WODI status &mdash; the foundational spark for national women’s cricket.
         </div>
       </article>
+    </div>
 
-      <!-- PRINCIPLE 05 -->
+    <!-- FULL-SCREEN PHOTO 04: HISTORIC ASIA CUP VICTORY MOMENT -->
+    <div class="fullscreen-photo-divider">
+      <img src="images/p4-world.jpg" alt="Historic Asia Cup Victory Celebration" loading="lazy">
+    </div>
+
+    <!-- PRINCIPLE 05 -->
+    <div class="wrap">
       <article class="p-card reveal" id="p5">
         <div class="p-card-top">
           <div class="p-card-num">05</div>
@@ -1688,8 +1673,15 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
           <b style="color:var(--blue-d)">Continuous Audience Engagement:</b> Each platform delivers a different part of the story, keeping audiences engaged throughout the tournament without hitting a dead end.
         </div>
       </article>
+    </div>
 
-      <!-- PRINCIPLE 06 -->
+    <!-- FULL-SCREEN PHOTO 05: LEGENDARY SPIN MASTERCLASS ACTION -->
+    <div class="fullscreen-photo-divider">
+      <img src="images/p5-spin.jpg" alt="Women's Cricket Spin Action Masterclass" loading="lazy">
+    </div>
+
+    <!-- PRINCIPLE 06 -->
+    <div class="wrap">
       <article class="p-card reveal" id="p6">
         <div class="p-card-top">
           <div class="p-card-num">06</div>
@@ -1723,8 +1715,15 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
           </div>
         </div>
       </article>
+    </div>
 
-      <!-- PRINCIPLE 07 -->
+    <!-- FULL-SCREEN PHOTO 06: TEAM PASSION & EMOTION -->
+    <div class="fullscreen-photo-divider">
+      <img src="images/p6-emotion.jpg" alt="Bangladesh Women's Cricket Team Passion & Heart" loading="lazy">
+    </div>
+
+    <!-- PRINCIPLE 07 -->
+    <div class="wrap">
       <article class="p-card reveal" id="p7">
         <div class="p-card-top">
           <div class="p-card-num">07</div>
@@ -1782,27 +1781,10 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
         </div>
       </article>
     </div>
-  </div>
-</section>
 
-
-
-
-
-<!-- STANDALONE EDITORIAL PHOTO BREAK 02: THE NATIONAL SQUAD -->
-<section class="photo-editorial-break reveal">
-  <div class="wrap">
-    <div class="editorial-frame">
-      <img src="images/squad.jpg" alt="Bangladesh Women's National Cricket Squad" class="editorial-img" loading="lazy">
-      <div class="editorial-caption">
-        <div class="caption-left">
-          <span class="caption-tag">The 80-Player Heritage &middot; Visual Pause</span>
-          <h3 class="caption-title">United Across 8 Home Divisions</h3>
-        </div>
-        <div class="caption-right">
-          <span class="caption-meta">The Lineup That Powers the Canonical Data Sheet</span>
-        </div>
-      </div>
+    <!-- FULL-SCREEN PHOTO 07: CLIMACTIC TRIUMPH CELEBRATION -->
+    <div class="fullscreen-photo-divider">
+      <img src="images/p7-triumph.jpg" alt="Bangladesh Women's Cricket Team Triumphant Celebration" loading="lazy">
     </div>
   </div>
 </section>
@@ -1854,25 +1836,6 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
     </div>
 
     <p class="dsource reveal">Sources: ESPNcricinfo, Wisden &amp; official match archives (Oct 2026).</p>
-  </div>
-</section>
-
-
-<!-- STANDALONE EDITORIAL PHOTO BREAK 03: TEAM CAMARADERIE -->
-<section class="photo-editorial-break reveal">
-  <div class="wrap">
-    <div class="editorial-frame">
-      <img src="images/hug.jpg" alt="Teammate embrace after crucial victory" class="editorial-img" loading="lazy">
-      <div class="editorial-caption">
-        <div class="caption-left">
-          <span class="caption-tag">The Continuous Journey &middot; Visual Pause</span>
-          <h3 class="caption-title">No Fan Left Behind</h3>
-        </div>
-        <div class="caption-right">
-          <span class="caption-meta">From Grassroots Contender Trials to the World Cup Final</span>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
