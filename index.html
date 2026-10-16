@@ -229,6 +229,100 @@ footer .frow{display:flex;justify-content:space-between;align-items:center;margi
 footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color:var(--cloud);font-size:15px}
 
 .placeholder-note{font-family:var(--cond);font-size:14px;letter-spacing:1px;text-transform:uppercase;color:var(--fog);margin-top:14px}
+
+/* ===== DATA STORY SECTION ===== */
+.dintro-stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.dstat{background:var(--mist);border:1.5px solid var(--line);border-radius:14px;padding:16px 22px;flex:1 1 150px;min-width:140px}
+.dstat .v{font-family:var(--disp);font-size:clamp(30px,4.2vw,46px);color:var(--blue);line-height:1}
+.dstat .v.y{color:var(--yellow-d)} .dstat .v.c{color:var(--coral)}
+.dstat .l{font-family:var(--cond);font-size:14px;font-weight:600;letter-spacing:.4px;text-transform:uppercase;color:var(--slate);margin-top:6px;line-height:1.2;word-break:keep-all}
+.dblock{margin-top:62px}
+.dhead{display:flex;align-items:center;gap:16px;margin-bottom:26px}
+.dnum{width:50px;height:50px;border-radius:12px;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--disp);font-size:21px;flex:none}
+.dh3{font-family:var(--cond);font-size:clamp(22px,3vw,33px);font-weight:700;text-transform:uppercase;letter-spacing:.3px;line-height:1.04;word-break:keep-all;overflow-wrap:normal}
+.dsub{font-size:14.5px;color:var(--fog);margin-top:3px;word-break:keep-all}
+
+/* map */
+.mapgrid{display:grid;grid-template-columns:minmax(0,440px) minmax(260px,1fr);gap:30px;align-items:start}
+@media(max-width:860px){.mapgrid{grid-template-columns:1fr}}
+.mapbox{background:linear-gradient(180deg,#eef4fb,#e3edf8);border:1.5px solid var(--line);border-radius:18px;padding:14px;display:flex;justify-content:center}
+.mapbox svg{width:100%;height:auto;max-height:600px;display:block}
+.divpath{stroke:#ffffff;stroke-width:1.5;transition:filter .2s}
+.divpath:hover{filter:brightness(1.08) saturate(1.1)}
+.divlabel{font-family:var(--cond);font-weight:700;fill:#fff;font-size:12px;text-anchor:middle;pointer-events:none;paint-order:stroke;stroke:rgba(5,30,66,.55);stroke-width:2.4px;text-transform:uppercase;letter-spacing:.3px}
+.divcount{font-family:var(--disp);fill:#fff;font-size:18px;text-anchor:middle;pointer-events:none;paint-order:stroke;stroke:rgba(5,30,66,.5);stroke-width:2.6px}
+.bub{fill:var(--yellow);fill-opacity:.5;stroke:var(--blue-d);stroke-width:1.3}
+.bublbl{font-family:var(--cond);font-weight:700;font-size:10px;fill:var(--ink);text-anchor:middle;pointer-events:none;paint-order:stroke;stroke:#fff;stroke-width:2.2px}
+.mapside{display:flex;flex-direction:column;gap:9px}
+.mstitle{font-family:var(--cond);font-size:14px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--blue-l);margin:2px 0 3px}
+.drow{display:grid;grid-template-columns:96px 1fr 26px;align-items:center;gap:10px}
+.drow .dn{font-family:var(--cond);font-weight:600;font-size:14.5px;color:var(--ink);text-align:right;word-break:keep-all}
+.drow .dt{height:18px;background:var(--mist);border-radius:5px;overflow:hidden}
+.drow .df{height:100%;border-radius:5px;background:linear-gradient(90deg,var(--blue-l),var(--blue));width:0;transition:width .9s ease}
+.drow .dc{font-family:var(--disp);font-size:16px;color:var(--blue);text-align:left}
+.mkey{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--slate);margin-top:6px;font-family:var(--cond);text-transform:uppercase;letter-spacing:.4px}
+.mkey .dot{width:14px;height:14px;border-radius:50%;background:var(--yellow);opacity:.55;border:1.3px solid var(--blue-d);flex:none}
+.mcaveat{background:#fff6e0;border:1.5px solid #f0d58a;border-radius:12px;padding:13px 16px;margin-top:6px;font-size:13.5px;line-height:1.42;color:#7a5a12}
+.mcaveat b{color:var(--yellow-d)}
+
+/* records */
+.recgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+@media(max-width:860px){.recgrid{grid-template-columns:1fr 1fr}}
+.rec{background:var(--mist);border-radius:14px;padding:22px 20px 18px;position:relative;overflow:hidden;border:1.5px solid var(--line)}
+.rec .cap{position:absolute;top:0;left:0;width:100%;height:5px}
+.rec.blue .cap{background:var(--blue)} .rec.yellow .cap{background:var(--yellow)} .rec.coral .cap{background:var(--coral)} .rec.grass .cap{background:var(--grass)}
+.rec .rv{font-family:var(--disp);font-size:clamp(30px,3.4vw,42px);line-height:1;color:var(--blue);margin-top:4px}
+.rec.yellow .rv{color:var(--yellow-d)} .rec.coral .rv{color:var(--coral)} .rec.grass .rv{color:var(--grass-d)}
+.rec .rn{font-family:var(--cond);font-weight:700;font-size:16.5px;text-transform:uppercase;margin-top:8px;color:var(--ink);line-height:1.08;word-break:keep-all}
+.rec .rl{font-size:12.5px;color:var(--fog);margin-top:4px;line-height:1.3}
+
+/* leaderboards */
+.lbgrid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+@media(max-width:760px){.lbgrid{grid-template-columns:1fr}}
+.lbtitle{font-family:var(--cond);font-size:16px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin:0 0 14px;padding-bottom:8px;border-bottom:2px solid var(--line)}
+.lbtitle.bat{color:var(--blue)} .lbtitle.bowl{color:var(--coral)}
+.lb{display:flex;flex-direction:column;gap:9px}
+.lbrow{display:grid;grid-template-columns:126px 1fr;gap:12px;align-items:center}
+.lbrow .nm{font-family:var(--cond);font-weight:600;font-size:14.5px;color:var(--ink);text-align:right;line-height:1.08;word-break:keep-all}
+.lbtrack{position:relative;height:28px;background:var(--mist);border-radius:7px;overflow:hidden}
+.lbfill{height:100%;width:0;border-radius:7px;transition:width 1s ease;display:flex;align-items:center;justify-content:flex-end;padding-right:9px;min-width:34px}
+.lbfill.bat{background:linear-gradient(90deg,var(--blue-l),var(--blue))}
+.lbfill.bowl{background:linear-gradient(90deg,#ef8a5c,var(--coral))}
+.lbfill .vv{font-family:var(--disp);font-size:14px;color:#fff}
+@media(max-width:400px){.lbrow{grid-template-columns:92px 1fr}}
+
+/* two-col panels */
+.twocol{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+@media(max-width:760px){.twocol{grid-template-columns:1fr}}
+.panel{background:var(--mist);border:1.5px solid var(--line);border-radius:16px;padding:24px}
+.paneltitle{font-family:var(--cond);font-size:16px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--blue-l);margin:0 0 16px}
+.donutwrap{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.donutwrap svg{flex:none}
+.dlegend{display:flex;flex-direction:column;gap:9px;flex:1;min-width:150px}
+.dleg{display:flex;align-items:center;gap:9px;font-size:14.5px;color:var(--slate);font-family:var(--cond)}
+.dleg .sw{width:14px;height:14px;border-radius:4px;flex:none}
+.dleg b{color:var(--ink);font-family:var(--disp);font-weight:400;font-size:16px;margin-left:auto}
+.debutchart{display:flex;align-items:flex-end;gap:5px;min-height:216px;border-bottom:2px solid var(--line);padding-top:10px}
+.dbar{flex:1;display:flex;flex-direction:column;align-items:center}
+.dbar .bar{width:100%;max-width:26px;background:var(--blue-l);border-radius:4px 4px 0 0;height:0;transition:height .9s ease}
+.dbar.peak .bar{background:var(--yellow)}
+.dbar .yr{font-family:var(--cond);font-size:10.5px;color:var(--fog);margin-top:9px;height:30px;transform:rotate(-55deg);transform-origin:top center;white-space:nowrap}
+.dbar .bn{font-family:var(--disp);font-size:11.5px;color:var(--slate);margin-bottom:3px}
+.debutnote{font-size:13px;color:var(--fog);margin-top:34px;line-height:1.4}
+.debutnote b{color:var(--yellow-d)}
+
+/* scatter */
+.scatterbox{background:var(--mist);border:1.5px solid var(--line);border-radius:16px;padding:18px 20px}
+.scatterbox svg{width:100%;height:auto;display:block}
+.sc-dot{fill:var(--grass);fill-opacity:.82;stroke:#fff;stroke-width:1.5;transition:fill .2s}
+.sc-dot:hover{fill:var(--coral)}
+.sc-lbl{font-family:var(--cond);font-weight:600;font-size:11.5px;fill:var(--ink);pointer-events:none}
+.sc-axis{stroke:var(--fog);stroke-width:1}
+.sc-grid{stroke:var(--line);stroke-width:1;stroke-dasharray:3 4}
+.sc-axttl{font-family:var(--cond);font-weight:700;font-size:12.5px;fill:var(--slate);text-transform:uppercase;letter-spacing:.5px}
+.sc-tick{font-family:var(--cond);font-size:11px;fill:var(--fog)}
+
+.dsource{font-size:12.5px;color:var(--fog);line-height:1.5;margin-top:50px;padding-top:18px;border-top:1px solid var(--line)}
 </style>
 </head>
 <body>
@@ -239,6 +333,7 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
     <li><a href="#spine">Spine</a></li>
     <li><a href="#acts">Three acts</a></li>
     <li><a href="#matrix">7 principles</a></li>
+    <li><a href="#data">The data</a></li>
     <li><a href="#game">Play</a></li>
     <li><a href="#journey">Journey</a></li>
     <li><a href="#break">The break</a></li>
@@ -287,6 +382,56 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
     <h2 class="h-sec reveal d1" id="matrix"><span class="b" style="white-space:nowrap">The 7 principles</span> <span class="y" style="white-space:nowrap">matrix</span></h2>
     <p class="lead reveal d2">Every piece of content serves one distinct purpose. Open each row to see the execution and the platform it lives on.</p>
     <div class="matrix" id="matrixList"></div>
+  </div>
+</section>
+
+<section id="data">
+  <div class="wrap">
+    <p class="eyebrow blue reveal">Worldbuilding, in numbers</p>
+    <h2 class="h-sec reveal d1"><span class="b" style="white-space:nowrap">The master data sheet,</span> <span class="y" style="white-space:nowrap">visualized</span></h2>
+    <p class="lead reveal d2">The pitch keeps promising &ldquo;one canonical data sheet.&rdquo; Here it is &mdash; every woman to represent (or line up for) Bangladesh, turned into the live visuals each show in the ecosystem would run on. <b>80 players, honestly sourced: where the public record is silent, we show the gap instead of guessing.</b></p>
+    <div class="dintro-stats reveal d2">
+      <div class="dstat"><div class="v">80</div><div class="l">Players tracked</div></div>
+      <div class="dstat"><div class="v y">39</div><div class="l">Home region documented</div></div>
+      <div class="dstat"><div class="v c">41</div><div class="l">Origin not yet public</div></div>
+      <div class="dstat"><div class="v">2011</div><div class="l">First WODI &middot; story begins</div></div>
+    </div>
+
+    <div class="dblock reveal">
+      <div class="dhead"><span class="dnum">01</span><div><h3 class="dh3">Where the players come from</h3><p class="dsub">Shading = players per home division &middot; bubbles = players per home town</p></div></div>
+      <div class="mapgrid">
+        <div class="mapbox"><div id="bdMap"></div></div>
+        <div class="mapside" id="mapSide"></div>
+      </div>
+    </div>
+
+    <div class="dblock reveal">
+      <div class="dhead"><span class="dnum">02</span><div><h3 class="dh3">The record book</h3><p class="dsub">Career internationals (WODI + WT20I), to 2026</p></div></div>
+      <div class="recgrid" id="recGrid"></div>
+    </div>
+
+    <div class="dblock reveal">
+      <div class="dhead"><span class="dnum">03</span><div><h3 class="dh3">Top run-scorers &amp; wicket-takers</h3><p class="dsub">Total international career &middot; fills as it scrolls into view</p></div></div>
+      <div class="lbgrid">
+        <div class="lbcol"><h4 class="lbtitle bat">Most runs</h4><div class="lb" id="lbBat"></div></div>
+        <div class="lbcol"><h4 class="lbtitle bowl">Most wickets</h4><div class="lb" id="lbBowl"></div></div>
+      </div>
+    </div>
+
+    <div class="dblock reveal">
+      <div class="dhead"><span class="dnum">04</span><div><h3 class="dh3">Squad shape &amp; the arrival waves</h3><p class="dsub">What the players do &middot; when they first appeared</p></div></div>
+      <div class="twocol">
+        <div class="panel"><h4 class="paneltitle">Primary role</h4><div class="donutwrap"><div id="roleDonut"></div><div class="dlegend" id="roleLegend"></div></div></div>
+        <div class="panel"><h4 class="paneltitle">Debut year</h4><div class="debutchart" id="debutChart"></div><p class="debutnote"><b>Two waves:</b> the founding generation of 2011&ndash;13 after the first WODI, then the 2023&ndash;24 surge as U&#8209;19 and domestic players entered the pool.</p></div>
+      </div>
+    </div>
+
+    <div class="dblock reveal">
+      <div class="dhead"><span class="dnum">05</span><div><h3 class="dh3">The all-rounders</h3><p class="dsub">Runs vs wickets &mdash; who carries both jobs</p></div></div>
+      <div class="scatterbox" id="scatter"></div>
+    </div>
+
+    <p class="dsource reveal">Compiled from Wikipedia, ESPNcricinfo, Wisden, The Cricketer, TBS, Dhaka Tribune &amp; Prothom Alo (Oct 2026). Home division is documented for 39 of 80 players; the rest are shown as unknown rather than estimated. Map geometry simplified from geoBoundaries (gbOpen, BGD ADM1).</p>
   </div>
 </section>
 
@@ -382,6 +527,51 @@ window.IMG = {
   highfive: 'images/highfive.jpg',
   squad: 'images/squad.jpg',
   celebrate: 'images/celebrate.jpg'
+};
+</script>
+<script>
+// ---- Bangladesh women's cricket dataset (80 players) ----
+window.CDATA = {
+  mapViewBox: "0 0 500 690",
+  divisions: [
+    {name:"Khulna", n:10, lx:143.5, ly:426.6, d:"M138.8,312.8L134.0,306.9L131.7,310.6L117.1,299.1L103.9,288.7L90.6,286.5L82.4,284.8L86.2,295.2L85.5,301.2L86.3,312.8L76.7,317.1L73.5,315.6L73.5,321.1L72.7,326.0L70.5,327.9L70.7,333.0L70.2,342.9L86.8,368.0L88.2,386.4L93.9,387.9L99.8,387.2L109.6,392.6L100.3,404.2L99.5,415.5L106.7,428.3L108.2,433.3L108.3,445.9L107.2,454.2L108.6,459.2L111.1,464.7L113.5,475.2L113.3,489.1L116.7,495.4L121.7,507.9L118.2,517.1L122.9,529.6L124.8,539.8L130.0,547.9L134.8,549.9L137.2,557.1L134.2,564.0L138.2,565.1L143.6,561.2L143.5,547.5L151.0,535.1L149.9,547.2L157.3,555.7L159.5,552.4L160.1,544.1L160.7,539.7L165.5,529.9L169.2,524.8L170.9,553.8L176.1,556.0L183.7,551.0L182.4,546.6L182.6,543.0L201.3,539.3L203.5,511.7L202.6,496.1L203.7,489.2L208.0,475.5L210.3,467.8L211.7,460.4L208.0,447.5L204.4,443.0L208.2,435.5L208.5,431.8L202.3,430.7L197.2,429.6L194.8,425.2L194.0,417.4L181.9,400.2L187.7,394.7L182.7,392.8L178.4,388.0L176.7,385.9L176.3,382.1L172.4,371.6L170.8,360.3L163.2,356.5L151.5,340.3L143.8,333.4L144.6,318.1L138.8,312.9L138.8,312.8Z"},
+    {name:"Rangpur", n:9, lx:118.2, ly:107.9, d:"M196.5,153.6L196.6,146.0L199.3,118.4L196.5,110.3L198.1,105.8L195.8,100.5L200.8,90.2L197.5,87.1L197.0,84.1L191.9,76.4L192.4,72.3L187.3,65.1L181.0,64.7L180.8,58.1L175.8,60.1L172.7,69.2L173.9,73.7L177.3,73.0L177.3,77.3L169.9,81.2L170.4,88.4L167.6,86.9L165.4,83.4L158.8,81.9L155.4,78.1L152.4,83.1L148.6,82.1L139.2,74.8L130.2,68.7L127.1,61.8L125.5,55.7L124.9,51.0L126.9,48.3L121.1,44.7L119.1,39.6L112.9,36.8L106.5,34.5L101.3,39.9L106.9,45.7L110.6,47.1L110.7,51.4L115.2,52.5L116.5,57.6L105.9,55.6L99.9,53.1L95.8,58.1L93.4,52.5L93.2,50.4L88.0,46.6L84.8,45.1L82.5,43.5L79.5,39.6L74.3,35.0L71.7,31.1L68.2,33.7L63.0,27.8L60.8,27.4L57.3,25.0L54.4,22.1L51.9,15.9L48.7,20.4L44.2,29.4L45.4,35.3L47.8,34.0L50.7,31.6L55.2,34.3L58.9,34.8L61.7,44.3L55.2,45.0L49.0,50.3L46.0,52.5L43.5,62.0L33.7,64.4L30.6,68.5L28.0,71.9L28.6,76.1L28.0,83.2L23.5,86.7L19.7,93.7L25.4,107.5L28.8,106.4L31.9,107.2L34.2,106.0L37.6,105.8L50.7,118.5L55.7,124.1L58.4,129.2L68.7,137.5L82.5,139.6L88.0,136.0L90.0,134.7L93.2,137.3L96.2,150.7L104.3,158.1L111.9,162.9L120.0,165.7L130.6,170.2L131.6,174.3L142.4,182.2L160.1,187.7L171.8,188.8L181.3,182.5L188.0,169.4L191.7,160.0L192.8,149.7L196.5,153.6Z"},
+    {name:"Rajshahi", n:6, lx:118.8, ly:239.0, d:"M193.8,239.2L193.7,218.7L183.5,205.4L180.7,188.7L180.9,185.9L164.5,189.0L148.6,185.1L134.4,177.3L130.6,170.2L127.5,167.6L114.0,163.9L109.6,163.0L107.0,167.5L103.5,173.6L95.4,170.7L89.7,172.2L80.1,170.2L71.4,171.9L66.7,173.1L61.8,169.8L57.1,173.9L55.5,180.3L55.6,184.6L54.2,186.8L54.5,191.4L48.4,198.6L44.8,201.3L43.8,207.0L37.6,204.3L29.6,196.9L24.3,200.5L26.3,211.2L17.7,219.1L15.1,225.6L15.3,229.0L21.6,240.1L25.6,247.3L33.4,251.8L45.5,255.7L67.4,267.8L73.0,268.4L77.1,268.6L83.3,268.9L85.3,278.4L88.0,283.0L99.8,289.7L112.5,290.7L128.2,310.0L133.5,308.5L138.6,311.7L157.2,318.7L168.3,325.7L174.8,325.9L182.0,328.5L193.2,329.0L190.9,315.2L187.8,303.5L194.0,296.3L193.7,287.1L192.1,267.6L190.3,259.8L188.9,252.3L188.6,243.1L193.8,239.2Z"},
+    {name:"Mymensingh", n:6, lx:255.8, ly:209.6, d:"M334.7,232.5L339.7,225.0L334.4,216.8L335.0,213.1L330.5,210.6L325.0,205.9L312.9,196.1L309.8,175.2L287.4,173.2L250.8,173.9L221.7,164.5L203.9,158.3L196.9,158.5L196.6,153.6L191.7,160.0L188.0,169.4L181.3,182.5L182.4,201.8L187.0,211.8L195.7,226.5L197.1,237.2L202.2,227.1L207.5,218.7L216.1,220.1L225.5,218.4L229.6,232.9L231.6,240.9L239.1,250.5L237.9,254.1L240.1,260.6L241.5,269.0L250.9,270.1L265.5,266.4L271.8,270.1L276.5,272.1L281.2,268.9L280.0,261.0L278.6,253.0L277.5,247.1L290.1,246.7L300.2,242.0L312.2,237.2L334.7,232.5Z"},
+    {name:"Chattogram", n:4, lx:393.3, ly:444.5, d:"M346.2,280.3L344.4,276.9L336.8,276.3L326.9,279.6L319.1,282.7L318.8,296.6L314.4,303.0L311.9,308.5L301.3,318.7L291.2,323.9L288.4,333.2L285.8,337.4L281.3,344.4L283.4,357.9L275.8,362.5L274.8,371.5L280.1,379.3L279.0,389.1L273.6,407.2L295.1,433.6L300.7,447.0L311.7,464.2L321.0,482.5L327.5,511.5L329.4,497.3L326.1,471.5L319.1,458.2L317.9,446.7L321.9,435.9L342.7,435.7L350.8,433.6L357.0,438.4L368.3,446.9L386.1,469.5L401.7,507.0L409.6,533.0L406.8,563.6L415.0,578.5L416.1,587.8L432.8,629.9L445.1,655.4L452.3,663.0L443.8,631.6L445.1,627.7L443.0,623.9L437.3,614.7L439.6,608.1L440.5,596.1L448.1,588.5L450.4,586.2L452.8,581.9L455.5,583.0L464.2,595.2L473.8,596.5L478.3,607.2L482.3,605.2L484.9,598.7L479.2,572.8L478.3,545.0L481.0,530.6L477.4,509.9L477.1,495.5L470.2,458.1L466.3,439.2L463.7,428.8L457.9,421.9L455.2,416.0L456.4,404.9L452.9,392.9L453.4,384.0L453.9,376.1L453.7,368.5L448.9,358.4L444.9,338.6L444.8,332.8L440.4,334.8L437.8,338.0L437.2,331.7L431.3,331.0L425.6,336.0L420.5,340.4L411.8,331.2L409.3,337.7L411.8,360.1L408.2,363.5L403.4,366.1L393.7,383.3L398.4,397.3L395.9,403.7L383.9,414.7L378.4,415.6L369.8,412.1L365.4,389.5L358.1,383.3L355.7,385.7L354.7,392.9L355.5,404.4L349.7,397.8L339.3,359.4L331.1,342.6L334.5,334.7L336.7,328.0L338.4,324.1L342.4,305.6L346.2,296.1L343.9,286.3L346.2,280.3Z"},
+    {name:"Dhaka", n:2, lx:239.6, ly:322.5, d:"M336.8,276.3L335.2,267.1L338.3,262.7L340.4,259.9L339.2,257.3L335.3,251.3L333.1,247.4L339.3,240.9L330.7,234.4L302.7,239.1L294.7,245.1L282.3,248.5L275.4,250.5L282.0,255.8L281.2,265.2L281.2,268.9L276.5,272.1L271.8,270.1L256.2,268.3L241.5,269.0L237.9,254.1L239.1,250.5L234.8,245.3L228.2,235.5L227.9,225.3L222.9,215.8L216.1,220.1L210.5,221.7L202.2,223.1L198.2,234.3L193.8,239.2L189.8,258.1L192.1,267.6L193.6,275.5L194.0,296.3L191.4,302.2L189.7,311.2L192.8,321.3L187.0,329.6L174.8,325.9L168.3,325.7L159.8,324.5L147.0,314.8L138.8,312.9L145.8,326.6L151.5,340.3L164.3,353.4L165.8,359.0L172.8,364.2L173.3,375.5L176.3,382.1L178.2,384.3L178.4,388.0L182.7,392.8L187.2,395.2L186.8,399.4L181.9,400.2L183.2,403.6L189.0,411.8L195.2,421.5L195.6,427.2L199.5,430.7L208.5,431.7L220.4,418.1L235.3,409.4L242.6,416.0L252.2,413.6L262.2,405.6L267.6,404.2L273.3,406.7L277.0,391.5L280.1,379.3L275.8,362.5L283.4,357.9L284.8,350.6L282.4,339.5L288.4,333.2L295.0,318.4L308.0,314.8L314.4,303.0L318.8,296.6L321.8,290.6L324.6,280.9L333.4,276.3L336.8,276.3Z"},
+    {name:"Sylhet", n:1, lx:382.7, ly:222.7, d:"M345.0,302.7L355.0,301.2L355.0,293.5L358.0,288.5L372.3,294.3L379.5,290.0L385.0,282.2L393.4,284.2L396.3,277.6L408.0,280.6L411.6,263.9L415.4,259.4L420.9,259.2L427.0,258.7L431.6,254.2L430.7,242.7L436.3,235.4L441.6,221.7L444.7,214.8L445.6,207.1L465.6,200.9L460.0,193.4L456.3,187.2L450.6,182.6L447.9,181.8L437.5,177.3L423.1,169.9L398.5,173.2L389.0,172.9L381.3,175.9L371.5,173.8L362.1,175.1L347.2,171.3L340.3,169.0L315.6,171.7L313.7,180.1L312.9,196.1L318.7,203.6L330.5,210.6L335.0,213.1L334.4,216.8L337.2,222.7L339.0,230.5L335.7,233.7L333.1,247.4L335.3,251.3L337.7,255.5L340.4,259.9L338.3,262.7L338.3,266.3L335.4,272.0L341.2,276.2L346.2,280.3L343.9,290.2L345.0,302.7Z"},
+    {name:"Barishal", n:1, lx:239.3, ly:472.6, d:"M208.5,431.7L204.4,443.0L208.0,447.5L210.1,453.8L210.3,467.8L208.0,475.5L204.4,481.4L203.7,489.2L202.6,496.1L212.1,525.3L215.5,515.0L217.1,519.3L218.0,525.0L221.4,529.4L216.7,533.9L220.5,542.6L235.8,546.4L241.1,540.7L243.0,534.8L246.7,529.4L250.2,517.4L256.3,513.7L268.0,514.0L270.3,507.8L276.6,474.4L273.1,468.3L269.2,460.9L265.9,454.9L265.2,446.5L276.6,437.0L282.0,426.1L262.2,415.5L255.2,410.8L237.2,414.5L226.2,410.8L216.6,424.9L208.5,431.7ZM278.4,524.1L294.1,511.4L298.7,501.4L299.5,465.4L295.5,458.5L288.9,441.2L285.4,437.0L278.6,439.9L273.3,445.8L272.6,454.6L278.2,466.5L282.6,483.5L277.9,503.8L276.1,511.9L276.2,517.1L276.4,521.2L277.2,524.2L278.4,524.1ZM261.4,531.1L257.7,518.4L254.1,517.2L249.1,530.7L248.8,542.5L252.5,532.6L259.8,533.6L261.4,531.1Z"}
+  ],
+  districts: [
+    {nm:"Khulna",x:167.6,y:430.5,n:7},{nm:"Gaibandha",x:166.4,y:156.5,n:3},{nm:"Rajshahi",x:73.0,y:261.8,n:3},
+    {nm:"Bogura",x:151.1,y:209.7,n:3},{nm:"Chattogram",x:394.3,y:484.4,n:3},{nm:"Rangpur",x:140.8,y:110.8,n:2},
+    {nm:"Jamalpur",x:207.7,y:199.7,n:2},{nm:"Sherpur",x:215.6,y:190.6,n:2},{nm:"Nilphamari",x:98.4,y:90.1,n:2},
+    {nm:"Mymensingh",x:256.5,y:220.7,n:2},{nm:"Dhaka",x:255.7,y:324.1,n:1},{nm:"Sylhet",x:402.9,y:204.4,n:1},
+    {nm:"Gopalganj",x:196.5,y:412.9,n:1},{nm:"Kushtia",x:125.2,y:314.0,n:1},{nm:"Jashore",x:134.0,y:395.1,n:1},
+    {nm:"Barishal",x:249.8,y:446.4,n:1},{nm:"Panchagarh",x:67.9,y:44.9,n:1},{nm:"Dinajpur",x:76.1,y:124.2,n:1},
+    {nm:"Magura",x:155.4,y:359.9,n:1},{nm:"CHT",x:433.7,y:451.7,n:1}
+  ],
+  undocumented: 41, documented: 39, total: 80,
+  records: [
+    {v:"4,294", n:"Nigar Sultana", l:"Most int'l runs", c:"yellow"},
+    {v:"210", n:"Nahida Akter", l:"Most int'l wickets", c:"coral"},
+    {v:"200", n:"Nigar Sultana", l:"Most int'l caps", c:"blue"},
+    {v:"2", n:"Fargana Hoque", l:"Only 2× ODI centurion", c:"grass"},
+    {v:"1,939", n:"Fargana Hoque", l:"Most ODI runs", c:"blue"},
+    {v:"2,709", n:"Nigar Sultana", l:"Most T20I runs", c:"yellow"},
+    {v:"129", n:"Nahida Akter", l:"Most T20I wickets", c:"coral"},
+    {v:"15", n:"Fargana Hoque", l:"Most ODI fifties", c:"grass"}
+  ],
+  batters: [["Nigar Sultana",4294],["Fargana Hoque",3192],["Sharmin Akhter",2128],["Rumana Ahmed",1829],["Sobhana Mostary",1710],["Murshida Khatun",1482],["Ritu Moni",1208],["Shamima Sultana",1197],["Ayasha Rahman",1133],["Salma Khatun",1125]],
+  bowlers: [["Nahida Akter",210],["Salma Khatun",136],["Rumana Ahmed",125],["Fahima Khatun",110],["Jahanara Alam",108],["Rabeya Khan",90],["Khadija Tul Kubra",85],["Marufa Akter",73],["Ritu Moni",71],["Panna Ghosh",48]],
+  roles: [["Bowler",27,"#1766b8"],["Batter",23,"#f5b921"],["All-rounder",19,"#2a9d5c"],["Wicketkeeper / Batter",7,"#e2622e"],["Not specified",4,"#8aa0bd"]],
+  debut: [["2006",1],["2007",1],["2010",1],["2011",7],["2012",12],["2013",6],["2014",1],["2015",2],["2018",4],["2019",3],["2022",4],["2023",20],["2024",13],["2025",1],["2026",3]],
+  allround: [
+    {name:"Rumana Ahmed",runs:1829,wkts:125},{name:"Nahida Akter",runs:417,wkts:210},{name:"Salma Khatun",runs:1125,wkts:136},
+    {name:"Fahima Khatun",runs:850,wkts:110},{name:"Ritu Moni",runs:1208,wkts:71},{name:"Jahanara Alam",runs:354,wkts:108},
+    {name:"Rabeya Khan",runs:312,wkts:90},{name:"Shorna Akter",runs:961,wkts:33},{name:"Lata Mondal",runs:851,wkts:19}
+  ]
 };
 </script>
 <script>
@@ -595,6 +785,124 @@ document.getElementById('resetBtn').addEventListener('click', () => {
   document.getElementById('verdict').className = 'verdict';
 });
 setBars();
+
+/* ===== DATA STORY RENDERING ===== */
+(function(){
+  var C = window.CDATA; if (!C) return;
+  function onView(el, cb){
+    if(!('IntersectionObserver' in window)){ cb(); return; }
+    var o = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ cb(); o.disconnect(); } }); }, {threshold:.2});
+    o.observe(el);
+  }
+  function lerp(a,b,t){ return Math.round(a + (b-a)*t); }
+  function divFill(n){ var t=Math.pow(n/10,0.72); var c1=[221,232,248], c2=[6,48,97];
+    return 'rgb('+lerp(c1[0],c2[0],t)+','+lerp(c1[1],c2[1],t)+','+lerp(c1[2],c2[2],t)+')'; }
+
+  // --- 01 MAP ---
+  (function(){
+    var mp = document.getElementById('bdMap'); if(!mp) return;
+    var paths = C.divisions.map(function(d){
+      return '<path class="divpath" d="'+d.d+'" fill="'+divFill(d.n)+'"><title>'+d.name+' division — '+d.n+' player'+(d.n>1?'s':'')+'</title></path>';
+    }).join('');
+    var bubs = C.districts.map(function(b){
+      var r = (5 + Math.sqrt(b.n)*3.0).toFixed(1);
+      return '<circle class="bub" cx="'+b.x+'" cy="'+b.y+'" r="'+r+'"><title>'+b.nm+' — '+b.n+' player'+(b.n>1?'s':'')+'</title></circle>';
+    }).join('');
+    var labels = C.divisions.map(function(d){
+      return '<text class="divlabel" x="'+d.lx+'" y="'+(d.ly-4)+'">'+d.name+'</text>'+
+             '<text class="divcount" x="'+d.lx+'" y="'+(d.ly+15)+'">'+d.n+'</text>';
+    }).join('');
+    mp.innerHTML = '<svg viewBox="'+C.mapViewBox+'" role="img" aria-label="Map of Bangladesh: women cricketers by home division">'+paths+bubs+labels+'</svg>';
+
+    var side = document.getElementById('mapSide');
+    var rows = C.divisions.map(function(d){
+      return '<div class="drow"><div class="dn">'+d.name+'</div><div class="dt"><div class="df" data-w="'+Math.round(d.n/10*100)+'"></div></div><div class="dc">'+d.n+'</div></div>';
+    }).join('');
+    var towns = C.districts.filter(function(t){return t.n>=2;}).sort(function(a,b){return b.n-a.n;});
+    var townchips = towns.map(function(t){
+      return '<span style="font-family:var(--cond);font-size:13px;background:#fff;border:1.5px solid var(--line);border-radius:20px;padding:4px 11px;color:var(--slate);white-space:nowrap"><b style="color:var(--blue)">'+t.n+'</b> '+t.nm+'</span>';
+    }).join('');
+    side.innerHTML =
+      '<div class="mstitle">Players by home division</div>'+rows+
+      '<div class="mkey"><span class="dot"></span>Bubble = players per home town</div>'+
+      '<div class="mstitle" style="margin-top:14px">Top home towns</div>'+
+      '<div style="display:flex;flex-wrap:wrap;gap:6px">'+townchips+'</div>'+
+      '<div class="mcaveat"><b>Honest gap:</b> only '+C.documented+' of '+C.total+' players have a publicly documented home region. The other '+C.undocumented+' are undocumented in reliable sources — shown as unknown, never guessed.</div>';
+    onView(side, function(){ side.querySelectorAll('.df').forEach(function(f){ f.style.width = f.dataset.w+'%'; }); });
+  })();
+
+  // --- 02 RECORDS ---
+  (function(){
+    var g = document.getElementById('recGrid'); if(!g) return;
+    g.innerHTML = C.records.map(function(r){
+      return '<div class="rec '+r.c+'"><div class="cap"></div><div class="rv">'+r.v+'</div><div class="rn">'+r.n+'</div><div class="rl">'+r.l+'</div></div>';
+    }).join('');
+  })();
+
+  // --- 03 LEADERBOARDS ---
+  function buildLB(id, data, cls){
+    var el = document.getElementById(id); if(!el) return;
+    var max = data[0][1];
+    el.innerHTML = data.map(function(d){
+      var w = (d[1]/max*100).toFixed(1);
+      return '<div class="lbrow"><div class="nm">'+d[0]+'</div><div class="lbtrack"><div class="lbfill '+cls+'" data-w="'+w+'"><span class="vv">'+d[1].toLocaleString()+'</span></div></div></div>';
+    }).join('');
+    onView(el, function(){ el.querySelectorAll('.lbfill').forEach(function(f){ f.style.width = f.dataset.w+'%'; }); });
+  }
+  buildLB('lbBat', C.batters, 'bat');
+  buildLB('lbBowl', C.bowlers, 'bowl');
+
+  // --- 04a ROLE DONUT ---
+  (function(){
+    var el = document.getElementById('roleDonut'); if(!el) return;
+    var total = C.roles.reduce(function(s,r){ return s+r[1]; }, 0);
+    var cx=80, cy=80, r=60, sw=26, circ=2*Math.PI*r, off=0;
+    var segs = C.roles.map(function(role){
+      var len = role[1]/total*circ;
+      var s = '<circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="none" stroke="'+role[2]+'" stroke-width="'+sw+'" stroke-dasharray="'+len.toFixed(2)+' '+(circ-len).toFixed(2)+'" stroke-dashoffset="'+(-off).toFixed(2)+'" transform="rotate(-90 '+cx+' '+cy+')"><title>'+role[0]+': '+role[1]+'</title></circle>';
+      off += len; return s;
+    }).join('');
+    el.innerHTML = '<svg width="160" height="160" viewBox="0 0 160 160">'+segs+
+      '<text x="'+cx+'" y="'+(cy-3)+'" text-anchor="middle" style="font-family:var(--disp);font-size:30px;fill:var(--ink)">'+total+'</text>'+
+      '<text x="'+cx+'" y="'+(cy+15)+'" text-anchor="middle" style="font-family:var(--cond);font-weight:600;font-size:11px;fill:var(--fog);letter-spacing:1px">PLAYERS</text></svg>';
+    var lg = document.getElementById('roleLegend');
+    lg.innerHTML = C.roles.map(function(role){
+      return '<div class="dleg"><span class="sw" style="background:'+role[2]+'"></span>'+role[0]+'<b>'+role[1]+'</b></div>';
+    }).join('');
+  })();
+
+  // --- 04b DEBUT CHART ---
+  (function(){
+    var el = document.getElementById('debutChart'); if(!el) return;
+    var max = Math.max.apply(null, C.debut.map(function(d){ return d[1]; }));
+    el.innerHTML = C.debut.map(function(d){
+      var px = Math.round(d[1]/max*150);
+      var peak = (d[0]==='2011');
+      return '<div class="dbar'+(peak?' peak':'')+'" title="'+d[0]+': '+d[1]+' debut'+(d[1]>1?'s':'')+'"><span class="bn">'+d[1]+'</span><div class="bar" data-h="'+px+'"></div><span class="yr">'+d[0]+'</span></div>';
+    }).join('');
+    onView(el, function(){ el.querySelectorAll('.bar').forEach(function(b){ b.style.height = b.dataset.h+'px'; }); });
+  })();
+
+  // --- 05 ALL-ROUNDER SCATTER ---
+  (function(){
+    var el = document.getElementById('scatter'); if(!el) return;
+    var W=720, H=380, m={l:56, r:24, t:22, b:48}, maxR=2000, maxW=220;
+    function X(v){ return m.l + v/maxR*(W-m.l-m.r); }
+    function Y(v){ return H-m.b - v/maxW*(H-m.t-m.b); }
+    var grid='';
+    for(var gr=0; gr<=maxR; gr+=500){ var gx=X(gr); grid+='<line class="sc-grid" x1="'+gx+'" y1="'+m.t+'" x2="'+gx+'" y2="'+(H-m.b)+'"/><text class="sc-tick" x="'+gx+'" y="'+(H-m.b+16)+'" text-anchor="middle">'+gr.toLocaleString()+'</text>'; }
+    for(var gw=0; gw<=200; gw+=50){ var gy=Y(gw); grid+='<line class="sc-grid" x1="'+m.l+'" y1="'+gy+'" x2="'+(W-m.r)+'" y2="'+gy+'"/><text class="sc-tick" x="'+(m.l-8)+'" y="'+(gy+4)+'" text-anchor="end">'+gw+'</text>'; }
+    var axes='<line class="sc-axis" x1="'+m.l+'" y1="'+(H-m.b)+'" x2="'+(W-m.r)+'" y2="'+(H-m.b)+'"/><line class="sc-axis" x1="'+m.l+'" y1="'+m.t+'" x2="'+m.l+'" y2="'+(H-m.b)+'"/>';
+    var dots = C.allround.map(function(p){
+      var x=X(p.runs), y=Y(p.wkts), anchor = (p.runs>1450?'end':'start'), dx = (p.runs>1450? -10 : 10);
+      return '<g><circle class="sc-dot" cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="7"><title>'+p.name+': '+p.runs.toLocaleString()+' runs, '+p.wkts+' wkts</title></circle>'+
+        '<text class="sc-lbl" x="'+(x+dx).toFixed(1)+'" y="'+(y+4).toFixed(1)+'" text-anchor="'+anchor+'">'+p.name+'</text></g>';
+    }).join('');
+    var titles='<text class="sc-axttl" x="'+((m.l+W-m.r)/2)+'" y="'+(H-8)+'" text-anchor="middle">Career runs →</text>'+
+      '<text class="sc-axttl" transform="translate(15,'+((m.t+H-m.b)/2)+') rotate(-90)" text-anchor="middle">Career wickets →</text>';
+    el.innerHTML = '<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Scatter plot: career runs versus wickets for Bangladesh women all-rounders">'+grid+axes+dots+titles+'</svg>';
+  })();
+})();
 </script>
 </body>
 </html>
