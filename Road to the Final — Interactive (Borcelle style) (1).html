@@ -380,17 +380,120 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
 .asset-info .desc{font-size:12.5px;color:var(--fog);margin-top:2px}
 
 /* Worldbuilding timeline */
-.wb-timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:20px}
-@media(max-width:860px){.wb-timeline{grid-template-columns:1fr}}
-.wb-step{background:var(--mist);border:1.5px solid var(--line);border-radius:14px;padding:18px;cursor:pointer;transition:.2s}
-.wb-step:hover,.wb-step.active{background:var(--blue);color:#fff;border-color:var(--blue-d)}
-.wb-step.active .wb-yr{color:var(--yellow)}
-.wb-step.active .wb-ttl{color:#fff}
-.wb-step.active .wb-desc{color:var(--cloud)}
-.wb-yr{font-family:var(--disp);font-size:26px;color:var(--blue);line-height:1}
-.wb-ttl{font-family:var(--cond);font-size:16px;font-weight:700;text-transform:uppercase;margin:6px 0 4px;color:var(--ink)}
-.wb-desc{font-size:13px;line-height:1.35;color:var(--slate)}
-.wb-detail-box{background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:18px 22px;margin-top:16px;font-size:15px;line-height:1.45;color:var(--slate)}
+.wb-timeline {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+@media(max-width: 960px) {
+  .wb-timeline {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+.wb-step {
+  background: #fff;
+  border: 1.5px solid var(--line);
+  border-radius: 14px;
+  padding: 12px;
+  cursor: pointer;
+  transition: all .2s ease;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.wb-step:hover, .wb-step.active {
+  background: var(--blue);
+  color: #fff;
+  border-color: var(--blue-d);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(11,74,143,.15);
+}
+.wb-step-thumb {
+  width: 100%;
+  height: 105px;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 12px;
+  position: relative;
+  border: 1px solid rgba(0,0,0,.08);
+}
+.wb-step.active .wb-step-thumb {
+  border-color: rgba(255,255,255,.3);
+}
+.wb-step-badge {
+  position: absolute;
+  bottom: 6px;
+  left: 6px;
+  background: rgba(11,74,143,.85);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  font-family: var(--cond);
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+.wb-step.active .wb-step-badge {
+  background: var(--yellow);
+  color: var(--blue-d);
+}
+.wb-yr {
+  font-family: var(--disp);
+  font-size: 26px;
+  color: var(--blue);
+  line-height: 1;
+}
+.wb-step.active .wb-yr {
+  color: var(--yellow);
+}
+.wb-ttl {
+  font-family: var(--cond);
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 6px 0 4px;
+  color: var(--ink);
+}
+.wb-step.active .wb-ttl {
+  color: #fff;
+}
+.wb-desc {
+  font-size: 12.5px;
+  line-height: 1.35;
+  color: var(--slate);
+}
+.wb-step.active .wb-desc {
+  color: var(--cloud);
+}
+.wb-detail-box {
+  background: #fff;
+  border: 1.5px solid var(--line);
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin-top: 18px;
+  box-shadow: 0 6px 20px rgba(11,74,143,.05);
+}
+.wb-detail-card {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 20px;
+  align-items: center;
+}
+@media(max-width: 680px) {
+  .wb-detail-card {
+    grid-template-columns: 1fr;
+  }
+}
+.wb-detail-img {
+  width: 100%;
+  height: 145px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+}
 
 /* Seriality Stepper */
 .serial-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:20px}
@@ -1469,13 +1572,13 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
             <!-- Talkshow 1: মনে আছে? -->
             <div style="background:#fff;border:1.5px solid var(--line);border-radius:16px;padding:22px;border-top:4px solid var(--yellow);box-shadow:0 8px 24px rgba(11,74,143,.05);display:flex;flex-direction:column;justify-content:space-between">
               <div>
-                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
                   <span style="font-family:var(--cond);font-size:12px;font-weight:700;text-transform:uppercase;color:var(--yellow-d);background:rgba(245,185,33,.12);padding:4px 10px;border-radius:6px">&#128308; প্রি-ম্যাচ বিশেষজ্ঞ টকশো</span>
                   <span style="font-size:12px;color:var(--slate);font-weight:600">YouTube Live &bull; Podcast</span>
                 </div>
                 <h4 style="font-family:var(--disp);font-size:24px;color:var(--blue-d);margin:0 0 8px;letter-spacing:.5px">মনে আছে?</h4>
-                <p style="font-size:14.5px;color:var(--slate);line-height:1.45;margin:0 0 14px">
-                  ম্যাচ শুরুর ঠিক পূর্বে তথ্যবহুল ও রোমাঞ্চকর ফরম্যাট। নারী ক্রিকেটের অতীত স্মৃতি, ঐতিহাসিক হেড-টু-হেড রেকর্ড ও লড়াইয়ের পটভূমি বিশ্লেষণ করে আসন্ন ম্যাচের কৌশলগত প্রেডিকশন।
+                <p style="font-size:14px;color:var(--slate);line-height:1.45;margin:0 0 14px">
+                  অতীত স্মৃতি, হেড-টু-হেড রেকর্ড ও ট্যাকটিকাল ম্যাচ প্রেডিকশন।
                 </p>
               </div>
               <div style="background:var(--mist);border-radius:10px;padding:10px 14px;font-family:var(--cond);font-size:13px;color:var(--blue);font-weight:700;text-transform:uppercase;display:flex;align-items:center;gap:8px">
@@ -1486,13 +1589,13 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
             <!-- Talkshow 2: T20-র মেয়েরা -->
             <div style="background:#fff;border:1.5px solid var(--line);border-radius:16px;padding:22px;border-top:4px solid var(--blue);box-shadow:0 8px 24px rgba(11,74,143,.05);display:flex;flex-direction:column;justify-content:space-between">
               <div>
-                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
                   <span style="font-family:var(--cond);font-size:12px;font-weight:700;text-transform:uppercase;color:var(--blue);background:rgba(11,74,143,.1);padding:4px 10px;border-radius:6px">&#9889; ধারাবাহিক ম্যাচডে শো ও ১০ PM স্পেশাল</span>
                   <span style="font-size:12px;color:var(--slate);font-weight:600">YouTube &bull; Live Studio</span>
                 </div>
                 <h4 style="font-family:var(--disp);font-size:24px;color:var(--blue-d);margin:0 0 8px;letter-spacing:.5px">T20-র মেয়েরা</h4>
-                <p style="font-size:14.5px;color:var(--slate);line-height:1.45;margin:0 0 14px">
-                  একটি সার্বক্ষণিক ধারাবাহিক টকশো। ম্যাচের আগে, ইনিংসের বিরতিতে এবং ম্যাচ শেষে তাত্ক্ষণিক মাঠের বিশ্লেষণ। এছাড়া প্রতি ম্যাচডে রাত <b>১০:০০ টায়</b> বিশেষ সম্প্রচার — বর্তমান সংকট, অতীতের সংগ্রাম, কাঠামোগত দুর্বলতা ও উত্তরণের গল্প।
+                <p style="font-size:14px;color:var(--slate);line-height:1.45;margin:0 0 14px">
+                  সার্বক্ষণিক মাঠের বিশ্লেষণ এবং রাত ১০টায় সংকট ও উত্তরণের গভীর আলোচনা।
                 </p>
               </div>
               <div style="background:rgba(16,133,74,.08);border-radius:10px;padding:10px 14px;font-family:var(--cond);font-size:13px;color:var(--grass-d);font-weight:700;text-transform:uppercase;display:flex;align-items:center;gap:8px">
@@ -1505,27 +1608,51 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
         
 
         <div class="wb-timeline">
+          <!-- 2011 -->
           <div class="wb-step active" data-year="2011">
+            <div class="wb-step-thumb" style="background-image:url('images/wb-2011.jpg')">
+              <span class="wb-step-badge">&#127942; First WODI</span>
+            </div>
             <div class="wb-yr">2011</div>
             <div class="wb-ttl">The Savar Spark</div>
             <div class="wb-desc">First official WODI win vs Ireland; international status unlocked.</div>
           </div>
+
+          <!-- 2014 -->
           <div class="wb-step" data-year="2014">
+            <div class="wb-step-thumb" style="background-image:url('images/wb-2014.jpg')">
+              <span class="wb-step-badge">&#127967; Sylhet Stadium</span>
+            </div>
             <div class="wb-yr">2014</div>
             <div class="wb-ttl">Home Debut</div>
-            <div class="wb-desc">Sylhet hosts the ICC WT20 &mdash; first domestic television surge.</div>
+            <div class="wb-desc">Sylhet hosts ICC WT20 &mdash; first domestic television surge.</div>
           </div>
+
+          <!-- 2018 -->
           <div class="wb-step" data-year="2018">
+            <div class="wb-step-thumb" style="background-image:url('images/wb-2018.jpg')">
+              <span class="wb-step-badge">&#127941; Asia Cup Win</span>
+            </div>
             <div class="wb-yr">2018</div>
             <div class="wb-ttl">Asia Cup Miracle</div>
             <div class="wb-desc">Final-ball upset over 6-time champions India in Kuala Lumpur.</div>
           </div>
+
+          <!-- 2023 -->
           <div class="wb-step" data-year="2023">
+            <div class="wb-step-thumb" style="background-image:url('images/wb-2023.jpg')">
+              <span class="wb-step-badge">&#9889; U-19 Shockwave</span>
+            </div>
             <div class="wb-yr">2023</div>
             <div class="wb-ttl">U-19 Shockwave</div>
-            <div class="wb-desc">Defeating Australia by 7 wickets; the new generation arrives.</div>
+            <div class="wb-desc">Defeating Australia by 7 wickets; new fearless generation arrives.</div>
           </div>
+
+          <!-- 2028 -->
           <div class="wb-step" data-year="2028">
+            <div class="wb-step-thumb" style="background-image:url('images/wb-2028.jpg')">
+              <span class="wb-step-badge">&#127760; Mirpur Stadium Host</span>
+            </div>
             <div class="wb-yr">2028</div>
             <div class="wb-ttl">The Universe</div>
             <div class="wb-desc">Home World Cup &mdash; transmedia campaign unites the nation.</div>
@@ -1533,7 +1660,18 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
         </div>
 
         <div class="wb-detail-box" id="wbDetailBox">
-          <b>2011 Milestone:</b> Bangladesh defeated Ireland by 82 runs in Savar to earn official WODI status &mdash; the foundational spark for national women’s cricket.
+          <div class="wb-detail-card">
+            <img src="images/wb-2011.jpg" alt="2011 Savar Milestone" class="wb-detail-img">
+            <div>
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
+                <span class="pill" style="font-size:11.5px;padding:3px 10px;background:var(--mist)">2011 Milestone</span>
+                <span style="font-family:var(--cond);font-size:13px;font-weight:700;color:var(--blue);text-transform:uppercase">The Savar Spark</span>
+              </div>
+              <p style="font-size:14.5px;color:var(--ink);line-height:1.45;margin:0">
+                <b>সাভারের ভিত্তিপ্রস্তর:</b> ২০১১ সালে সাভারে আয়ারল্যান্ডকে ৮২ রানে হারিয়ে বাংলাদেশ জাতীয় নারী ক্রিকেট দল প্রথম অফিসিয়াল WODI স্ট্যাটাস অর্জন করে। এটিই ছিল বাংলাদেশের নারী ক্রিকেটের আনুষ্ঠানিক আন্তর্জাতিক যাত্রার ভিত্তি।
+              </p>
+            </div>
+          </div>
         </div>
       </article>
     </div>
@@ -1553,36 +1691,21 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
             <h3 class="p-card-title">Seriality</h3>
             <p class="p-card-sub">Pre-planned sequencing across time and platform-based distribution</p>
             <div class="p-card-chips">
-              <span class="p-chip"><b>Pre-Planned Seriality:</b> 1-Year Advance Strategy (2028 Schedule)</span>
-              <span class="p-chip"><b>Live Execution:</b> Before &middot; During &middot; After Sequence</span>
-              <span class="p-chip"><b>Continuous Engagement:</b> Multi-Platform Interconnection</span>
+              <span class="p-chip"><b>Seriality:</b> One Story Divided into Chapters</span>
+              <span class="p-chip"><b>Distribution:</b> Based on Match-by-Match Outcomes</span>
+              <span class="p-chip"><b>Engagement:</b> Continuous Audience Loop</span>
             </div>
           </div>
         </div>
 
-        <!-- Pre-Planned Execution Sequence -->
-        <div class="serial-timeline-bar">
-          <div class="serial-stage-box" style="border-top:4px solid var(--grass)">
-            <span class="serial-stage-badge">Phase 1 &middot; Before Match</span>
-            <h4 class="serial-stage-title">Pre-Planned Hype</h4>
-            <p class="serial-stage-desc">Documentary backstories, expert forecast podcasts &amp; Facebook visual previews planned a year in advance.</p>
+        <!-- One Story Divided into Chapters -->
+        <div style="margin:24px 0 16px;border-bottom:1.5px solid var(--line);padding-bottom:12px;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:10px">
+          <div>
+            <span class="pill" style="font-size:12px;padding:4px 12px;margin-bottom:6px">Serial Strategy &middot; ধারাবাহিক আখ্যান</span>
+            <h4 style="font-family:var(--disp);font-size:26px;color:var(--blue-d);margin:0;letter-spacing:.5px">One story divided into chapters</h4>
+            <p style="font-size:14px;color:var(--slate);margin:4px 0 0">Platform-based content distribution &middot; based on match-by-match outcomes</p>
           </div>
-          <div class="serial-stage-box" style="border-top:4px solid var(--yellow)">
-            <span class="serial-stage-badge">Phase 2 &middot; During Match</span>
-            <h4 class="serial-stage-title">Live Execution</h4>
-            <p class="serial-stage-desc">Fast-update wire on Website, instant TikTok highlight moments, real-time photocards &amp; live prediction arena.</p>
-          </div>
-          <div class="serial-stage-box" style="border-top:4px solid var(--coral)">
-            <span class="serial-stage-badge">Phase 3 &middot; After Match</span>
-            <h4 class="serial-stage-title">Continuous Legacy</h4>
-            <p class="serial-stage-desc">Tactical breakdown shows, reaction UGC reels, and episodic hand-off into the next tournament fixture.</p>
-          </div>
-        </div>
-
-        <!-- Platform-Based Content Distribution Matrix -->
-        <div style="display:flex;align-items:center;justify-content:space-between;margin:20px 0 12px;border-bottom:1.5px solid var(--line);padding-bottom:8px;flex-wrap:wrap;gap:8px">
-          <h4 style="font-family:var(--cond);font-size:18px;font-weight:700;text-transform:uppercase;color:var(--blue-d);margin:0">Platform-Based Content Distribution</h4>
-          <span style="font-family:var(--cond);font-size:11.5px;font-weight:700;text-transform:uppercase;color:var(--slate);letter-spacing:.8px">5 Specialized Channels</span>
+          <span style="font-family:var(--cond);font-size:12px;font-weight:700;text-transform:uppercase;color:var(--yellow-d);letter-spacing:1px">&#9889; 5 Specialized Channels</span>
         </div>
 
         <div class="serial-platforms-grid">
@@ -1632,8 +1755,11 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
           </div>
         </div>
 
-        <div style="background:var(--mist);border-radius:12px;padding:14px 18px;font-size:14px;color:var(--slate);line-height:1.45;margin-top:20px;border-left:4px solid var(--yellow)">
-          <b style="color:var(--blue-d)">Continuous Audience Engagement:</b> Each platform delivers a different part of the story, keeping audiences engaged throughout the tournament without hitting a dead end.
+        <div style="background:var(--mist);border-radius:12px;padding:14px 18px;font-size:14px;color:var(--slate);line-height:1.45;margin-top:20px;border-left:4px solid var(--yellow);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px">
+          <div>
+            <b style="color:var(--blue-d)">Continuous Audience Engagement:</b> Each platform delivers a different part of the story based on match-by-match outcomes, keeping audiences engaged throughout the tournament without hitting a dead end.
+          </div>
+          <span class="pill" style="font-size:11px;background:#fff">Match-by-Match Outcomes</span>
         </div>
       </article>
     </div>
@@ -1723,55 +1849,62 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
             <h3 class="p-card-title">Performance</h3>
             <p class="p-card-sub">The audience joins the narrative as active co-creators</p>
             <div class="p-card-chips">
-              <span class="p-chip"><b>Fan Agency:</b> VIP Ticket Lottery &middot; Interactive UGC Wall</span>
+              <span class="p-chip"><b>Fan Agency:</b> 2 Requirements &middot; Grand Finale VIP Ticket Lottery</span>
             </div>
           </div>
         </div>
 
-        <div class="perf-grid">
-          <!-- Lottery Progress Box -->
-          <div class="lottery-box">
+        <!-- 2 Clear Fan Requirements Grid -->
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;margin:24px 0 18px">
+          <!-- Requirement 1: Subscribe -->
+          <div style="background:#fff;border:1.5px solid var(--line);border-radius:16px;padding:24px;border-top:4px solid #ff0000;box-shadow:0 8px 24px rgba(11,74,143,.05);display:flex;flex-direction:column;justify-content:space-between">
             <div>
-              <div class="hook-badge" style="background:#fff;color:var(--blue-d)">Performance Element &middot; ফ্যান অ্যাক্টিভেশন</div>
-              <h4 class="lottery-title">গ্র্যান্ড ফিনালে টিকেট লটারি &middot; Fan Reaction Challenge</h4>
-              <p style="font-size:14.5px;color:var(--cloud);margin:8px 0 0;line-height:1.45">
-                আমাদের <b>YouTube চ্যানেলে সাবস্ক্রাইব করুন</b> এবং নারী ক্রিকেট দলের জন্য একটি <b>২ মিনিটের শুভেচ্ছা বা ম্যাচ রিঅ্যাকশন ভিডিও</b> আপলোড করুন।
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+                <span style="font-family:var(--cond);font-size:12px;font-weight:700;text-transform:uppercase;color:#ff0000;background:rgba(255,0,0,.08);padding:4px 10px;border-radius:6px">&#127916; Requirement 01</span>
+                <span style="font-size:12px;color:var(--slate);font-weight:600">YouTube Channel</span>
+              </div>
+              <h4 style="font-family:var(--disp);font-size:24px;color:var(--blue-d);margin:0 0 8px;letter-spacing:.5px">চ্যানেলে সাবস্ক্রাইব করুন</h4>
+              <p style="font-size:14px;color:var(--slate);line-height:1.45;margin:0 0 16px">
+                আমাদের অফিশিয়াল YouTube চ্যানেলে সাবস্ক্রাইব করুন এবং সমস্ত ফ্ল্যাগশিপ শো ও ম্যাচডে লাইভ স্ট্রিমে যুক্ত থাকুন।
               </p>
-              <div style="background:rgba(255,255,255,.15);border-radius:10px;padding:8px 14px;margin-top:12px;font-size:13.5px;display:inline-block">
-                &#127915; <b>১ জন ভাগ্যবান বিজয়ী পাবেন ফাইনাল ম্যাচের ফ্রি ভিআইপি টিকিট!</b>
-              </div>
             </div>
-            <div>
-              <div class="lottery-progress"><div class="lottery-bar"></div></div>
-              <div class="lottery-meta">
-                <span><b>14,842</b> Fans Entered</span>
-                <span>Goal: 20,000 Entries</span>
-              </div>
+            <div style="background:var(--mist);border-radius:10px;padding:10px 14px;font-family:var(--cond);font-size:12.5px;color:var(--blue);font-weight:700;text-transform:uppercase;display:flex;align-items:center;gap:8px">
+              <span>&#128276; সাবস্ক্রাইব করে এন্ট্রি ভেরিফাই করুন</span>
             </div>
           </div>
 
-          <!-- UGC Reaction Wall -->
-          <div class="ugc-box">
-            <h4 style="font-family:var(--cond);font-size:17px;font-weight:700;text-transform:uppercase;color:var(--blue-l);margin:0">UGC Reaction Wall</h4>
-            
-            <div class="ugc-selector">
-              <button class="ugc-chip active">Tea Stall</button>
-              <button class="ugc-chip">University</button>
-              <button class="ugc-chip">Living Room</button>
-              <button class="ugc-chip">Stadium Stand</button>
+          <!-- Requirement 2: 2-Min Video -->
+          <div style="background:#fff;border:1.5px solid var(--line);border-radius:16px;padding:24px;border-top:4px solid var(--grass);box-shadow:0 8px 24px rgba(11,74,143,.05);display:flex;flex-direction:column;justify-content:space-between">
+            <div>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+                <span style="font-family:var(--cond);font-size:12px;font-weight:700;text-transform:uppercase;color:var(--grass-d);background:rgba(16,133,74,.08);padding:4px 10px;border-radius:6px">&#127909; Requirement 02</span>
+                <span style="font-size:12px;color:var(--slate);font-weight:600">Fan Video Challenge</span>
+              </div>
+              <h4 style="font-family:var(--disp);font-size:24px;color:var(--blue-d);margin:0 0 8px;letter-spacing:.5px">২ মিনিটের শুভেচ্ছা বা রিঅ্যাকশন ভিডিও</h4>
+              <p style="font-size:14px;color:var(--slate);line-height:1.45;margin:0 0 16px">
+                নারী ক্রিকেট দলকে সমর্থন জানিয়ে একটি ২ মিনিটের শুভেচ্ছা বার্তা বা ম্যাচ রিঅ্যাকশন ভিডিও আপলোড করুন (#RoadToTheFinal হ্যাশট্যাগ সহ)।
+              </p>
             </div>
-            <button class="gbtn" id="ugcSubmitBtn" style="padding:9px 18px;font-size:14px;margin-bottom:14px;width:100%">Simulate Upload Reaction</button>
-            <div class="ugc-wall" id="ugcWall">
-              <div class="ugc-item">
-                <span class="tag">Tea Stall (Bogura)</span>
-                <span>&ldquo;The whole bazaar was screaming on that last over! &#128293;&rdquo;</span>
-                <span style="color:var(--grass-d);font-weight:700">+10 pts</span>
-              </div>
-              <div class="ugc-item">
-                <span class="tag">Dhaka Univ. Campus</span>
-                <span>&ldquo;Projector screen on the lawn was electric!&rdquo;</span>
-                <span style="color:var(--grass-d);font-weight:700">+10 pts</span>
-              </div>
+            <div style="background:rgba(16,133,74,.08);border-radius:10px;padding:10px 14px;font-family:var(--cond);font-size:12.5px;color:var(--grass-d);font-weight:700;text-transform:uppercase;display:flex;align-items:center;gap:8px">
+              <span>&#127919; ভিডিও আপলোড &middot; #RoadToTheFinal</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Grand Finale VIP Ticket Lottery Banner -->
+        <div class="lottery-box" style="margin-top:0">
+          <div>
+            <div class="hook-badge" style="background:#fff;color:var(--blue-d)">গ্র্যান্ড ফিনালে রিওয়ার্ড &middot; ফ্যান অ্যাক্টিভেশন</div>
+            <h4 class="lottery-title" style="margin-top:8px">ফ্রি ভিআইপি টিকিট লটারি</h4>
+            <p style="font-size:14.5px;color:var(--cloud);margin:8px 0 0;line-height:1.45">
+              উভয় শর্ত পূরণকারী ফ্যানদের মধ্য থেকে <b>১ জন ভাগ্যবান বিজয়ী</b> পাবেন ২০২৮ হোম ওয়ার্ল্ড কাপ ফাইনাল ম্যাচের ফ্রি ভিআইপি টিকিট!
+            </p>
+          </div>
+          <div style="min-width:280px;flex:1;max-width:380px">
+            <div class="lottery-progress"><div class="lottery-bar"></div></div>
+            <div class="lottery-meta">
+              <span><b>14,842</b> Fans Entered</span>
+              <span>Goal: 20,000 Entries</span>
             </div>
           </div>
         </div>
@@ -2252,11 +2385,31 @@ povTabs.forEach(tab => {
 // Principle 04: Worldbuilding timeline
 const wbSteps = document.querySelectorAll('.wb-step');
 const wbDetails = {
-  2011: 'Bangladesh defeated Ireland by 82 runs in Savar to earn official WODI status &mdash; the foundational spark for national women’s cricket.',
-  2014: 'Bangladesh hosted the ICC Women’s World T20 in Sylhet, playing in front of capacity domestic crowds and setting television viewership benchmarks.',
-  2018: 'Jahanara Alam scored the winning runs on the final ball against six-time champions India in Kuala Lumpur, capturing Bangladesh’s first Asia Cup trophy.',
-  2023: 'Bangladesh stunned tournament favorites Australia by 7 wickets in the ICC U-19 Women’s World Cup opener in South Africa, introducing the new fearless generation.',
-  2028: 'The ICC Women’s T20 World Cup returns home to Bangladesh. 80 players, 8 divisions, built as an interconnected transmedia universe.'
+  2011: {
+    img: 'images/wb-2011.jpg',
+    tag: 'The Savar Spark',
+    text: '<b>সাভারের ভিত্তিপ্রস্তর:</b> ২০১১ সালে সাভারে আয়ারল্যান্ডকে ৮২ রানে হারিয়ে বাংলাদেশ নারী দল প্রথম অফিসিয়াল WODI স্ট্যাটাস অর্জন করে। এটিই ছিল আন্তর্জাতিক ক্রিকেটে আমাদের আনুষ্ঠানিক ভিত্তিপ্রস্তর।'
+  },
+  2014: {
+    img: 'images/wb-2014.jpg',
+    tag: 'Home Debut · Sylhet Stadium',
+    text: '<b>সিলেটে আন্তর্জাতিক অভিষেক:</b> ২০১৪ সালে সিলেটে আইসিসি নারী ওয়ার্ল্ড টি-টোয়েন্টি আয়োজিত হয়। দেশের মাটিতে হাউসফুল দর্শক এবং অভূতপূর্ব টেলিভিশন ভিউয়ারশিপের মাধ্যমে নারী ক্রিকেট প্রথমবার ঘরে ঘরে পৌঁছে যায়।'
+  },
+  2018: {
+    img: 'images/wb-2018.jpg',
+    tag: 'Asia Cup Miracle · Kuala Lumpur',
+    text: '<b>কুয়ালালামপুরে ইতিহাস:</b> ৬ বারের অপরাজিত চ্যাম্পিয়ন ভারতকে ফাইনালের শেষ বলে হারিয়ে বাংলাদেশ ঐতিহাসিক এশিয়া কাপ ট্রফি জয় করে। জাহানারা আলমের উইনিং রান দেশকে এনে দেয় নারী ক্রিকেটের প্রথম মহাদেশীয় শিরোপা।'
+  },
+  2023: {
+    img: 'images/wb-2023.jpg',
+    tag: 'U-19 Shockwave · South Africa',
+    text: '<b>অস্ট্রেলিয়ার বিরুদ্ধে অবিস্মরণীয় জয়:</b> উদ্বোধনী অনূর্ধ্ব-১৯ নারী বিশ্বকাপে অস্ট্রেলিয়াকে ৭ উইকেটে হারিয়ে বিশ্বকে চমকে দেয় বাংলাদেশ। মারুফা, স্বর্ণা ও দিলারার মতো নির্ভীক নতুন প্রজন্মের আগমন ঘটে।'
+  },
+  2028: {
+    img: 'images/wb-2028.jpg',
+    tag: 'The Home Universe · Mirpur Stadium',
+    text: '<b>হোম ওয়ার্ল্ড কাপের বিশ্বমঞ্চ:</b> শের-ই-বাংলা জাতীয় স্টেডিয়াম মিরপুরসহ দেশের শীর্ষ ভেন্যুতে বসবে ২০২৮ বিশ্বকাপ। ৮০ জন খেলোয়াড়, ৮টি বিভাগ এবং একটি অবিচ্ছিন্ন ট্রান্সমিডিয়া ইকোসিস্টেমে রচিত হবে নতুন ইতিহাস।'
+  }
 };
 const wbDetailBox = document.getElementById('wbDetailBox');
 wbSteps.forEach(step => {
@@ -2264,8 +2417,19 @@ wbSteps.forEach(step => {
     wbSteps.forEach(s => s.classList.remove('active'));
     step.classList.add('active');
     const yr = step.dataset.year;
-    if (wbDetailBox && wbDetails[yr]) {
-      wbDetailBox.innerHTML = `<b>${yr} Milestone:</b> ${wbDetails[yr]}`;
+    const d = wbDetails[yr];
+    if (wbDetailBox && d) {
+      wbDetailBox.innerHTML = `
+        <div class="wb-detail-card">
+          <img src="${d.img}" alt="${yr} Milestone" class="wb-detail-img">
+          <div>
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
+              <span class="pill" style="font-size:11.5px;padding:3px 10px;background:var(--mist)">${yr} Milestone</span>
+              <span style="font-family:var(--cond);font-size:13px;font-weight:700;color:var(--blue);text-transform:uppercase">${d.tag}</span>
+            </div>
+            <p style="font-size:14.5px;color:var(--ink);line-height:1.45;margin:0">${d.text}</p>
+          </div>
+        </div>`;
     }
   });
 });
@@ -2319,30 +2483,8 @@ subjBtns.forEach(btn => {
   });
 });
 
-// Principle 07: UGC Simulator
-const ugcChips = document.querySelectorAll('.ugc-chip');
-ugcChips.forEach(chip => {
-  chip.addEventListener('click', () => {
-    ugcChips.forEach(c => c.classList.remove('active'));
-    chip.classList.add('active');
-  });
-});
-const ugcSubmitBtn = document.getElementById('ugcSubmitBtn');
-if (ugcSubmitBtn) {
-  ugcSubmitBtn.addEventListener('click', () => {
-    const activeChip = document.querySelector('.ugc-chip.active');
-    const loc = activeChip ? activeChip.textContent : 'Mirpur Stand';
-    const wall = document.getElementById('ugcWall');
-    if (wall) {
-      const item = document.createElement('div');
-      item.className = 'ugc-item';
-      item.innerHTML = `<span class="tag">${loc}</span><span>&ldquo;Just locked my prediction for Bangladesh! Road to the Final! &#128293;&rdquo;</span><span style="color:var(--grass-d);font-weight:700">+10 pts</span>`;
-      wall.prepend(item);
-    }
-    ugcSubmitBtn.textContent = '✓ Reaction Uploaded!';
-    setTimeout(() => { ugcSubmitBtn.textContent = 'Simulate Upload Reaction'; }, 2000);
-  });
-}
+// Principle 07: Fan Activation & Lottery Tracker
+// Requirements: (1) YouTube Channel Subscription, (2) 2-min Reaction/Wishing Video
 
 </script>
 </body>
