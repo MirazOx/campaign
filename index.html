@@ -488,6 +488,191 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
 .yt-link-btn:hover{background:#cc0000;transform:translateY(-1px)}
 .video-meta-txt{font-size:13px;color:var(--fog);font-family:var(--cond);text-transform:uppercase;letter-spacing:.5px}
 
+
+/* ==========================================================================
+   CINEMATIC FULL-SCREEN PHOTO BREATHERS (Information Pause)
+   ========================================================================== */
+.photo-breather {
+  position: relative;
+  width: 100%;
+  min-height: 480px;
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+}
+@media (min-width: 992px) {
+  .photo-breather {
+    min-height: 540px;
+    background-attachment: fixed;
+  }
+}
+.photo-breather-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(7,52,104,0.25) 0%, rgba(7,52,104,0.65) 55%, rgba(7,52,104,0.94) 100%);
+  pointer-events: none;
+}
+.photo-breather-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 32px;
+  color: #fff;
+}
+.photo-breather-tag {
+  display: inline-block;
+  font-family: var(--cond);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--yellow);
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(8px);
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+  border: 1px solid rgba(245,185,33,0.35);
+}
+.photo-breather-title {
+  font-family: var(--disp);
+  font-size: clamp(34px, 5.5vw, 68px);
+  text-transform: uppercase;
+  line-height: 1.02;
+  margin: 0 0 12px;
+  color: #fff;
+  letter-spacing: .5px;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.65);
+}
+.photo-breather-sub {
+  font-family: var(--cond);
+  font-size: clamp(17px, 2vw, 22px);
+  font-weight: 600;
+  color: #e2ecf8;
+  max-width: 65ch;
+  margin: 0;
+  line-height: 1.35;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+}
+
+/* ==========================================================================
+   PROGRAMME CARDS WITH VISUAL PHOTO BANNERS (Slide 1 & Slide 2)
+   ========================================================================== */
+.prog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+@media (max-width: 768px) {
+  .prog-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.prog-card {
+  background: #fff;
+  border: 1.5px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  box-shadow: 0 4px 14px rgba(11,74,143,.06);
+  position: relative;
+}
+.prog-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px rgba(11,74,143,.14);
+  border-color: var(--blue-l);
+}
+
+/* Card Visual Banner */
+.prog-card-banner {
+  position: relative;
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+  background-color: var(--blue-d);
+}
+.prog-card-banner-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform .4s ease;
+}
+.prog-card:hover .prog-card-banner-bg {
+  transform: scale(1.06);
+}
+.prog-card-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(7,52,104,0.2) 0%, rgba(7,52,104,0.85) 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 12px 14px;
+}
+
+/* Platform pills on banner */
+.prog-banner-badge {
+  font-family: var(--cond);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.25);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.prog-banner-action {
+  font-family: var(--cond);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  color: var(--yellow);
+  background: rgba(7,52,104,0.7);
+  padding: 3px 8px;
+  border-radius: 6px;
+  backdrop-filter: blur(4px);
+}
+
+/* Card Body */
+.prog-card-body {
+  padding: 16px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+/* Bangla Highlighted Card */
+.prog-card-highlight {
+  border: 1.5px solid var(--yellow);
+  box-shadow: 0 6px 18px rgba(245,185,33,.15);
+}
+.prog-card-highlight .prog-card-banner-overlay {
+  background: linear-gradient(180deg, rgba(216,154,8,0.2) 0%, rgba(7,52,104,0.9) 100%);
+}
+.prog-card-highlight:hover {
+  border-color: var(--yellow-d);
+  box-shadow: 0 14px 34px rgba(245,185,33,.25);
+}
+
 </style>
 </head>
 <body>
@@ -541,6 +726,17 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
   </div>
 </section>
 
+
+
+<!-- PHOTO BREATHER 01: THE MOMENTUM -->
+<section class="photo-breather" style="background-image:url('images/celebrate.jpg')">
+  <div class="photo-breather-scrim"></div>
+  <div class="photo-breather-content reveal">
+    <span class="photo-breather-tag">The Campaign Horizon &middot; Visual Pause</span>
+    <h2 class="photo-breather-title">One Universe. Every Screen.</h2>
+    <p class="photo-breather-sub">From grassroots contender trials to the World Cup final &mdash; transmedia storytelling built for 170 million fans.</p>
+  </div>
+</section>
 
 <section id="principles" style="background:var(--mist);padding:92px 0">
   <div class="wrap">
@@ -611,7 +807,7 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
         </div>
 
         
-        <!-- Slide 1: Spreadability Programmes -->
+                <!-- Slide 1: Spreadability Programmes -->
         <div class="prog-container">
           <div class="prog-section-title">
             <div>
@@ -624,83 +820,147 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
           <div class="prog-grid">
             <!-- 1. YouTube Documentary -->
             <div class="prog-card">
-              <div class="prog-head">
-                <span class="prog-name">YouTube Documentary</span>
-                <span class="prog-badge">YouTube</span>
+              <div class="prog-card-banner">
+                <div class="prog-card-banner-bg" style="background-image:url('images/squad.jpg')"></div>
+                <div class="prog-card-banner-overlay">
+                  <span class="prog-banner-badge">&#9658; YouTube Mini-Doc</span>
+                  <span class="prog-banner-action">18:40 &middot; 4K</span>
+                </div>
               </div>
-              <p class="prog-desc">Players’ journeys, struggles &amp; achievements</p>
+              <div class="prog-card-body">
+                <div class="prog-head">
+                  <span class="prog-name">YouTube Documentary</span>
+                </div>
+                <p class="prog-desc">Players’ journeys, struggles &amp; achievements</p>
+              </div>
             </div>
 
             <!-- 2. Facebook — Share the Story -->
             <div class="prog-card">
-              <div class="prog-head">
-                <span class="prog-name"><span class="prog-platform">Facebook</span> &mdash; Share the Story</span>
-                <span class="prog-badge">Facebook</span>
+              <div class="prog-card-banner">
+                <div class="prog-card-banner-bg" style="background-image:url('images/celebrate.jpg')"></div>
+                <div class="prog-card-banner-overlay">
+                  <span class="prog-banner-badge">Facebook Hub</span>
+                  <span class="prog-banner-action">&#128077; 48K Shares</span>
+                </div>
               </div>
-              <p class="prog-desc">Documentary clips, photocards &amp; player facts</p>
+              <div class="prog-card-body">
+                <div class="prog-head">
+                  <span class="prog-name"><span class="prog-platform">Facebook</span> &mdash; Share the Story</span>
+                </div>
+                <p class="prog-desc">Documentary clips, photocards &amp; player facts</p>
+              </div>
             </div>
 
             <!-- 3. কানে কানে ক্রিকেট | Podcast (Spotify) & Radio [HIGHLIGHTED BANGLA] -->
             <div class="prog-card prog-card-highlight">
-              <div class="prog-head">
-                <div class="prog-title-wrap">
-                  <span class="prog-bn-tag">Bengali IP</span>
-                  <span class="prog-name"><span class="bn-title">কানে কানে ক্রিকেট</span> <span class="prog-subname">| Podcast &amp; Radio</span></span>
+              <div class="prog-card-banner">
+                <div class="prog-card-banner-bg" style="background-image:url('images/batfocus.jpg')"></div>
+                <div class="prog-card-banner-overlay">
+                  <span class="prog-banner-badge">&#127911; Spotify &amp; Radio Exclusive</span>
+                  <span class="prog-banner-action">&#9835; Episode 04</span>
                 </div>
-                <span class="prog-badge prog-badge-audio">Spotify &amp; Radio</span>
               </div>
-              <p class="prog-desc">Player stories, experiences, match commentary &amp; updates</p>
+              <div class="prog-card-body">
+                <div class="prog-head">
+                  <div class="prog-title-wrap">
+                    <span class="prog-bn-tag">Signature Bengali IP</span>
+                    <span class="prog-name"><span class="bn-title">কানে কানে ক্রিকেট</span> <span class="prog-subname">| Podcast &amp; Radio</span></span>
+                  </div>
+                </div>
+                <p class="prog-desc">Player stories, experiences, match commentary &amp; updates</p>
+              </div>
             </div>
 
             <!-- 4. Instagram Carousel — Meet the Team -->
             <div class="prog-card">
-              <div class="prog-head">
-                <span class="prog-name"><span class="prog-platform">Instagram Carousel</span> &mdash; Meet the Team</span>
-                <span class="prog-badge">Instagram</span>
+              <div class="prog-card-banner">
+                <div class="prog-card-banner-bg" style="background-image:url('images/batter2.jpg')"></div>
+                <div class="prog-card-banner-overlay">
+                  <span class="prog-banner-badge">&#128248; Instagram Carousel</span>
+                  <span class="prog-banner-action">1/5 Profiles &rarr;</span>
+                </div>
               </div>
-              <p class="prog-desc">Team profiles, key players &amp; achievements</p>
+              <div class="prog-card-body">
+                <div class="prog-head">
+                  <span class="prog-name"><span class="prog-platform">Instagram Carousel</span> &mdash; Meet the Team</span>
+                </div>
+                <p class="prog-desc">Team profiles, key players &amp; achievements</p>
+              </div>
             </div>
 
             <!-- 5. Instagram Reels & TikTok — Play Along! -->
             <div class="prog-card">
-              <div class="prog-head">
-                <span class="prog-name"><span class="prog-platform">Instagram Reels &amp; TikTok</span> &mdash; Play Along!</span>
-                <span class="prog-badge">Reels &amp; TikTok</span>
+              <div class="prog-card-banner">
+                <div class="prog-card-banner-bg" style="background-image:url('images/highfive.jpg')"></div>
+                <div class="prog-card-banner-overlay">
+                  <span class="prog-banner-badge">&#9889; Reels &amp; TikTok</span>
+                  <span class="prog-banner-action">15s Quiz &amp; Challenge</span>
+                </div>
               </div>
-              <p class="prog-desc">Guess the Player, Did You Know?, challenges &amp; predictions</p>
+              <div class="prog-card-body">
+                <div class="prog-head">
+                  <span class="prog-name"><span class="prog-platform">Instagram Reels &amp; TikTok</span> &mdash; Play Along!</span>
+                </div>
+                <p class="prog-desc">Guess the Player, Did You Know?, challenges &amp; predictions</p>
+              </div>
             </div>
 
             <!-- 6. Online Magazine — মাঠের বাইরে [HIGHLIGHTED BANGLA] -->
             <div class="prog-card prog-card-highlight">
-              <div class="prog-head">
-                <div class="prog-title-wrap">
-                  <span class="prog-bn-tag">Bengali IP</span>
-                  <span class="prog-name"><span class="prog-platform">Online Magazine</span> &mdash; <span class="bn-title">মাঠের বাইরে</span></span>
+              <div class="prog-card-banner">
+                <div class="prog-card-banner-bg" style="background-image:url('images/appeal.jpg')"></div>
+                <div class="prog-card-banner-overlay">
+                  <span class="prog-banner-badge">&#128214; Digital Magazine</span>
+                  <span class="prog-banner-action">Issue 01 &middot; Feature</span>
                 </div>
-                <span class="prog-badge prog-badge-editorial">Online Mag</span>
               </div>
-              <p class="prog-desc">Untold stories, career journeys &amp; team history</p>
+              <div class="prog-card-body">
+                <div class="prog-head">
+                  <div class="prog-title-wrap">
+                    <span class="prog-bn-tag">Signature Bengali IP</span>
+                    <span class="prog-name"><span class="prog-platform">Online Magazine</span> &mdash; <span class="bn-title">মাঠের বাইরে</span></span>
+                  </div>
+                </div>
+                <p class="prog-desc">Untold stories, career journeys &amp; team history</p>
+              </div>
             </div>
 
             <!-- 7. Website — Cricket 360° -->
             <div class="prog-card">
-              <div class="prog-head">
-                <span class="prog-name"><span class="prog-platform">Website</span> &mdash; Cricket 360&deg;</span>
-                <span class="prog-badge">Web Hub</span>
+              <div class="prog-card-banner">
+                <div class="prog-card-banner-bg" style="background-image:url('images/hero.jpg')"></div>
+                <div class="prog-card-banner-overlay">
+                  <span class="prog-banner-badge">&#127760; Official Web Hub</span>
+                  <span class="prog-banner-action">Live Radar</span>
+                </div>
               </div>
-              <p class="prog-desc">Match schedules, results, statistics &amp; expert analysis</p>
+              <div class="prog-card-body">
+                <div class="prog-head">
+                  <span class="prog-name"><span class="prog-platform">Website</span> &mdash; Cricket 360&deg;</span>
+                </div>
+                <p class="prog-desc">Match schedules, results, statistics &amp; expert analysis</p>
+              </div>
             </div>
 
             <!-- 8. Advertising Campaign — বিশ্বকাপের হাওয়া [HIGHLIGHTED BANGLA] -->
             <div class="prog-card prog-card-highlight">
-              <div class="prog-head">
-                <div class="prog-title-wrap">
-                  <span class="prog-bn-tag">Bengali IP</span>
-                  <span class="prog-name"><span class="prog-platform">Advertising Campaign</span> &mdash; <span class="bn-title">বিশ্বকাপের হাওয়া</span></span>
+              <div class="prog-card-banner">
+                <div class="prog-card-banner-bg" style="background-image:url('images/hug.jpg')"></div>
+                <div class="prog-card-banner-overlay">
+                  <span class="prog-banner-badge">&#127775; Nationwide Campaign</span>
+                  <span class="prog-banner-action">TVC &amp; Billboard</span>
                 </div>
-                <span class="prog-badge prog-badge-campaign">Ad Campaign</span>
               </div>
-              <p class="prog-desc">Promotional ads featuring emerging &amp; popular players</p>
+              <div class="prog-card-body">
+                <div class="prog-head">
+                  <div class="prog-title-wrap">
+                    <span class="prog-bn-tag">Signature Bengali IP</span>
+                    <span class="prog-name"><span class="prog-platform">Advertising Campaign</span> &mdash; <span class="bn-title">বিশ্বকাপের হাওয়া</span></span>
+                  </div>
+                </div>
+                <p class="prog-desc">Promotional ads featuring emerging &amp; popular players</p>
+              </div>
             </div>
           </div>
         </div>
@@ -752,7 +1012,7 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
         </div>
 
         
-        <!-- Slide 2: Continuity Programmes -->
+                <!-- Slide 2: Continuity Programmes -->
         <div class="prog-container">
           <div class="prog-section-title">
             <div>
@@ -765,80 +1025,144 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
           <div class="prog-grid">
             <!-- 1. Central Live Update Page / Live Thread -->
             <div class="prog-card">
-              <div class="prog-head">
-                <span class="prog-name">Central Live Update Page / Live Thread</span>
-                <span class="prog-badge">Live Hub</span>
+              <div class="prog-card-banner">
+                <div class="prog-card-banner-bg" style="background-image:url('images/hero.jpg')"></div>
+                <div class="prog-card-banner-overlay">
+                  <span class="prog-banner-badge">&#128308; Live Match Center</span>
+                  <span class="prog-banner-action">Single Source</span>
+                </div>
               </div>
-              <p class="prog-desc">Team news, player updates, schedules &amp; results</p>
+              <div class="prog-card-body">
+                <div class="prog-head">
+                  <span class="prog-name">Central Live Update Page / Live Thread</span>
+                </div>
+                <p class="prog-desc">Team news, player updates, schedules &amp; results</p>
+              </div>
             </div>
 
             <!-- 2. Facebook — Share the Story -->
             <div class="prog-card">
-              <div class="prog-head">
-                <span class="prog-name"><span class="prog-platform">Facebook</span> &mdash; Share the Story</span>
-                <span class="prog-badge">Facebook</span>
+              <div class="prog-card-banner">
+                <div class="prog-card-banner-bg" style="background-image:url('images/highfive.jpg')"></div>
+                <div class="prog-card-banner-overlay">
+                  <span class="prog-banner-badge">Real-Time Photocards</span>
+                  <span class="prog-banner-action">&#128077; Breaking Updates</span>
+                </div>
               </div>
-              <p class="prog-desc">Real-time updates through photocards</p>
+              <div class="prog-card-body">
+                <div class="prog-head">
+                  <span class="prog-name"><span class="prog-platform">Facebook</span> &mdash; Share the Story</span>
+                </div>
+                <p class="prog-desc">Real-time updates through photocards</p>
+              </div>
             </div>
 
             <!-- 3. Instagram Reels & TikTok — Play Along! -->
             <div class="prog-card">
-              <div class="prog-head">
-                <span class="prog-name"><span class="prog-platform">Instagram Reels &amp; TikTok</span> &mdash; Play Along!</span>
-                <span class="prog-badge">Reels &amp; TikTok</span>
+              <div class="prog-card-banner">
+                <div class="prog-card-banner-bg" style="background-image:url('images/batfocus.jpg')"></div>
+                <div class="prog-card-banner-overlay">
+                  <span class="prog-banner-badge">&#9889; Reels &amp; TikTok</span>
+                  <span class="prog-banner-action">Match Reactions</span>
+                </div>
               </div>
-              <p class="prog-desc">Quick updates, player moments &amp; match reactions</p>
+              <div class="prog-card-body">
+                <div class="prog-head">
+                  <span class="prog-name"><span class="prog-platform">Instagram Reels &amp; TikTok</span> &mdash; Play Along!</span>
+                </div>
+                <p class="prog-desc">Quick updates, player moments &amp; match reactions</p>
+              </div>
             </div>
 
             <!-- 4. Website — Cricket 360° -->
             <div class="prog-card">
-              <div class="prog-head">
-                <span class="prog-name"><span class="prog-platform">Website</span> &mdash; Cricket 360&deg;</span>
-                <span class="prog-badge">Web Hub</span>
+              <div class="prog-card-banner">
+                <div class="prog-card-banner-bg" style="background-image:url('images/batter2.jpg')"></div>
+                <div class="prog-card-banner-overlay">
+                  <span class="prog-banner-badge">&#127760; In-Depth Hub</span>
+                  <span class="prog-banner-action">Wagon Wheels &amp; Stats</span>
+                </div>
               </div>
-              <p class="prog-desc">Detailed match reports, statistics &amp; expert analysis</p>
+              <div class="prog-card-body">
+                <div class="prog-head">
+                  <span class="prog-name"><span class="prog-platform">Website</span> &mdash; Cricket 360&deg;</span>
+                </div>
+                <p class="prog-desc">Detailed match reports, statistics &amp; expert analysis</p>
+              </div>
             </div>
 
             <!-- 5. Online Magazine — মাঠের বাইরে [HIGHLIGHTED BANGLA] -->
             <div class="prog-card prog-card-highlight">
-              <div class="prog-head">
-                <div class="prog-title-wrap">
-                  <span class="prog-bn-tag">Bengali IP</span>
-                  <span class="prog-name"><span class="prog-platform">Online Magazine</span> &mdash; <span class="bn-title">মাঠের বাইরে</span></span>
+              <div class="prog-card-banner">
+                <div class="prog-card-banner-bg" style="background-image:url('images/appeal.jpg')"></div>
+                <div class="prog-card-banner-overlay">
+                  <span class="prog-banner-badge">&#128214; In-Depth Tournament Issue</span>
+                  <span class="prog-banner-action">Deep Analysis</span>
                 </div>
-                <span class="prog-badge prog-badge-editorial">Online Mag</span>
               </div>
-              <p class="prog-desc">In-depth stories connected to tournament developments</p>
+              <div class="prog-card-body">
+                <div class="prog-head">
+                  <div class="prog-title-wrap">
+                    <span class="prog-bn-tag">Signature Bengali IP</span>
+                    <span class="prog-name"><span class="prog-platform">Online Magazine</span> &mdash; <span class="bn-title">মাঠের বাইরে</span></span>
+                  </div>
+                </div>
+                <p class="prog-desc">In-depth stories connected to tournament developments</p>
+              </div>
             </div>
 
             <!-- 6. কানে কানে ক্রিকেট | Podcast & Radio [HIGHLIGHTED BANGLA] -->
             <div class="prog-card prog-card-highlight">
-              <div class="prog-head">
-                <div class="prog-title-wrap">
-                  <span class="prog-bn-tag">Bengali IP</span>
-                  <span class="prog-name"><span class="bn-title">কানে কানে ক্রিকেট</span> <span class="prog-subname">| Podcast &amp; Radio</span></span>
+              <div class="prog-card-banner">
+                <div class="prog-card-banner-bg" style="background-image:url('images/hug.jpg')"></div>
+                <div class="prog-card-banner-overlay">
+                  <span class="prog-banner-badge">&#127911; Ongoing Audio Broadcast</span>
+                  <span class="prog-banner-action">Post-Match Debrief</span>
                 </div>
-                <span class="prog-badge prog-badge-audio">Podcast &amp; Radio</span>
               </div>
-              <p class="prog-desc">Ongoing player stories, match commentary &amp; discussions</p>
+              <div class="prog-card-body">
+                <div class="prog-head">
+                  <div class="prog-title-wrap">
+                    <span class="prog-bn-tag">Signature Bengali IP</span>
+                    <span class="prog-name"><span class="bn-title">কানে কানে ক্রিকেট</span> <span class="prog-subname">| Podcast &amp; Radio</span></span>
+                  </div>
+                </div>
+                <p class="prog-desc">Ongoing player stories, match commentary &amp; discussions</p>
+              </div>
             </div>
 
             <!-- 7. Cross-Platform Content Flow -->
             <div class="prog-card">
-              <div class="prog-head">
-                <span class="prog-name">Cross-Platform Content Flow</span>
-                <span class="prog-badge">Workflow</span>
+              <div class="prog-card-banner">
+                <div class="prog-card-banner-bg" style="background-image:url('images/squad.jpg')"></div>
+                <div class="prog-card-banner-overlay">
+                  <span class="prog-banner-badge">&#128260; Architecture</span>
+                  <span class="prog-banner-action">Multi-Format Adaptation</span>
+                </div>
               </div>
-              <p class="prog-desc">One key update adapted into different formats for different platforms</p>
+              <div class="prog-card-body">
+                <div class="prog-head">
+                  <span class="prog-name">Cross-Platform Content Flow</span>
+                </div>
+                <p class="prog-desc">One key update adapted into different formats for different platforms</p>
+              </div>
             </div>
 
             <!-- 8. Consistent Storytelling -->
             <div class="prog-card">
-              <div class="prog-head">
-                <span class="prog-name">Consistent Storytelling</span>
-                <span class="prog-badge">Core Narrative</span>
+              <div class="prog-card-banner">
+                <div class="prog-card-banner-bg" style="background-image:url('images/celebrate.jpg')"></div>
+                <div class="prog-card-banner-overlay">
+                  <span class="prog-banner-badge">&#128279; Core Narrative</span>
+                  <span class="prog-banner-action">Continuous Loop</span>
+                </div>
               </div>
-              <p class="prog-desc">Connected information, unique content and continuous audience engagement</p>
+              <div class="prog-card-body">
+                <div class="prog-head">
+                  <span class="prog-name">Consistent Storytelling</span>
+                </div>
+                <p class="prog-desc">Connected information, unique content and continuous audience engagement</p>
+              </div>
             </div>
           </div>
         </div>
@@ -884,6 +1208,17 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
           </div>
         </div>
       </article>
+
+      
+<!-- PHOTO BREATHER 02: THE PASSION -->
+<section class="photo-breather" style="background-image:url('images/appeal.jpg');min-height:460px">
+  <div class="photo-breather-scrim"></div>
+  <div class="photo-breather-content reveal">
+    <span class="photo-breather-tag">The Passion on the Turf &middot; Visual Pause</span>
+    <h2 class="photo-breather-title">Every Ball Contested.</h2>
+    <p class="photo-breather-sub">Step inside the stadium narrative &mdash; interactive field maps, real-time prediction games, and fan performance.</p>
+  </div>
+</section>
 
       <!-- PRINCIPLE 03 -->
       <article class="p-card reveal" id="p3">
@@ -1216,6 +1551,17 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
 
 
 
+
+<!-- PHOTO BREATHER 03: THE PIONEERS -->
+<section class="photo-breather" style="background-image:url('images/squad.jpg')">
+  <div class="photo-breather-scrim"></div>
+  <div class="photo-breather-content reveal">
+    <span class="photo-breather-tag">The Deep Statistical Story &middot; Visual Pause</span>
+    <h2 class="photo-breather-title">80 Pioneers. One Canon.</h2>
+    <p class="photo-breather-sub">17 years of national women’s cricket documented across 8 home divisions.</p>
+  </div>
+</section>
+
 <section id="data">
   <div class="wrap">
     <p class="eyebrow blue reveal">Worldbuilding, in numbers</p>
@@ -1263,6 +1609,17 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
     </div>
 
     <p class="dsource reveal">Sources: ESPNcricinfo, Wisden &amp; official match archives (Oct 2026).</p>
+  </div>
+</section>
+
+
+<!-- PHOTO BREATHER 04: THE CAMARADERIE -->
+<section class="photo-breather" style="background-image:url('images/hug.jpg')">
+  <div class="photo-breather-scrim"></div>
+  <div class="photo-breather-content reveal">
+    <span class="photo-breather-tag">The Continuous Journey &middot; Visual Pause</span>
+    <h2 class="photo-breather-title">No Fan Left Behind.</h2>
+    <p class="photo-breather-sub">From free social discovery to live stadium celebration &mdash; every step connects.</p>
   </div>
 </section>
 
