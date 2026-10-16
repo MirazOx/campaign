@@ -429,6 +429,42 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
 .ugc-item{display:flex;align-items:center;justify-content:space-between;padding:8px 12px;background:var(--mist);border-radius:8px;font-size:14px}
 .ugc-item .tag{font-family:var(--cond);font-weight:700;color:var(--blue);text-transform:uppercase}
 
+
+/* ==========================================================================
+   PROGRAMME GRIDS & BANGLA IP HIGHLIGHTING (Jenkins Slide 1 & Slide 2)
+   ========================================================================== */
+.prog-container{margin:28px 0 32px}
+.prog-section-title{display:flex;align-items:center;justify-content:space-between;margin:0 0 16px;padding-bottom:12px;border-bottom:1.5px solid var(--line);flex-wrap:wrap;gap:10px}
+.prog-sup{display:block;font-family:var(--cond);font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--yellow-d);margin-bottom:3px}
+.prog-section-h{font-family:var(--cond);font-size:22px;font-weight:700;text-transform:uppercase;color:var(--blue-d);letter-spacing:.3px;margin:0}
+.prog-section-badge{font-family:var(--cond);font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:5px 12px;border-radius:14px;background:var(--yellow);color:var(--blue-d)}
+
+.prog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media(max-width:768px){.prog-grid{grid-template-columns:1fr}}
+
+.prog-card{background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:16px 18px;display:flex;flex-direction:column;gap:8px;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;box-shadow:0 2px 8px rgba(11,74,143,.04);position:relative}
+.prog-card:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(11,74,143,.08);border-color:var(--blue-l)}
+
+/* Bangla Highlighted Cards */
+.prog-card-highlight{background:linear-gradient(135deg, #ffffff 0%, #fffdf5 100%);border:1.5px solid var(--yellow);border-left:5px solid var(--yellow);box-shadow:0 4px 14px rgba(245,185,33,.12)}
+.prog-card-highlight:hover{border-color:var(--yellow-d);box-shadow:0 8px 22px rgba(245,185,33,.22)}
+
+.prog-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.prog-title-wrap{display:flex;flex-direction:column;gap:3px}
+.prog-bn-tag{display:inline-block;align-self:flex-start;font-family:var(--cond);font-size:10px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;padding:2px 7px;border-radius:4px;background:var(--yellow);color:var(--blue-d)}
+.prog-name{font-family:var(--cond);font-size:17.5px;font-weight:700;color:var(--blue-d);line-height:1.25}
+.prog-platform{color:var(--blue-l);font-weight:600}
+.prog-subname{color:var(--slate);font-weight:600;font-size:15px}
+
+.bn-title{font-family:'Kohinoor Bangla','SolaimanLipi','Bangla Sangam MN','Noto Sans Bengali',sans-serif;font-size:19px;font-weight:700;color:var(--blue-d);letter-spacing:0}
+
+.prog-badge{font-family:var(--cond);font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:3px 9px;border-radius:6px;background:var(--mist);color:var(--slate);white-space:nowrap;flex-shrink:0}
+.prog-badge-audio{background:#e8f4fd;color:var(--blue)}
+.prog-badge-editorial{background:#fdf2e9;color:#b25e06}
+.prog-badge-campaign{background:#fbeae8;color:var(--coral)}
+
+.prog-desc{font-size:14px;color:var(--slate);line-height:1.45;margin:0}
+
 </style>
 </head>
 <body>
@@ -486,7 +522,7 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
 <section id="principles" style="background:var(--mist);padding:92px 0">
   <div class="wrap">
     <p class="eyebrow blue reveal">Jenkins' Transmedia Framework in Practice</p>
-    <h2 class="h-sec reveal d1"><span class="b" style="white-space:nowrap">The 7 Principles</span> &mdash; <span class="y" style="white-space:nowrap">Applied</span></h2>
+    <h2 class="h-sec reveal d1"><span class="y" style="white-space:nowrap">The 7 Principles</span></h2>
     <p class="lead reveal d2">Every transmedia principle paired directly with its live production artifact. Here is what we build for each principle across our ecosystem &mdash; from viral hooks and deep data to the live prediction game and fan performance.</p>
 
     <!-- Quick Principle Navigator -->
@@ -533,6 +569,101 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
           <button class="hook-playbtn" id="hookPlayBtn" data-playing="false" aria-label="Play 15-sec audio hook">&#9658;</button>
         </div>
 
+        
+        <!-- Slide 1: Spreadability Programmes -->
+        <div class="prog-container">
+          <div class="prog-section-title">
+            <div>
+              <span class="prog-sup">Spreadability Strategy &middot; Slide 1</span>
+              <h4 class="prog-section-h">Building Hype &amp; Reaching Wider Audiences</h4>
+            </div>
+            <span class="prog-section-badge">8 Core Programmes</span>
+          </div>
+
+          <div class="prog-grid">
+            <!-- 1. YouTube Documentary -->
+            <div class="prog-card">
+              <div class="prog-head">
+                <span class="prog-name">YouTube Documentary</span>
+                <span class="prog-badge">YouTube</span>
+              </div>
+              <p class="prog-desc">Players’ journeys, struggles &amp; achievements</p>
+            </div>
+
+            <!-- 2. Facebook — Share the Story -->
+            <div class="prog-card">
+              <div class="prog-head">
+                <span class="prog-name"><span class="prog-platform">Facebook</span> &mdash; Share the Story</span>
+                <span class="prog-badge">Facebook</span>
+              </div>
+              <p class="prog-desc">Documentary clips, photocards &amp; player facts</p>
+            </div>
+
+            <!-- 3. কানে কানে ক্রিকেট | Podcast (Spotify) & Radio [HIGHLIGHTED BANGLA] -->
+            <div class="prog-card prog-card-highlight">
+              <div class="prog-head">
+                <div class="prog-title-wrap">
+                  <span class="prog-bn-tag">Bengali IP</span>
+                  <span class="prog-name"><span class="bn-title">কানে কানে ক্রিকেট</span> <span class="prog-subname">| Podcast &amp; Radio</span></span>
+                </div>
+                <span class="prog-badge prog-badge-audio">Spotify &amp; Radio</span>
+              </div>
+              <p class="prog-desc">Player stories, experiences, match commentary &amp; updates</p>
+            </div>
+
+            <!-- 4. Instagram Carousel — Meet the Team -->
+            <div class="prog-card">
+              <div class="prog-head">
+                <span class="prog-name"><span class="prog-platform">Instagram Carousel</span> &mdash; Meet the Team</span>
+                <span class="prog-badge">Instagram</span>
+              </div>
+              <p class="prog-desc">Team profiles, key players &amp; achievements</p>
+            </div>
+
+            <!-- 5. Instagram Reels & TikTok — Play Along! -->
+            <div class="prog-card">
+              <div class="prog-head">
+                <span class="prog-name"><span class="prog-platform">Instagram Reels &amp; TikTok</span> &mdash; Play Along!</span>
+                <span class="prog-badge">Reels &amp; TikTok</span>
+              </div>
+              <p class="prog-desc">Guess the Player, Did You Know?, challenges &amp; predictions</p>
+            </div>
+
+            <!-- 6. Online Magazine — মাঠের বাইরে [HIGHLIGHTED BANGLA] -->
+            <div class="prog-card prog-card-highlight">
+              <div class="prog-head">
+                <div class="prog-title-wrap">
+                  <span class="prog-bn-tag">Bengali IP</span>
+                  <span class="prog-name"><span class="prog-platform">Online Magazine</span> &mdash; <span class="bn-title">মাঠের বাইরে</span></span>
+                </div>
+                <span class="prog-badge prog-badge-editorial">Online Mag</span>
+              </div>
+              <p class="prog-desc">Untold stories, career journeys &amp; team history</p>
+            </div>
+
+            <!-- 7. Website — Cricket 360° -->
+            <div class="prog-card">
+              <div class="prog-head">
+                <span class="prog-name"><span class="prog-platform">Website</span> &mdash; Cricket 360&deg;</span>
+                <span class="prog-badge">Web Hub</span>
+              </div>
+              <p class="prog-desc">Match schedules, results, statistics &amp; expert analysis</p>
+            </div>
+
+            <!-- 8. Advertising Campaign — বিশ্বকাপের হাওয়া [HIGHLIGHTED BANGLA] -->
+            <div class="prog-card prog-card-highlight">
+              <div class="prog-head">
+                <div class="prog-title-wrap">
+                  <span class="prog-bn-tag">Bengali IP</span>
+                  <span class="prog-name"><span class="prog-platform">Advertising Campaign</span> &mdash; <span class="bn-title">বিশ্বকাপের হাওয়া</span></span>
+                </div>
+                <span class="prog-badge prog-badge-campaign">Ad Campaign</span>
+              </div>
+              <p class="prog-desc">Promotional ads featuring emerging &amp; popular players</p>
+            </div>
+          </div>
+        </div>
+
         <!-- Drillability artifact: Master Data Sheet Showcase Card -->
         <div style="background:var(--mist);border:1.5px solid var(--line);border-radius:18px;padding:26px 28px;margin-top:10px">
           <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:14px">
@@ -575,6 +706,98 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
             <div class="p-card-chips">
               <span class="p-chip"><b>Continuity:</b> One canonical match-center data feed powers broadcast, app &amp; podcast simultaneously</span>
               <span class="p-chip"><b>Multiplicity:</b> &ldquo;Off the XI&rdquo; tells the tournament through unselected players &amp; grassroots scouts</span>
+            </div>
+          </div>
+        </div>
+
+        
+        <!-- Slide 2: Continuity Programmes -->
+        <div class="prog-container">
+          <div class="prog-section-title">
+            <div>
+              <span class="prog-sup">Continuity Strategy &middot; Slide 2</span>
+              <h4 class="prog-section-h">One Tournament, Connected Stories</h4>
+            </div>
+            <span class="prog-section-badge">8 Continuity Strands</span>
+          </div>
+
+          <div class="prog-grid">
+            <!-- 1. Central Live Update Page / Live Thread -->
+            <div class="prog-card">
+              <div class="prog-head">
+                <span class="prog-name">Central Live Update Page / Live Thread</span>
+                <span class="prog-badge">Live Hub</span>
+              </div>
+              <p class="prog-desc">Team news, player updates, schedules &amp; results</p>
+            </div>
+
+            <!-- 2. Facebook — Share the Story -->
+            <div class="prog-card">
+              <div class="prog-head">
+                <span class="prog-name"><span class="prog-platform">Facebook</span> &mdash; Share the Story</span>
+                <span class="prog-badge">Facebook</span>
+              </div>
+              <p class="prog-desc">Real-time updates through photocards</p>
+            </div>
+
+            <!-- 3. Instagram Reels & TikTok — Play Along! -->
+            <div class="prog-card">
+              <div class="prog-head">
+                <span class="prog-name"><span class="prog-platform">Instagram Reels &amp; TikTok</span> &mdash; Play Along!</span>
+                <span class="prog-badge">Reels &amp; TikTok</span>
+              </div>
+              <p class="prog-desc">Quick updates, player moments &amp; match reactions</p>
+            </div>
+
+            <!-- 4. Website — Cricket 360° -->
+            <div class="prog-card">
+              <div class="prog-head">
+                <span class="prog-name"><span class="prog-platform">Website</span> &mdash; Cricket 360&deg;</span>
+                <span class="prog-badge">Web Hub</span>
+              </div>
+              <p class="prog-desc">Detailed match reports, statistics &amp; expert analysis</p>
+            </div>
+
+            <!-- 5. Online Magazine — মাঠের বাইরে [HIGHLIGHTED BANGLA] -->
+            <div class="prog-card prog-card-highlight">
+              <div class="prog-head">
+                <div class="prog-title-wrap">
+                  <span class="prog-bn-tag">Bengali IP</span>
+                  <span class="prog-name"><span class="prog-platform">Online Magazine</span> &mdash; <span class="bn-title">মাঠের বাইরে</span></span>
+                </div>
+                <span class="prog-badge prog-badge-editorial">Online Mag</span>
+              </div>
+              <p class="prog-desc">In-depth stories connected to tournament developments</p>
+            </div>
+
+            <!-- 6. কানে কানে ক্রিকেট | Podcast & Radio [HIGHLIGHTED BANGLA] -->
+            <div class="prog-card prog-card-highlight">
+              <div class="prog-head">
+                <div class="prog-title-wrap">
+                  <span class="prog-bn-tag">Bengali IP</span>
+                  <span class="prog-name"><span class="bn-title">কানে কানে ক্রিকেট</span> <span class="prog-subname">| Podcast &amp; Radio</span></span>
+                </div>
+                <span class="prog-badge prog-badge-audio">Podcast &amp; Radio</span>
+              </div>
+              <p class="prog-desc">Ongoing player stories, match commentary &amp; discussions</p>
+            </div>
+
+            <!-- 7. Cross-Platform Content Flow -->
+            <div class="prog-card">
+              <div class="prog-head">
+                <span class="prog-name">Cross-Platform Content Flow</span>
+                <span class="prog-badge">Workflow</span>
+              </div>
+              <p class="prog-desc">One key update adapted into different formats for different platforms</p>
+            </div>
+
+            <!-- 8. Consistent Storytelling -->
+            <div class="prog-card">
+              <div class="prog-head">
+                <span class="prog-name">Consistent Storytelling</span>
+                <span class="prog-badge">Core Narrative</span>
+              </div>
+              <p class="prog-desc">Connected information, unique content and continuous audience engagement</p>
             </div>
           </div>
         </div>
@@ -1144,17 +1367,18 @@ const acts = [
   {cls:'a1',img:IMG.highfive,tag:'Act I',h:'Pre-tournament',when:'Featuring the Players',li:[
     'Sponsored selection matches',
     'New & old faces',
-    'Inside the squad'],
+    'Inside the squad',
+    'Paid Streaming Launch'],
     cue:''},
   {cls:'a2',img:IMG.batfocus,tag:'Act II',h:'Post-selection',when:'Analysis & the paid launch',li:[
-    '<b>Expert analysis series</b> — motion-graphic breakdowns on YouTube, cut for podcast.',
-    '<b>Historical & prediction podcast</b> — experts use past cups to forecast each match.',
-    '<b>Paid-streaming launch</b> — TV + Meta campaign seed the audience before the first ball.'],
+    'Expert analysis series',
+    'Historical & prediction podcast',
+    'Paid-streaming launch'],
     cue:''},
   {cls:'a3',img:IMG.appeal,tag:'Act III',h:'Live event',when:'Coverage, data & the campaign',li:[
-    '<b>One data sheet, many shows</b> — every programme runs on one canonical set of facts.',
-    '<b>Immersion on the field</b> — ladder board, field map, Google game, influencer takeovers.',
-    '<b>\u201cRoad to the Final\u201d</b> — subscribe to win a ticket; real fans filmed reacting.'],
+    'One data sheet, many shows',
+    'Immersion on the field',
+    'Road to the Final'],
     cue:''},
 ];
 const ag = document.getElementById('actsGrid');
