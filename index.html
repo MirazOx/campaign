@@ -465,6 +465,29 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
 
 .prog-desc{font-size:14px;color:var(--slate);line-height:1.45;margin:0}
 
+
+/* ==========================================================================
+   DRILLABILITY VIDEO CARD (MARUFA INSWINGER YOUTUBE EMBED)
+   ========================================================================== */
+.video-card{background:linear-gradient(135deg,var(--blue-d),#0a3a70);color:#fff;border-radius:18px;padding:24px;margin-bottom:28px;display:grid;grid-template-columns:1.15fr 1fr;gap:24px;align-items:center;box-shadow:0 10px 28px rgba(11,74,143,.18);border:1.5px solid rgba(255,255,255,.12)}
+@media(max-width:860px){.video-card{grid-template-columns:1fr;padding:18px;gap:18px}}
+.video-embed-wrap{position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;background:#000;box-shadow:0 6px 20px rgba(0,0,0,.4)}
+.video-embed-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+.video-info-col{display:flex;flex-direction:column;gap:10px}
+.video-badge-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.drill-badge{display:inline-block;background:var(--yellow);color:var(--blue-d);font-family:var(--cond);font-weight:700;font-size:12px;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:12px}
+.video-platform-badge{font-family:var(--cond);font-size:11.5px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--cloud);background:rgba(255,255,255,.12);padding:3px 8px;border-radius:6px}
+.video-title{font-family:var(--cond);font-size:24px;font-weight:700;text-transform:uppercase;color:#fff;line-height:1.15;margin:0;letter-spacing:.3px}
+.video-quote{font-size:15px;color:var(--cloud);line-height:1.45;margin:0;font-style:italic}
+.video-points{display:flex;flex-direction:column;gap:6px;margin:4px 0}
+.v-point{display:flex;align-items:flex-start;gap:8px;font-size:13.5px;color:#e2ecf8;line-height:1.35}
+.v-dot{width:6px;height:6px;border-radius:50%;background:var(--yellow);margin-top:6px;flex-shrink:0}
+.v-point b{color:#fff}
+.video-footer{display:flex;align-items:center;gap:14px;margin-top:6px;flex-wrap:wrap}
+.yt-link-btn{display:inline-flex;align-items:center;gap:6px;background:#ff0000;color:#fff;text-decoration:none;font-family:var(--cond);font-weight:700;font-size:13px;letter-spacing:.5px;text-transform:uppercase;padding:6px 14px;border-radius:8px;transition:transform .15s ease,background .15s ease}
+.yt-link-btn:hover{background:#cc0000;transform:translateY(-1px)}
+.video-meta-txt{font-size:13px;color:var(--fog);font-family:var(--cond);text-transform:uppercase;letter-spacing:.5px}
+
 </style>
 </head>
 <body>
@@ -546,27 +569,50 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
             <h3 class="p-card-title">Spreadability vs. Drillability</h3>
             <p class="p-card-sub">The shareable hook against the deep-dive asset</p>
             <div class="p-card-chips">
-              <span class="p-chip"><b>Spread:</b> 15-sec vertical contender hooks &amp; coach bites across TikTok &amp; Reels</span>
-              <span class="p-chip"><b>Drill:</b> The canonical 80-player master data sheet &amp; interactive divisional map</span>
+              <span class="p-chip"><b>Spread:</b> Slide 1 &middot; 8 Core Programmes &amp; viral vertical hooks across TikTok &amp; Reels</span>
+              <span class="p-chip"><b>Drill:</b> Marufa inswinger video breakdown &amp; the 80-player master data sheet</span>
             </div>
           </div>
         </div>
 
-        <!-- Spreadability artifact: Viral Hook Reel Mockup -->
-        <div class="hook-card">
-          <div>
-            <span class="hook-badge">Spreadability Element &middot; 15-Sec Hook Reel</span>
-            <h4 class="hook-title">Marufa Akter: The 115 kph Inswinger from Nilphamari</h4>
-            <p class="hook-quote">&ldquo;When the seam strikes the turf, it nips back two full inches. Australia’s top order hasn’t faced this release angle yet.&rdquo;</p>
-            <div class="hook-meta">
-              <span id="hookPlayStatus">Tap to play 15s audio hook</span>
-              <span>&middot;</span>
-              <span>Platforms: TikTok / IG Reels</span>
-              <span>&middot;</span>
-              <span style="color:var(--yellow);font-weight:700">&nearr; 48.2K Shares</span>
+        <!-- Drillability artifact: Marufa Akter Inswinger Video Breakdown -->
+        <div class="video-card" id="marufa-drill-video">
+          <div class="video-embed-col">
+            <div class="video-embed-wrap">
+              <iframe
+                src="https://www.youtube.com/embed/jbpddx8qM5s?rel=0"
+                title="Marufa Akter: The 115 kph Inswinger from Nilphamari (Drillability Video Breakdown)"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+              </iframe>
             </div>
           </div>
-          <button class="hook-playbtn" id="hookPlayBtn" data-playing="false" aria-label="Play 15-sec audio hook">&#9658;</button>
+          <div class="video-info-col">
+            <div class="video-badge-row">
+              <span class="drill-badge">Drillability Element &middot; Video Breakdown</span>
+              <span class="video-platform-badge">YouTube Embed &middot; Live Preview</span>
+            </div>
+            <h4 class="video-title">Marufa Akter: The 115 kph Inswinger from Nilphamari</h4>
+            <p class="video-quote">&ldquo;When the seam strikes the turf, it nips back two full inches. Australia’s top order hasn’t faced this release angle yet.&rdquo;</p>
+            <div class="video-points">
+              <div class="v-point">
+                <span class="v-dot"></span>
+                <span><b>Forensic Bowling Breakdown:</b> Upright seam presentation delivering sharp late deviation into right-handed batters.</span>
+              </div>
+              <div class="v-point">
+                <span class="v-dot"></span>
+                <span><b>Drill-Down Artifact:</b> Takes viewers beyond the broadcast soundbite into deep tactical analysis of release velocity &amp; wrist angle.</span>
+              </div>
+            </div>
+            <div class="video-footer">
+              <a href="https://www.youtube.com/watch?v=jbpddx8qM5s" target="_blank" rel="noopener noreferrer" class="yt-link-btn">
+                <span>Watch on YouTube &nearr;</span>
+              </a>
+              <span class="video-meta-txt">ICC WT20 Tactical Archive</span>
+            </div>
+          </div>
         </div>
 
         
