@@ -438,7 +438,9 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
   <ul>
     <li><a href="#spine">Spine</a></li>
     <li><a href="#acts">Three acts</a></li>
-    <li><a href="#principles">7 principles in action</a></li>
+    <li><a href="#principles">7 principles</a></li>
+    <li><a href="#data">The data</a></li>
+    <li><a href="#game">Play</a></li>
     <li><a href="#journey">Journey</a></li>
     <li><a href="#break">The break</a></li>
   </ul>
@@ -531,56 +533,34 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
           <button class="hook-playbtn" id="hookPlayBtn" data-playing="false" aria-label="Play 15-sec audio hook">&#9658;</button>
         </div>
 
-        <!-- Drillability artifact: Master Data Sheet Visualized -->
-        <div id="data">
-          <div style="margin-bottom:20px">
-            <span class="pill" style="font-size:13px;padding:6px 16px">Drillability Element &middot; The Deep Canon</span>
+        <!-- Drillability artifact: Master Data Sheet Showcase Card -->
+        <div style="background:var(--mist);border:1.5px solid var(--line);border-radius:18px;padding:26px 28px;margin-top:10px">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:14px">
+            <div>
+              <span class="pill" style="font-size:12.5px;padding:5px 14px;margin-bottom:10px;background:#fff">Drillability Element &middot; The Deep Canon</span>
+              <h4 style="font-family:var(--cond);font-size:24px;font-weight:700;text-transform:uppercase;color:var(--blue-d);margin:0 0 6px">The 80-Player Master Data Sheet &amp; Origin Maps</h4>
+              <p style="font-size:15.5px;color:var(--slate);line-height:1.45;margin:0;max-width:62ch">A deep statistical rabbit hole: every woman to represent Bangladesh mapped across 8 divisions, career records, debut arrival waves, and all-rounders scatter plot.</p>
+            </div>
+            <a href="#data" class="gbtn" style="text-decoration:none;display:inline-flex;align-items:center;gap:8px;font-size:15px;padding:12px 22px">View Full Maps &amp; Stats &darr;</a>
           </div>
-          <p class="eyebrow blue reveal">Worldbuilding, in numbers</p>
-    <h2 class="h-sec reveal d1"><span class="b" style="white-space:nowrap">The master data sheet,</span> <span class="y" style="white-space:nowrap">visualized</span></h2>
-    <p class="lead reveal d2">The pitch keeps promising &ldquo;one canonical data sheet.&rdquo; Here it is &mdash; every woman to represent (or line up for) Bangladesh, turned into the live visuals each show in the ecosystem would run on. <b>80 players, honestly sourced: where the public record is silent, we show the gap instead of guessing.</b></p>
-    <div class="dintro-stats reveal d2">
-      <div class="dstat"><div class="v">80</div><div class="l">Players tracked</div></div>
-      <div class="dstat"><div class="v y">39</div><div class="l">Home region documented</div></div>
-      <div class="dstat"><div class="v c">41</div><div class="l">Origin not yet public</div></div>
-      <div class="dstat"><div class="v">2011</div><div class="l">First WODI &middot; story begins</div></div>
-    </div>
-
-    <div class="dblock reveal">
-      <div class="dhead"><span class="dnum">01</span><div><h3 class="dh3">Where the players come from</h3><p class="dsub">Shading = players per home division &middot; bubbles = players per home town</p></div></div>
-      <div class="mapgrid">
-        <div class="mapbox"><div id="bdMap"></div></div>
-        <div class="mapside" id="mapSide"></div>
-      </div>
-    </div>
-
-    <div class="dblock reveal">
-      <div class="dhead"><span class="dnum">02</span><div><h3 class="dh3">The record book</h3><p class="dsub">Career internationals (WODI + WT20I), to 2026</p></div></div>
-      <div class="recgrid" id="recGrid"></div>
-    </div>
-
-    <div class="dblock reveal">
-      <div class="dhead"><span class="dnum">03</span><div><h3 class="dh3">Top run-scorers &amp; wicket-takers</h3><p class="dsub">Total international career &middot; fills as it scrolls into view</p></div></div>
-      <div class="lbgrid">
-        <div class="lbcol"><h4 class="lbtitle bat">Most runs</h4><div class="lb" id="lbBat"></div></div>
-        <div class="lbcol"><h4 class="lbtitle bowl">Most wickets</h4><div class="lb" id="lbBowl"></div></div>
-      </div>
-    </div>
-
-    <div class="dblock reveal">
-      <div class="dhead"><span class="dnum">04</span><div><h3 class="dh3">Squad shape &amp; the arrival waves</h3><p class="dsub">What the players do &middot; when they first appeared</p></div></div>
-      <div class="twocol">
-        <div class="panel"><h4 class="paneltitle">Primary role</h4><div class="donutwrap"><div id="roleDonut"></div><div class="dlegend" id="roleLegend"></div></div></div>
-        <div class="panel"><h4 class="paneltitle">Debut year</h4><div class="debutchart" id="debutChart"></div><p class="debutnote"><b>Two waves:</b> the founding generation of 2011&ndash;13 after the first WODI, then the 2023&ndash;24 surge as U&#8209;19 and domestic players entered the pool.</p></div>
-      </div>
-    </div>
-
-    <div class="dblock reveal">
-      <div class="dhead"><span class="dnum">05</span><div><h3 class="dh3">The all-rounders</h3><p class="dsub">Runs vs wickets &mdash; who carries both jobs</p></div></div>
-      <div class="scatterbox" id="scatter"></div>
-    </div>
-
-    <p class="dsource reveal">Compiled from Wikipedia, ESPNcricinfo, Wisden, The Cricketer, TBS, Dhaka Tribune &amp; Prothom Alo (Oct 2026). Home division is documented for 39 of 80 players; the rest are shown as unknown rather than estimated. Map geometry simplified from geoBoundaries (gbOpen, BGD ADM1).</p>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin-top:20px">
+            <div style="background:#fff;border-radius:12px;padding:12px 16px;border:1px solid var(--line);text-align:center">
+              <div style="font-family:var(--disp);font-size:28px;color:var(--blue)">80</div>
+              <div style="font-family:var(--cond);font-size:12px;color:var(--fog);text-transform:uppercase">Players Tracked</div>
+            </div>
+            <div style="background:#fff;border-radius:12px;padding:12px 16px;border:1px solid var(--line);text-align:center">
+              <div style="font-family:var(--disp);font-size:28px;color:var(--yellow-d)">39</div>
+              <div style="font-family:var(--cond);font-size:12px;color:var(--fog);text-transform:uppercase">Origins Documented</div>
+            </div>
+            <div style="background:#fff;border-radius:12px;padding:12px 16px;border:1px solid var(--line);text-align:center">
+              <div style="font-family:var(--disp);font-size:28px;color:var(--coral)">8</div>
+              <div style="font-family:var(--cond);font-size:12px;color:var(--fog);text-transform:uppercase">Home Divisions</div>
+            </div>
+            <div style="background:#fff;border-radius:12px;padding:12px 16px;border:1px solid var(--line);text-align:center">
+              <div style="font-family:var(--disp);font-size:28px;color:var(--grass-d)">2011</div>
+              <div style="font-family:var(--cond);font-size:12px;color:var(--fog);text-transform:uppercase">First WODI</div>
+            </div>
+          </div>
         </div>
       </article>
 
@@ -670,7 +650,43 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
         <span class="demo-pill">Live demo</span>
       </div>
       <p class="g-intro">This is the interactive artifact we'd embed at the fixtures page. The pitch map below is the kind of field visual fans would see live.</p>
-      <div class="pitch-wrap" id="pitchWrap"></div>
+      <div class="pitch-wrap" id="pitchWrap">
+        <svg viewBox="0 0 900 230" style="width:100%;height:auto;display:block" aria-label="Cricket field map with fielding positions">
+          <defs>
+            <radialGradient id="turf" cx="50%" cy="50%" r="70%">
+              <stop offset="0%" stop-color="#2a9d5c"/>
+              <stop offset="100%" stop-color="#1d7745"/>
+            </radialGradient>
+          </defs>
+          <!-- Cricket Oval Outfield -->
+          <ellipse cx="450" cy="115" rx="430" ry="105" fill="url(#turf)" stroke="#8fe0b0" stroke-width="2.5"/>
+          <!-- 30-Yard Circle -->
+          <ellipse cx="450" cy="115" rx="260" ry="62" fill="none" stroke="#bdeccf" stroke-width="1.8" stroke-dasharray="6 6" opacity="0.85"/>
+          <!-- 22-Yard Pitch Strip -->
+          <rect x="420" y="88" width="60" height="54" rx="4" fill="#d9c08a" stroke="#b89a5c" stroke-width="1.5"/>
+          <line x1="438" y1="92" x2="438" y2="138" stroke="#7a5f2c" stroke-width="2"/>
+          <line x1="462" y1="92" x2="462" y2="138" stroke="#7a5f2c" stroke-width="2"/>
+          <!-- Wickets -->
+          <rect x="428" y="112" width="3" height="7" fill="#fff"/>
+          <rect x="469" y="112" width="3" height="7" fill="#fff"/>
+          <!-- 11 Fielders in realistic field spread -->
+          <g id="fielders">
+            <circle cx="150" cy="85" r="8" fill="#f5b921" stroke="#0b4a8f" stroke-width="2"><title>Deep Mid-Wicket</title></circle>
+            <circle cx="210" cy="160" r="8" fill="#f5b921" stroke="#0b4a8f" stroke-width="2"><title>Square Leg</title></circle>
+            <circle cx="330" cy="65" r="8" fill="#f5b921" stroke="#0b4a8f" stroke-width="2"><title>Mid-On</title></circle>
+            <circle cx="330" cy="170" r="8" fill="#f5b921" stroke="#0b4a8f" stroke-width="2"><title>Mid-Wicket</title></circle>
+            <circle cx="450" cy="42" r="8" fill="#f5b921" stroke="#0b4a8f" stroke-width="2"><title>Long-On Boundary</title></circle>
+            <circle cx="450" cy="190" r="8" fill="#f5b921" stroke="#0b4a8f" stroke-width="2"><title>Deep Point Boundary</title></circle>
+            <circle cx="560" cy="62" r="8" fill="#f5b921" stroke="#0b4a8f" stroke-width="2"><title>Mid-Off</title></circle>
+            <circle cx="560" cy="170" r="8" fill="#f5b921" stroke="#0b4a8f" stroke-width="2"><title>Cover Point</title></circle>
+            <circle cx="690" cy="158" r="8" fill="#f5b921" stroke="#0b4a8f" stroke-width="2"><title>Extra Cover</title></circle>
+            <circle cx="750" cy="88" r="8" fill="#f5b921" stroke="#0b4a8f" stroke-width="2"><title>Deep Cover Boundary</title></circle>
+            <circle cx="300" cy="115" r="9" fill="#e2622e" stroke="#fff" stroke-width="2.5"><title>Bowler / Captain</title></circle>
+          </g>
+          <!-- Tactical label -->
+          <text x="450" y="24" text-anchor="middle" font-family="'Barlow Condensed', sans-serif" font-size="12.5" font-weight="700" fill="#ffffff" letter-spacing="1.2" opacity="0.9">TACTICAL 30-YARD FIELD SPREAD &middot; BANGLADESH DEFENDING</text>
+        </svg>
+      </div>
       <div class="vs">
         <div class="team bd" data-team="bd"><div class="flag">BAN</div><div class="nm">Bangladesh</div><div class="meta">Form · W W L W</div></div>
         <div class="mid">vs</div>
@@ -938,6 +954,58 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
 </section>
 
 
+
+
+<section id="data">
+  <div class="wrap">
+    <p class="eyebrow blue reveal">Worldbuilding, in numbers</p>
+    <h2 class="h-sec reveal d1"><span class="b" style="white-space:nowrap">The master data sheet,</span> <span class="y" style="white-space:nowrap">visualized</span></h2>
+    <p class="lead reveal d2">The pitch keeps promising &ldquo;one canonical data sheet.&rdquo; Here it is &mdash; every woman to represent (or line up for) Bangladesh, turned into the live visuals each show in the ecosystem would run on. <b>80 players, honestly sourced: where the public record is silent, we show the gap instead of guessing.</b></p>
+    <div class="dintro-stats reveal d2">
+      <div class="dstat"><div class="v">80</div><div class="l">Players tracked</div></div>
+      <div class="dstat"><div class="v y">39</div><div class="l">Home region documented</div></div>
+      <div class="dstat"><div class="v c">41</div><div class="l">Origin not yet public</div></div>
+      <div class="dstat"><div class="v">2011</div><div class="l">First WODI &middot; story begins</div></div>
+    </div>
+
+    <div class="dblock reveal">
+      <div class="dhead"><span class="dnum">01</span><div><h3 class="dh3">Where the players come from</h3><p class="dsub">Shading = players per home division &middot; bubbles = players per home town</p></div></div>
+      <div class="mapgrid">
+        <div class="mapbox"><div id="bdMap"></div></div>
+        <div class="mapside" id="mapSide"></div>
+      </div>
+    </div>
+
+    <div class="dblock reveal">
+      <div class="dhead"><span class="dnum">02</span><div><h3 class="dh3">The record book</h3><p class="dsub">Career internationals (WODI + WT20I), to 2026</p></div></div>
+      <div class="recgrid" id="recGrid"></div>
+    </div>
+
+    <div class="dblock reveal">
+      <div class="dhead"><span class="dnum">03</span><div><h3 class="dh3">Top run-scorers &amp; wicket-takers</h3><p class="dsub">Total international career &middot; fills as it scrolls into view</p></div></div>
+      <div class="lbgrid">
+        <div class="lbcol"><h4 class="lbtitle bat">Most runs</h4><div class="lb" id="lbBat"></div></div>
+        <div class="lbcol"><h4 class="lbtitle bowl">Most wickets</h4><div class="lb" id="lbBowl"></div></div>
+      </div>
+    </div>
+
+    <div class="dblock reveal">
+      <div class="dhead"><span class="dnum">04</span><div><h3 class="dh3">Squad shape &amp; the arrival waves</h3><p class="dsub">What the players do &middot; when they first appeared</p></div></div>
+      <div class="twocol">
+        <div class="panel"><h4 class="paneltitle">Primary role</h4><div class="donutwrap"><div id="roleDonut"></div><div class="dlegend" id="roleLegend"></div></div></div>
+        <div class="panel"><h4 class="paneltitle">Debut year</h4><div class="debutchart" id="debutChart"></div><p class="debutnote"><b>Two waves:</b> the founding generation of 2011&ndash;13 after the first WODI, then the 2023&ndash;24 surge as U&#8209;19 and domestic players entered the pool.</p></div>
+      </div>
+    </div>
+
+    <div class="dblock reveal">
+      <div class="dhead"><span class="dnum">05</span><div><h3 class="dh3">The all-rounders</h3><p class="dsub">Runs vs wickets &mdash; who carries both jobs</p></div></div>
+      <div class="scatterbox" id="scatter"></div>
+    </div>
+
+    <p class="dsource reveal">Compiled from Wikipedia, ESPNcricinfo, Wisden, The Cricketer, TBS, Dhaka Tribune &amp; Prothom Alo (Oct 2026). Home division is documented for 39 of 80 players; the rest are shown as unknown rather than estimated. Map geometry simplified from geoBoundaries (gbOpen, BGD ADM1).</p>
+  </div>
+</section>
+
 <section style="background:var(--mist)">
   <div class="wrap">
     <p class="eyebrow blue reveal">Design the user flow</p>
@@ -1120,7 +1188,8 @@ const principles = [
   {n:7,t:'Performance',s:'The audience joins the narrative',e:'\u201cRoad to the Final\u201d: subscribe to win a ticket. Fans submit reaction clips \u2014 tea-stall owner, student, housewife \u2014 and compete on the leaderboard.',p:'YouTube · IG/FB · website'},
 ];
 const ml = document.getElementById('matrixList');
-principles.forEach(pr => {
+if (ml) {
+  principles.forEach(pr => {
   const r = document.createElement('div');
   r.className = 'prow';
   r.innerHTML = `<div class="phead"><div class="pnum">${pr.n}</div>
@@ -1131,38 +1200,26 @@ principles.forEach(pr => {
   r.querySelector('.phead').addEventListener('click', () => r.classList.toggle('open'));
   ml.appendChild(r);
 });
+}
 
-// PITCH SVG (field map visual)
-document.getElementById('pitchWrap').innerHTML = `
-<svg viewBox="0 0 900 220" style="width:100%;height:auto" aria-label="Cricket field map with fielding positions">
-  <defs><radialGradient id="turf" cx="50%" cy="50%" r="70%">
-    <stop offset="0%" stop-color="#2f9d5c"/><stop offset="100%" stop-color="#1d7745"/></radialGradient></defs>
-  <ellipse cx="450" cy="110" rx="430" ry="100" fill="url(#turf)" stroke="#8fe0b0" stroke-width="2"/>
-  <ellipse cx="450" cy="110" rx="250" ry="58" fill="none" stroke="#bdeccf" stroke-width="1.4" stroke-dasharray="5 6"/>
-  <rect x="420" y="86" width="60" height="48" rx="3" fill="#d9c08a" stroke="#b89a5c" stroke-width="1"/>
-  <line x1="438" y1="90" x2="438" y2="130" stroke="#7a5f2c" stroke-width="2"/>
-  <line x1="462" y1="90" x2="462" y2="130" stroke="#7a5f2c" stroke-width="2"/>
-  <g id="fielders"></g>
-</svg>`;
-const positions = [[150,80],[210,150],[330,60],[330,165],[560,58],[560,165],[690,150],[750,82],[450,40],[450,180],[300,110]];
-const fg = document.querySelector('#fielders');
-positions.forEach((p, i) => {
-  const c = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-  c.setAttribute('cx', p[0]);
-  c.setAttribute('cy', p[1]);
-  c.setAttribute('r', 7);
-  c.setAttribute('fill', '#f5b921');
-  c.setAttribute('stroke', '#0b4a8f');
-  c.setAttribute('stroke-width', '2');
-  c.style.opacity = '0';
-  c.style.transition = 'opacity .4s';
-  c.style.transitionDelay = (i * 0.06) + 's';
-  fg.appendChild(c);
-});
-const pio = new IntersectionObserver(es => es.forEach(e => {
-  if (e.isIntersecting) fg.querySelectorAll('circle').forEach(c => c.style.opacity = '1');
-}), { threshold: .3 });
-pio.observe(document.getElementById('pitchWrap'));
+// PITCH SVG field visual animation
+const pw = document.getElementById('pitchWrap');
+if (pw) {
+  const fg = pw.querySelector('#fielders');
+  if (fg) {
+    const circles = fg.querySelectorAll('circle');
+    const pio = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) {
+        circles.forEach((c, i) => {
+          c.style.transition = 'transform 0.4s ease, opacity 0.4s ease';
+          c.style.transitionDelay = (i * 0.05) + 's';
+          c.style.opacity = '1';
+        });
+      }
+    }), { threshold: .15 });
+    pio.observe(pw);
+  }
+}
 
 // JOURNEY
 const steps = [
