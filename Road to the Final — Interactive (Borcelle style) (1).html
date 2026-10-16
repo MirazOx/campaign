@@ -323,6 +323,112 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
 .sc-tick{font-family:var(--cond);font-size:11px;fill:var(--fog)}
 
 .dsource{font-size:12.5px;color:var(--fog);line-height:1.5;margin-top:50px;padding-top:18px;border-top:1px solid var(--line)}
+
+/* ===== 7 PRINCIPLES IN ACTION ===== */
+.pnav-bar{display:flex;gap:8px;flex-wrap:wrap;margin:32px 0 44px;padding:12px;background:#fff;border-radius:18px;border:1.5px solid var(--line);box-shadow:0 4px 16px rgba(11,74,143,.04)}
+.pnav-pill{font-family:var(--cond);font-size:14.5px;font-weight:700;letter-spacing:.3px;text-transform:uppercase;color:var(--slate);text-decoration:none;padding:8px 14px;border-radius:10px;background:var(--mist);border:1px solid transparent;transition:.2s;white-space:nowrap}
+.pnav-pill:hover,.pnav-pill.active{background:var(--blue);color:#fff;border-color:var(--blue-d)}
+.principles-stack{display:flex;flex-direction:column;gap:56px}
+.p-card{background:#fff;border:1.5px solid var(--line);border-radius:22px;padding:36px;box-shadow:0 10px 30px rgba(11,74,143,.06);position:relative;overflow:hidden}
+.p-card-top{display:flex;align-items:flex-start;gap:20px;padding-bottom:24px;border-bottom:1.5px solid var(--line);margin-bottom:30px;flex-wrap:wrap}
+.p-card-num{width:64px;height:64px;border-radius:16px;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--disp);font-size:30px;flex:none}
+.p-card:nth-child(even) .p-card-num{background:var(--yellow);color:var(--blue-d)}
+.p-card-heading{flex:1;min-width:260px}
+.p-card-tag{font-family:var(--cond);font-size:13.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--yellow-d);margin-bottom:4px}
+.p-card-title{font-family:var(--cond);font-size:clamp(24px,3.2vw,36px);font-weight:700;text-transform:uppercase;line-height:1.05;margin:0 0 6px;word-break:keep-all}
+.p-card-sub{font-size:16px;color:var(--fog);line-height:1.35;margin:0;word-break:keep-all}
+.p-card-chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.p-chip{display:inline-flex;align-items:center;gap:6px;font-family:var(--sans);font-size:13.5px;padding:6px 12px;border-radius:8px;background:var(--mist);color:var(--slate);line-height:1.3}
+.p-chip b{color:var(--blue-d);font-weight:600}
+
+/* Spreadability viral hook card */
+.hook-card{background:linear-gradient(135deg,var(--blue-d),#0a3a70);color:#fff;border-radius:18px;padding:24px 28px;margin-bottom:36px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
+@media(max-width:760px){.hook-card{grid-template-columns:1fr}}
+.hook-badge{display:inline-block;background:var(--yellow);color:var(--blue-d);font-family:var(--cond);font-weight:700;font-size:12px;letter-spacing:1px;text-transform:uppercase;padding:4px 10px;border-radius:12px;margin-bottom:8px}
+.hook-title{font-family:var(--cond);font-size:22px;font-weight:700;text-transform:uppercase;color:#fff;margin:0 0 8px;letter-spacing:.3px}
+.hook-quote{font-size:16px;color:var(--cloud);line-height:1.45;margin:0 0 14px;font-style:italic}
+.hook-meta{display:flex;align-items:center;gap:12px;font-family:var(--cond);font-size:13.5px;color:var(--fog);flex-wrap:wrap}
+.hook-playbtn{width:56px;height:56px;border-radius:50%;background:var(--yellow);color:var(--blue-d);border:none;display:flex;align-items:center;justify-content:center;font-size:22px;cursor:pointer;transition:.2s;flex:none}
+.hook-playbtn:hover{transform:scale(1.08);background:#ffcb3d}
+
+/* Continuity vs Multiplicity */
+.cm-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:760px){.cm-grid{grid-template-columns:1fr}}
+.matchcenter-box{background:var(--blue-d);color:#fff;border-radius:18px;padding:24px;display:flex;flex-direction:column;gap:14px}
+.mc-header{display:flex;justify-content:space-between;align-items:center;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,.15);font-family:var(--cond);font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--yellow)}
+.mc-livebadge{background:var(--coral);color:#fff;padding:3px 8px;border-radius:10px;font-weight:700;font-size:11px}
+.mc-teams{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;text-align:center;margin:8px 0}
+.mc-team .flag{font-family:var(--disp);font-size:32px;color:#fff}
+.mc-team .score{font-family:var(--disp);font-size:24px;color:var(--yellow);margin-top:2px}
+.mc-sync-status{background:rgba(255,255,255,.08);border-radius:10px;padding:12px 14px;font-size:13.5px;color:var(--cloud);line-height:1.4}
+.off-xi-box{background:var(--mist);border:1.5px solid var(--line);border-radius:18px;padding:24px}
+.pov-tabs{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.pov-tab{font-family:var(--cond);font-size:13.5px;font-weight:700;text-transform:uppercase;padding:7px 12px;border-radius:8px;background:#fff;border:1.5px solid var(--line);cursor:pointer;transition:.15s;color:var(--slate)}
+.pov-tab.active{background:var(--blue);color:#fff;border-color:var(--blue-d)}
+.pov-quote-card{background:#fff;border-radius:12px;padding:18px;border:1.5px solid var(--line)}
+.pov-text{font-size:16px;line-height:1.45;color:var(--ink);margin:0 0 10px;font-style:italic}
+.pov-author{font-family:var(--cond);font-size:14px;font-weight:700;color:var(--blue);text-transform:uppercase}
+
+/* Extractability assets shelf */
+.assets-shelf{background:var(--mist);border:1.5px solid var(--line);border-radius:18px;padding:24px;margin-top:28px}
+.assets-title{font-family:var(--cond);font-size:15px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--blue-l);margin:0 0 14px}
+.assets-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.asset-item{background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:16px;display:flex;align-items:center;gap:14px;transition:.2s}
+.asset-item:hover{border-color:var(--blue-l);box-shadow:0 4px 12px rgba(11,74,143,.08)}
+.asset-icon{width:44px;height:44px;border-radius:10px;background:var(--mist2);display:flex;align-items:center;justify-content:center;font-size:20px;flex:none}
+.asset-info .name{font-family:var(--cond);font-size:15px;font-weight:700;text-transform:uppercase;color:var(--ink)}
+.asset-info .desc{font-size:12.5px;color:var(--fog);margin-top:2px}
+
+/* Worldbuilding timeline */
+.wb-timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:20px}
+@media(max-width:860px){.wb-timeline{grid-template-columns:1fr}}
+.wb-step{background:var(--mist);border:1.5px solid var(--line);border-radius:14px;padding:18px;cursor:pointer;transition:.2s}
+.wb-step:hover,.wb-step.active{background:var(--blue);color:#fff;border-color:var(--blue-d)}
+.wb-step.active .wb-yr{color:var(--yellow)}
+.wb-step.active .wb-ttl{color:#fff}
+.wb-step.active .wb-desc{color:var(--cloud)}
+.wb-yr{font-family:var(--disp);font-size:26px;color:var(--blue);line-height:1}
+.wb-ttl{font-family:var(--cond);font-size:16px;font-weight:700;text-transform:uppercase;margin:6px 0 4px;color:var(--ink)}
+.wb-desc{font-size:13px;line-height:1.35;color:var(--slate)}
+.wb-detail-box{background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:18px 22px;margin-top:16px;font-size:15px;line-height:1.45;color:var(--slate)}
+
+/* Seriality Stepper */
+.serial-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:20px}
+@media(max-width:960px){.serial-steps{grid-template-columns:1fr}}
+.serial-card{background:var(--mist);border:1.5px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;justify-content:space-between;gap:12px}
+.serial-ch{font-family:var(--cond);font-weight:700;font-size:12.5px;letter-spacing:1px;text-transform:uppercase;color:var(--coral)}
+.serial-name{font-family:var(--cond);font-size:18px;font-weight:700;text-transform:uppercase;color:var(--ink);margin:0}
+.serial-plat{display:inline-block;background:var(--blue);color:#fff;font-family:var(--cond);font-size:11.5px;font-weight:600;padding:3px 8px;border-radius:6px;width:fit-content;letter-spacing:.3px}
+.serial-cta{font-family:var(--cond);font-size:13px;font-weight:700;color:var(--grass-d);text-transform:uppercase}
+
+/* Subjectivity 4-Way Switcher */
+.subj-box{background:var(--mist);border:1.5px solid var(--line);border-radius:18px;padding:26px;margin-top:20px}
+.subj-nav{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}
+.subj-btn{display:flex;align-items:center;gap:8px;font-family:var(--cond);font-size:15px;font-weight:700;text-transform:uppercase;padding:10px 18px;border-radius:10px;background:#fff;border:1.5px solid var(--line);cursor:pointer;transition:.15s;color:var(--ink)}
+.subj-btn.active{background:var(--blue);color:#fff;border-color:var(--blue-d)}
+.subj-card{background:#fff;border-radius:14px;padding:24px 28px;border:1.5px solid var(--line);display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center}
+@media(max-width:600px){.subj-card{grid-template-columns:1fr}}
+.subj-avatar{width:72px;height:72px;border-radius:50%;background:var(--mist2);display:flex;align-items:center;justify-content:center;font-size:32px;flex:none;border:2px solid var(--yellow)}
+.subj-quote{font-size:18px;line-height:1.45;color:var(--ink);margin:0 0 10px;font-style:italic}
+.subj-foot{display:flex;gap:16px;align-items:center;font-family:var(--cond);font-size:14px;color:var(--slate);flex-wrap:wrap;text-transform:uppercase}
+.subj-foot b{color:var(--blue)}
+
+/* Performance Fan Hub */
+.perf-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:24px;margin-top:20px}
+@media(max-width:860px){.perf-grid{grid-template-columns:1fr}}
+.lottery-box{background:linear-gradient(135deg,#0b4a8f,#073468);color:#fff;border-radius:18px;padding:26px;display:flex;flex-direction:column;justify-content:space-between;gap:16px}
+.lottery-title{font-family:var(--disp);font-size:28px;text-transform:uppercase;color:var(--yellow);letter-spacing:.5px;margin:0}
+.lottery-progress{height:14px;background:rgba(255,255,255,.15);border-radius:8px;overflow:hidden;margin:8px 0}
+.lottery-bar{height:100%;width:74%;background:var(--yellow);border-radius:8px;transition:width .8s ease}
+.lottery-meta{display:flex;justify-content:space-between;font-family:var(--cond);font-size:14px;color:var(--cloud);text-transform:uppercase}
+.ugc-box{background:var(--mist);border:1.5px solid var(--line);border-radius:18px;padding:24px}
+.ugc-selector{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 16px}
+.ugc-chip{font-family:var(--cond);font-size:13.5px;font-weight:700;text-transform:uppercase;padding:6px 12px;border-radius:8px;background:#fff;border:1.5px solid var(--line);cursor:pointer;color:var(--slate)}
+.ugc-chip.active{background:var(--grass);color:#fff;border-color:var(--grass-d)}
+.ugc-wall{background:#fff;border-radius:12px;padding:16px;border:1.5px solid var(--line);display:flex;flex-direction:column;gap:10px}
+.ugc-item{display:flex;align-items:center;justify-content:space-between;padding:8px 12px;background:var(--mist);border-radius:8px;font-size:14px}
+.ugc-item .tag{font-family:var(--cond);font-weight:700;color:var(--blue);text-transform:uppercase}
+
 </style>
 </head>
 <body>
@@ -332,9 +438,7 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
   <ul>
     <li><a href="#spine">Spine</a></li>
     <li><a href="#acts">Three acts</a></li>
-    <li><a href="#matrix">7 principles</a></li>
-    <li><a href="#data">The data</a></li>
-    <li><a href="#game">Play</a></li>
+    <li><a href="#principles">7 principles in action</a></li>
     <li><a href="#journey">Journey</a></li>
     <li><a href="#break">The break</a></li>
   </ul>
@@ -376,18 +480,63 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
   </div>
 </section>
 
-<section style="background:var(--mist)">
-  <div class="wrap">
-    <p class="eyebrow blue reveal">Jenkins' framework</p>
-    <h2 class="h-sec reveal d1" id="matrix"><span class="b" style="white-space:nowrap">The 7 principles</span> <span class="y" style="white-space:nowrap">matrix</span></h2>
-    <p class="lead reveal d2">Every piece of content serves one distinct purpose. Open each row to see the execution and the platform it lives on.</p>
-    <div class="matrix" id="matrixList"></div>
-  </div>
-</section>
 
-<section id="data">
+<section id="principles" style="background:var(--mist);padding:92px 0">
   <div class="wrap">
-    <p class="eyebrow blue reveal">Worldbuilding, in numbers</p>
+    <p class="eyebrow blue reveal">Jenkins' Transmedia Framework in Practice</p>
+    <h2 class="h-sec reveal d1"><span class="b" style="white-space:nowrap">The 7 Principles</span> &mdash; <span class="y" style="white-space:nowrap">Applied</span></h2>
+    <p class="lead reveal d2">Every transmedia principle paired directly with its live production artifact. Here is what we build for each principle across our ecosystem &mdash; from viral hooks and deep data to the live prediction game and fan performance.</p>
+
+    <!-- Quick Principle Navigator -->
+    <div class="pnav-bar reveal d2">
+      <a href="#p1" class="pnav-pill active">01 Spread &amp; Drill</a>
+      <a href="#p2" class="pnav-pill">02 Continuity &amp; Multiplicity</a>
+      <a href="#p3" class="pnav-pill">03 Immersion &amp; Extractability</a>
+      <a href="#p4" class="pnav-pill">04 Worldbuilding</a>
+      <a href="#p5" class="pnav-pill">05 Seriality</a>
+      <a href="#p6" class="pnav-pill">06 Subjectivity</a>
+      <a href="#p7" class="pnav-pill">07 Performance</a>
+    </div>
+
+    <div class="principles-stack">
+      <!-- PRINCIPLE 01 -->
+      <article class="p-card reveal" id="p1">
+        <div class="p-card-top">
+          <div class="p-card-num">01</div>
+          <div class="p-card-heading">
+            <div class="p-card-tag">Principle 01</div>
+            <h3 class="p-card-title">Spreadability vs. Drillability</h3>
+            <p class="p-card-sub">The shareable hook against the deep-dive asset</p>
+            <div class="p-card-chips">
+              <span class="p-chip"><b>Spread:</b> 15-sec vertical contender hooks &amp; coach bites across TikTok &amp; Reels</span>
+              <span class="p-chip"><b>Drill:</b> The canonical 80-player master data sheet &amp; interactive divisional map</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Spreadability artifact: Viral Hook Reel Mockup -->
+        <div class="hook-card">
+          <div>
+            <span class="hook-badge">Spreadability Element &middot; 15-Sec Hook Reel</span>
+            <h4 class="hook-title">Marufa Akter: The 115 kph Inswinger from Nilphamari</h4>
+            <p class="hook-quote">&ldquo;When the seam strikes the turf, it nips back two full inches. Australia’s top order hasn’t faced this release angle yet.&rdquo;</p>
+            <div class="hook-meta">
+              <span id="hookPlayStatus">Tap to play 15s audio hook</span>
+              <span>&middot;</span>
+              <span>Platforms: TikTok / IG Reels</span>
+              <span>&middot;</span>
+              <span style="color:var(--yellow);font-weight:700">&nearr; 48.2K Shares</span>
+            </div>
+          </div>
+          <button class="hook-playbtn" id="hookPlayBtn" data-playing="false" aria-label="Play 15-sec audio hook">&#9658;</button>
+        </div>
+
+        <!-- Drillability artifact: Master Data Sheet Visualized -->
+        <div id="data">
+          <div style="margin-bottom:20px">
+            <span class="pill" style="font-size:13px;padding:6px 16px">Drillability Element &middot; The Deep Canon</span>
+          </div>
+          <p class="eyebrow blue reveal">Worldbuilding, in numbers</p>
     <h2 class="h-sec reveal d1"><span class="b" style="white-space:nowrap">The master data sheet,</span> <span class="y" style="white-space:nowrap">visualized</span></h2>
     <p class="lead reveal d2">The pitch keeps promising &ldquo;one canonical data sheet.&rdquo; Here it is &mdash; every woman to represent (or line up for) Bangladesh, turned into the live visuals each show in the ecosystem would run on. <b>80 players, honestly sourced: where the public record is silent, we show the gap instead of guessing.</b></p>
     <div class="dintro-stats reveal d2">
@@ -432,15 +581,87 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
     </div>
 
     <p class="dsource reveal">Compiled from Wikipedia, ESPNcricinfo, Wisden, The Cricketer, TBS, Dhaka Tribune &amp; Prothom Alo (Oct 2026). Home division is documented for 39 of 80 players; the rest are shown as unknown rather than estimated. Map geometry simplified from geoBoundaries (gbOpen, BGD ADM1).</p>
-  </div>
-</section>
+        </div>
+      </article>
 
-<section id="game">
-  <div class="wrap">
-    <p class="eyebrow blue reveal">Immersion, demonstrated</p>
-    <h2 class="h-sec reveal d1"><span class="b" style="white-space:nowrap">The prediction</span> <span class="y" style="white-space:nowrap">game</span></h2>
-    <p class="lead reveal d2">A live taste of the Google-collab immersion layer — pick a winner, set your confidence, lock it in. Every prediction feeds the leaderboard, just like the real thing would during the tournament.</p>
-    <div class="game reveal d1">
+      <!-- PRINCIPLE 02 -->
+      <article class="p-card reveal" id="p2">
+        <div class="p-card-top">
+          <div class="p-card-num">02</div>
+          <div class="p-card-heading">
+            <div class="p-card-tag">Principle 02</div>
+            <h3 class="p-card-title">Continuity vs. Multiplicity</h3>
+            <p class="p-card-sub">One canon across all channels, plus alternate points of view</p>
+            <div class="p-card-chips">
+              <span class="p-chip"><b>Continuity:</b> One canonical match-center data feed powers broadcast, app &amp; podcast simultaneously</span>
+              <span class="p-chip"><b>Multiplicity:</b> &ldquo;Off the XI&rdquo; tells the tournament through unselected players &amp; grassroots scouts</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cm-grid">
+          <!-- Continuity element -->
+          <div class="matchcenter-box">
+            <div class="mc-header">
+              <span>Continuity &middot; Canonical Live Match Center</span>
+              <span class="mc-livebadge">&bull; LIVE SYNC</span>
+            </div>
+            <div style="font-size:14px;color:var(--cloud);font-family:var(--cond);text-transform:uppercase">ICC WT20 2028 &middot; Semi-Final 1 &middot; Mirpur</div>
+            <div class="mc-teams">
+              <div class="mc-team">
+                <div class="flag">BAN</div>
+                <div class="score">142/4</div>
+                <div style="font-size:12px;color:var(--cloud)">20.0 overs</div>
+              </div>
+              <div style="font-family:var(--disp);color:var(--yellow);font-size:20px">VS</div>
+              <div class="mc-team">
+                <div class="flag">AUS</div>
+                <div class="score">128/6</div>
+                <div style="font-size:12px;color:var(--cloud)">17.4 overs (Req: 15)</div>
+              </div>
+            </div>
+            <div class="mc-sync-status">
+              <b>&check; Single Source of Truth:</b> Broadcast commentary, the prediction game, the podcast studio, and the mobile notifications all run on this exact feed &mdash; zero statistical contradictions across channels.
+            </div>
+          </div>
+
+          <!-- Multiplicity element -->
+          <div class="off-xi-box">
+            <span class="pill" style="font-size:12px;padding:5px 14px;margin-bottom:14px">Multiplicity &middot; &ldquo;Off the XI&rdquo; Alternate POV</span>
+            <div class="pov-tabs">
+              <button class="pov-tab active" data-pov="veteran">Omitted Senior Bowler</button>
+              <button class="pov-tab" data-pov="scout">Divisional Talent Scout</button>
+            </div>
+            <div class="pov-quote-card">
+              <p class="pov-text" id="povQuoteText">&ldquo;I took 74 wickets for this country. Being in the stands instead of the XI is heartbreaking, but my job on the podcast is giving fans the tactical truth the official broadcast won’t say.&rdquo;</p>
+              <div class="pov-author" id="povAuthorText">Former Senior Bowler &middot; 78 International Caps &middot; Host of &ldquo;Off the XI&rdquo;</div>
+            </div>
+            <p style="font-size:13.5px;color:var(--slate);margin:14px 0 0;line-height:1.4"><b>Why it matters:</b> Multiplicity introduces alternative perspectives to the main narrative, allowing fans to explore the human cost and the grassroots struggle behind the starting XI.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- PRINCIPLE 03 -->
+      <article class="p-card reveal" id="p3">
+        <div class="p-card-top">
+          <div class="p-card-num">03</div>
+          <div class="p-card-heading">
+            <div class="p-card-tag">Principle 03</div>
+            <h3 class="p-card-title">Immersion vs. Extractability</h3>
+            <p class="p-card-sub">Step inside the narrative world, then take tangible pieces home</p>
+            <div class="p-card-chips">
+              <span class="p-chip"><b>Immersion:</b> The interactive prediction game &amp; animated field visualizer</span>
+              <span class="p-chip"><b>Extractability:</b> Downloadable fixture calendars, HD wallpapers &amp; printable dossiers</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Immersion: Prediction Game -->
+        <div id="game">
+          <div style="margin-bottom:16px">
+            <span class="pill" style="font-size:13px;padding:6px 16px;background:rgba(255,255,255,.9)">Immersion Element &middot; The Interactive Field Arena</span>
+          </div>
+          <div class="game reveal d1">
       <svg class="curve" style="right:-80px;bottom:-80px;width:320px;height:320px" viewBox="0 0 300 300" aria-hidden="true">
         <circle cx="150" cy="150" r="150" fill="#073468"/>
       </svg>
@@ -476,8 +697,246 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
         <div class="lcard"><div class="lv" id="pts">0</div><div class="ll">Your points</div></div>
       </div>
     </div>
+        </div>
+
+        <!-- Extractability: Tangible Takeaway Shelf -->
+        <div class="assets-shelf">
+          <h4 class="assets-title">Extractability Shelf &middot; Take Elements Into Daily Life</h4>
+          <div class="assets-grid">
+            <div class="asset-item">
+              <div class="asset-icon">&#128241;</div>
+              <div class="asset-info">
+                <div class="name">Matchday Wallpaper</div>
+                <div class="desc">1080x1920 HD phone lockscreens</div>
+              </div>
+            </div>
+            <div class="asset-item">
+              <div class="asset-icon">&#128197;</div>
+              <div class="asset-info">
+                <div class="name">Calendar Sync (.ics)</div>
+                <div class="desc">Auto-updates fixture dates &amp; BST times</div>
+              </div>
+            </div>
+            <div class="asset-item">
+              <div class="asset-icon">&#128196;</div>
+              <div class="asset-info">
+                <div class="name">Printable Dossier</div>
+                <div class="desc">80-player tactical cheat sheet (PDF)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- PRINCIPLE 04 -->
+      <article class="p-card reveal" id="p4">
+        <div class="p-card-top">
+          <div class="p-card-num">04</div>
+          <div class="p-card-heading">
+            <div class="p-card-tag">Principle 04</div>
+            <h3 class="p-card-title">Worldbuilding</h3>
+            <p class="p-card-sub">The lore, cultural struggle, and history that makes the present momentous</p>
+            <div class="p-card-chips">
+              <span class="p-chip"><b>Lore Anchor:</b> 17-year historical narrative of Bangladesh women’s cricket</span>
+              <span class="p-chip"><b>Platform:</b> Historical podcast series &amp; interactive digital archive</span>
+            </div>
+          </div>
+        </div>
+
+        <p style="font-size:16px;color:var(--slate);line-height:1.45;margin:0 0 16px">Worldbuilding treats the World Cup as an ongoing universe rather than an isolated tournament. Tap any era to explore the foundational lore:</p>
+
+        <div class="wb-timeline">
+          <div class="wb-step active" data-year="2011">
+            <div class="wb-yr">2011</div>
+            <div class="wb-ttl">The Savar Spark</div>
+            <div class="wb-desc">First official WODI win vs Ireland; international status unlocked.</div>
+          </div>
+          <div class="wb-step" data-year="2014">
+            <div class="wb-yr">2014</div>
+            <div class="wb-ttl">Home Debut</div>
+            <div class="wb-desc">Sylhet hosts the ICC WT20 &mdash; first domestic television surge.</div>
+          </div>
+          <div class="wb-step" data-year="2018">
+            <div class="wb-yr">2018</div>
+            <div class="wb-ttl">Asia Cup Miracle</div>
+            <div class="wb-desc">Final-ball upset over 6-time champions India in Kuala Lumpur.</div>
+          </div>
+          <div class="wb-step" data-year="2023">
+            <div class="wb-yr">2023</div>
+            <div class="wb-ttl">U-19 Shockwave</div>
+            <div class="wb-desc">Defeating Australia by 7 wickets; the new generation arrives.</div>
+          </div>
+          <div class="wb-step" data-year="2028">
+            <div class="wb-yr">2028</div>
+            <div class="wb-ttl">The Universe</div>
+            <div class="wb-desc">Home World Cup &mdash; transmedia campaign unites the nation.</div>
+          </div>
+        </div>
+
+        <div class="wb-detail-box" id="wbDetailBox">
+          <b>2011 Milestone:</b> Bangladesh defeated Ireland by 82 runs in Savar to earn official WODI status &mdash; the foundational spark for national women’s cricket.
+        </div>
+      </article>
+
+      <!-- PRINCIPLE 05 -->
+      <article class="p-card reveal" id="p5">
+        <div class="p-card-top">
+          <div class="p-card-num">05</div>
+          <div class="p-card-heading">
+            <div class="p-card-tag">Principle 05</div>
+            <h3 class="p-card-title">Seriality</h3>
+            <p class="p-card-sub">The story broken into episodic chapters across time and screens</p>
+            <div class="p-card-chips">
+              <span class="p-chip"><b>Narrative Flow:</b> Continuous storytelling with explicit hooks between platforms</span>
+              <span class="p-chip"><b>No Dead Ends:</b> Every piece of content points directly to the next chapter</span>
+            </div>
+          </div>
+        </div>
+
+        <p style="font-size:16px;color:var(--slate);line-height:1.45;margin:0 0 16px">The campaign builds curiosity across 5 interconnected release windows:</p>
+
+        <div class="serial-steps">
+          <div class="serial-card">
+            <div>
+              <div class="serial-ch">Act I &middot; Ch 1</div>
+              <h4 class="serial-name">The Trials</h4>
+            </div>
+            <span class="serial-plat">YouTube Docu-Series</span>
+            <div class="serial-cta">&rarr; Next: 15s contender hooks on TikTok</div>
+          </div>
+          <div class="serial-card">
+            <div>
+              <div class="serial-ch">Act I &middot; Ch 2</div>
+              <h4 class="serial-name">Squad Reveal</h4>
+            </div>
+            <span class="serial-plat">IG Reels &amp; TikTok</span>
+            <div class="serial-cta">&rarr; Next: Tactical squad analysis podcast</div>
+          </div>
+          <div class="serial-card">
+            <div>
+              <div class="serial-ch">Act II &middot; Ch 3</div>
+              <h4 class="serial-name">The Hinge</h4>
+            </div>
+            <span class="serial-plat">Spotify Podcast &amp; Web</span>
+            <div class="serial-cta">&rarr; Next: Check fixtures &amp; play prediction game</div>
+          </div>
+          <div class="serial-card">
+            <div>
+              <div class="serial-ch">Act III &middot; Ch 4</div>
+              <h4 class="serial-name">Match Day</h4>
+            </div>
+            <span class="serial-plat">Stream &amp; Game</span>
+            <div class="serial-cta">&rarr; Next: Road to the Final ticket lottery</div>
+          </div>
+          <div class="serial-card">
+            <div>
+              <div class="serial-ch">Act III &middot; Ch 5</div>
+              <h4 class="serial-name">The Legacy</h4>
+            </div>
+            <span class="serial-plat">Newsletter &amp; Archive</span>
+            <div class="serial-cta">&orarr; Re-enters loop for the next tournament</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- PRINCIPLE 06 -->
+      <article class="p-card reveal" id="p6">
+        <div class="p-card-top">
+          <div class="p-card-num">06</div>
+          <div class="p-card-heading">
+            <div class="p-card-tag">Principle 06</div>
+            <h3 class="p-card-title">Subjectivity</h3>
+            <p class="p-card-sub">A shift to the voices around the margin</p>
+            <div class="p-card-chips">
+              <span class="p-chip"><b>4 Perspectives:</b> Coach, teenage debutante, omitted pioneer &amp; grassroots fan</span>
+              <span class="p-chip"><b>Dedicated Spaces:</b> Different emotions hosted on different native channels</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="subj-box">
+          <div class="subj-nav">
+            <button class="subj-btn active" data-subj="coach">&#129506; The Head Coach</button>
+            <button class="subj-btn" data-subj="prodigy">&#9889; 18-Yr Debutante</button>
+            <button class="subj-btn" data-subj="pioneer">&#127941; 2011 Pioneer</button>
+            <button class="subj-btn" data-subj="fan">&#9749; Tea-Stall Fan</button>
+          </div>
+          <div class="subj-card">
+            <div class="subj-avatar" id="subjAvatar">&#129506;</div>
+            <div>
+              <p class="subj-quote" id="subjQuote">&ldquo;We analyzed Australia’s scoring zones across the last two World Cups. If we bowl back-of-a-length, we get punished. Our only path is full, swinging yorkers and spin choke in the powerplay.&rdquo;</p>
+              <div class="subj-foot">
+                <span id="subjRole" style="font-weight:700;color:var(--blue-d)">Head Coach &middot; Tactical Review</span>
+                <span>&bull;</span>
+                <span id="subjChannel" style="color:var(--coral)">Long-form Technical Video &middot; YouTube</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- PRINCIPLE 07 -->
+      <article class="p-card reveal" id="p7">
+        <div class="p-card-top">
+          <div class="p-card-num">07</div>
+          <div class="p-card-heading">
+            <div class="p-card-tag">Principle 07</div>
+            <h3 class="p-card-title">Performance</h3>
+            <p class="p-card-sub">The audience joins the narrative as active co-creators</p>
+            <div class="p-card-chips">
+              <span class="p-chip"><b>Fan Agency:</b> Compete on the leaderboard, upload reaction reels, enter the ticket draw</span>
+              <span class="p-chip"><b>Community Engine:</b> Transforming passive viewers into vocal advocates</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="perf-grid">
+          <!-- Lottery Progress Box -->
+          <div class="lottery-box">
+            <div>
+              <div class="hook-badge" style="background:#fff;color:var(--blue-d)">Performance Element &middot; Fan Incentive</div>
+              <h4 class="lottery-title">&ldquo;Road to the Final&rdquo; Ticket Lottery</h4>
+              <p style="font-size:15px;color:var(--cloud);margin:10px 0 0;line-height:1.4">Subscribe, lock in match predictions, and submit reaction clips to earn entries into the draw for <b>2 VIP Final Tickets</b> at Mirpur Stadium.</p>
+            </div>
+            <div>
+              <div class="lottery-progress"><div class="lottery-bar"></div></div>
+              <div class="lottery-meta">
+                <span><b>14,842</b> Fans Entered</span>
+                <span>Goal: 20,000 Entries</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- UGC Reaction Wall -->
+          <div class="ugc-box">
+            <h4 style="font-family:var(--cond);font-size:17px;font-weight:700;text-transform:uppercase;color:var(--blue-l);margin:0">UGC Reaction Wall</h4>
+            <div style="font-size:13.5px;color:var(--fog);margin-top:3px">Choose your viewing spot &amp; simulate your reaction:</div>
+            <div class="ugc-selector">
+              <button class="ugc-chip active">Tea Stall</button>
+              <button class="ugc-chip">University</button>
+              <button class="ugc-chip">Living Room</button>
+              <button class="ugc-chip">Stadium Stand</button>
+            </div>
+            <button class="gbtn" id="ugcSubmitBtn" style="padding:9px 18px;font-size:14px;margin-bottom:14px;width:100%">Simulate Upload Reaction</button>
+            <div class="ugc-wall" id="ugcWall">
+              <div class="ugc-item">
+                <span class="tag">Tea Stall (Bogura)</span>
+                <span>&ldquo;The whole bazaar was screaming on that last over! &#128293;&rdquo;</span>
+                <span style="color:var(--grass-d);font-weight:700">+10 pts</span>
+              </div>
+              <div class="ugc-item">
+                <span class="tag">Dhaka Univ. Campus</span>
+                <span>&ldquo;Projector screen on the lawn was electric!&rdquo;</span>
+                <span style="color:var(--grass-d);font-weight:700">+10 pts</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
   </div>
 </section>
+
 
 <section style="background:var(--mist)">
   <div class="wrap">
@@ -903,6 +1362,144 @@ setBars();
     el.innerHTML = '<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Scatter plot: career runs versus wickets for Bangladesh women all-rounders">'+grid+axes+dots+titles+'</svg>';
   })();
 })();
+
+
+// ===== 7 PRINCIPLES INTERACTIVE SCRIPT =====
+// Quick navigator smooth scrolling
+document.querySelectorAll('.pnav-pill').forEach(pill => {
+  pill.addEventListener('click', e => {
+    document.querySelectorAll('.pnav-pill').forEach(p => p.classList.remove('active'));
+    pill.classList.add('active');
+  });
+});
+
+// Hook play button simulation
+const hookBtn = document.getElementById('hookPlayBtn');
+if (hookBtn) {
+  hookBtn.addEventListener('click', () => {
+    const isPlaying = hookBtn.dataset.playing === 'true';
+    hookBtn.dataset.playing = isPlaying ? 'false' : 'true';
+    hookBtn.innerHTML = isPlaying ? '&#9658;' : '&#10074;&#10074;';
+    const status = document.getElementById('hookPlayStatus');
+    if (status) status.textContent = isPlaying ? 'Tap to play 15s audio hook' : 'Playing clip · 0:08 / 0:15 (Audio Hook)';
+  });
+}
+
+// Principle 02: POV tab switcher
+const povTabs = document.querySelectorAll('.pov-tab');
+const povText = document.getElementById('povQuoteText');
+const povAuthor = document.getElementById('povAuthorText');
+const povData = {
+  veteran: {
+    q: '“I took 74 wickets for this country. Being in the stands instead of the XI is heartbreaking, but my job on the podcast is giving fans the tactical truth the official broadcast won’t say.”',
+    a: 'Former Senior Bowler · 78 International Caps · Host of “Off the XI”'
+  },
+  scout: {
+    q: '“I scouted Shorna when she was 13 in Jamalpur. Seeing her hit sixes at Mirpur proves the pipeline works — if you know where to look in the district leagues.”',
+    a: 'Grassroots Divisional Talent Scout · Rangpur & Rajshahi'
+  }
+};
+povTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    povTabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    const key = tab.dataset.pov;
+    if (povData[key]) {
+      povText.textContent = povData[key].q;
+      povAuthor.textContent = povData[key].a;
+    }
+  });
+});
+
+// Principle 04: Worldbuilding timeline
+const wbSteps = document.querySelectorAll('.wb-step');
+const wbDetails = {
+  2011: 'Bangladesh defeated Ireland by 82 runs in Savar to earn official WODI status &mdash; the foundational spark for national women’s cricket.',
+  2014: 'Bangladesh hosted the ICC Women’s World T20 in Sylhet, playing in front of capacity domestic crowds and setting television viewership benchmarks.',
+  2018: 'Jahanara Alam scored the winning runs on the final ball against six-time champions India in Kuala Lumpur, capturing Bangladesh’s first Asia Cup trophy.',
+  2023: 'Bangladesh stunned tournament favorites Australia by 7 wickets in the ICC U-19 Women’s World Cup opener in South Africa, introducing the new fearless generation.',
+  2028: 'The ICC Women’s T20 World Cup returns home to Bangladesh. 80 players, 8 divisions, built as an interconnected transmedia universe.'
+};
+const wbDetailBox = document.getElementById('wbDetailBox');
+wbSteps.forEach(step => {
+  step.addEventListener('click', () => {
+    wbSteps.forEach(s => s.classList.remove('active'));
+    step.classList.add('active');
+    const yr = step.dataset.year;
+    if (wbDetailBox && wbDetails[yr]) {
+      wbDetailBox.innerHTML = `<b>${yr} Milestone:</b> ${wbDetails[yr]}`;
+    }
+  });
+});
+
+// Principle 06: Subjectivity 4-Way Switcher
+const subjBtns = document.querySelectorAll('.subj-btn');
+const subjData = {
+  coach: {
+    icon: '&#129506;',
+    quote: '“We analyzed Australia’s scoring zones across the last two World Cups. If we bowl back-of-a-length, we get punished. Our only path is full, swinging yorkers and spin choke in the powerplay.”',
+    role: 'Head Coach · Tactical Review',
+    channel: 'Long-form Technical Video · YouTube'
+  },
+  prodigy: {
+    icon: '&#9889;',
+    quote: '“Three years ago I was bowling with taped tennis balls on the Nilphamari riverbank. Tomorrow I share the new ball at a sold-out Mirpur. I am not bowling to their reputations; I am bowling to the stumps.”',
+    role: '18-Yr-Old Debutante Pacer',
+    channel: 'Backstage Phone Diaries · TikTok / Reels'
+  },
+  pioneer: {
+    icon: '&#127941;',
+    quote: '“In 2011 we had to wash our own kits and play on unpaved outfields. Seeing these girls walk onto television with corporate sponsorships brings tears. Every boundary they hit is our victory too.”',
+    role: 'Founding Generation Pioneer (2011 Squad)',
+    channel: 'Historical Audio Archive · Spotify / Podcast'
+  },
+  fan: {
+    icon: '&#9749;',
+    quote: '“Thirty of us gather around a single 14-inch television at the bazaar tea stall in Bogura. When Nigar hits a six, nobody leaves for work. The tea is free for an hour!”',
+    role: 'Grassroots Fan & Tea-Stall Owner',
+    channel: 'UGC Fan Reaction Community · Website & IG'
+  }
+};
+subjBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    subjBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const key = btn.dataset.subj;
+    const d = subjData[key];
+    if (d) {
+      document.getElementById('subjAvatar').innerHTML = d.icon;
+      document.getElementById('subjQuote').textContent = d.quote;
+      document.getElementById('subjRole').textContent = d.role;
+      document.getElementById('subjChannel').textContent = d.channel;
+    }
+  });
+});
+
+// Principle 07: UGC Simulator
+const ugcChips = document.querySelectorAll('.ugc-chip');
+ugcChips.forEach(chip => {
+  chip.addEventListener('click', () => {
+    ugcChips.forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+  });
+});
+const ugcSubmitBtn = document.getElementById('ugcSubmitBtn');
+if (ugcSubmitBtn) {
+  ugcSubmitBtn.addEventListener('click', () => {
+    const activeChip = document.querySelector('.ugc-chip.active');
+    const loc = activeChip ? activeChip.textContent : 'Mirpur Stand';
+    const wall = document.getElementById('ugcWall');
+    if (wall) {
+      const item = document.createElement('div');
+      item.className = 'ugc-item';
+      item.innerHTML = `<span class="tag">${loc}</span><span>&ldquo;Just locked my prediction for Bangladesh! Road to the Final! &#128293;&rdquo;</span><span style="color:var(--grass-d);font-weight:700">+10 pts</span>`;
+      wall.prepend(item);
+    }
+    ugcSubmitBtn.textContent = '✓ Reaction Uploaded!';
+    setTimeout(() => { ugcSubmitBtn.textContent = 'Simulate Upload Reaction'; }, 2000);
+  });
+}
+
 </script>
 </body>
 </html>
