@@ -747,6 +747,114 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
   text-transform: uppercase;
 }
 
+
+/* ==========================================================================
+   PRINCIPLE 05: SERIALITY STRATEGY & PLATFORM DISTRIBUTION
+   ========================================================================== */
+.serial-timeline-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 18px 0 24px;
+}
+@media (max-width: 768px) {
+  .serial-timeline-bar {
+    grid-template-columns: 1fr;
+  }
+}
+.serial-stage-box {
+  background: #fff;
+  border: 1.5px solid var(--line);
+  border-radius: 14px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: 0 4px 12px rgba(11,74,143,.04);
+}
+.serial-stage-badge {
+  display: inline-block;
+  align-self: flex-start;
+  font-family: var(--cond);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: var(--mist);
+  color: var(--blue-d);
+}
+.serial-stage-title {
+  font-family: var(--cond);
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--blue-d);
+  margin: 0;
+}
+.serial-stage-desc {
+  font-size: 14px;
+  color: var(--slate);
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* 5-Platform Grid */
+.serial-platforms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 14px;
+}
+.serial-platform-card {
+  background: #fff;
+  border: 1.5px solid var(--line);
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+  box-shadow: 0 4px 12px rgba(11,74,143,.04);
+}
+.serial-platform-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--blue-l);
+  box-shadow: 0 8px 20px rgba(11,74,143,.1);
+}
+.sp-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.sp-title {
+  font-family: var(--cond);
+  font-size: 19px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--blue-d);
+}
+.sp-pill {
+  font-family: var(--cond);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: var(--mist);
+  color: var(--slate);
+}
+.sp-desc {
+  font-size: 14px;
+  color: var(--slate);
+  line-height: 1.45;
+  margin: 0;
+}
+
 </style>
 </head>
 <body>
@@ -1473,56 +1581,89 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
           <div class="p-card-heading">
             <div class="p-card-tag">Principle 05</div>
             <h3 class="p-card-title">Seriality</h3>
-            <p class="p-card-sub">The story broken into episodic chapters across time and screens</p>
+            <p class="p-card-sub">Pre-planned sequencing across time and platform-based distribution</p>
             <div class="p-card-chips">
-              <span class="p-chip"><b>5 Release Chapters:</b> Trials &rarr; Reveal &rarr; Hinge &rarr; Match Day &rarr; Legacy</span>
+              <span class="p-chip"><b>Pre-Planned Seriality:</b> 1-Year Advance Strategy (2028 Schedule)</span>
+              <span class="p-chip"><b>Live Execution:</b> Before &middot; During &middot; After Sequence</span>
+              <span class="p-chip"><b>Continuous Engagement:</b> Multi-Platform Interconnection</span>
             </div>
           </div>
         </div>
 
-        
+        <!-- Pre-Planned Execution Sequence -->
+        <div class="serial-timeline-bar">
+          <div class="serial-stage-box" style="border-top:4px solid var(--grass)">
+            <span class="serial-stage-badge">Phase 1 &middot; Before Match</span>
+            <h4 class="serial-stage-title">Pre-Planned Hype</h4>
+            <p class="serial-stage-desc">Documentary backstories, expert forecast podcasts &amp; Facebook visual previews planned a year in advance.</p>
+          </div>
+          <div class="serial-stage-box" style="border-top:4px solid var(--yellow)">
+            <span class="serial-stage-badge">Phase 2 &middot; During Match</span>
+            <h4 class="serial-stage-title">Live Execution</h4>
+            <p class="serial-stage-desc">Fast-update wire on Website, instant TikTok highlight moments, real-time photocards &amp; live prediction arena.</p>
+          </div>
+          <div class="serial-stage-box" style="border-top:4px solid var(--coral)">
+            <span class="serial-stage-badge">Phase 3 &middot; After Match</span>
+            <h4 class="serial-stage-title">Continuous Legacy</h4>
+            <p class="serial-stage-desc">Tactical breakdown shows, reaction UGC reels, and episodic hand-off into the next tournament fixture.</p>
+          </div>
+        </div>
 
-        <div class="serial-steps">
-          <div class="serial-card">
-            <div>
-              <div class="serial-ch">Act I &middot; Ch 1</div>
-              <h4 class="serial-name">The Trials</h4>
+        <!-- Platform-Based Content Distribution Matrix -->
+        <div style="display:flex;align-items:center;justify-content:space-between;margin:20px 0 12px;border-bottom:1.5px solid var(--line);padding-bottom:8px;flex-wrap:wrap;gap:8px">
+          <h4 style="font-family:var(--cond);font-size:18px;font-weight:700;text-transform:uppercase;color:var(--blue-d);margin:0">Platform-Based Content Distribution</h4>
+          <span style="font-family:var(--cond);font-size:11.5px;font-weight:700;text-transform:uppercase;color:var(--slate);letter-spacing:.8px">5 Specialized Channels</span>
+        </div>
+
+        <div class="serial-platforms-grid">
+          <!-- Facebook -->
+          <div class="serial-platform-card" style="border-left:4px solid #1877f2">
+            <div class="sp-head">
+              <span class="sp-title">Facebook</span>
+              <span class="sp-pill">Visual Wire</span>
             </div>
-            <span class="serial-plat">YouTube Docu-Series</span>
-            <div class="serial-cta">&rarr; Next: 15s contender hooks on TikTok</div>
+            <p class="sp-desc">Photocards, match previews, and visual updates.</p>
           </div>
-          <div class="serial-card">
-            <div>
-              <div class="serial-ch">Act I &middot; Ch 2</div>
-              <h4 class="serial-name">Squad Reveal</h4>
+
+          <!-- Website -->
+          <div class="serial-platform-card" style="border-left:4px solid var(--coral)">
+            <div class="sp-head">
+              <span class="sp-title">Website</span>
+              <span class="sp-pill" style="color:var(--coral);background:#fbeae8">Al Jazeera / Reuters Model</span>
             </div>
-            <span class="serial-plat">IG Reels &amp; TikTok</span>
-            <div class="serial-cta">&rarr; Next: Tactical squad analysis podcast</div>
+            <p class="sp-desc">Live news updates, match reports, and breaking news, following the fast-update approach.</p>
           </div>
-          <div class="serial-card">
-            <div>
-              <div class="serial-ch">Act II &middot; Ch 3</div>
-              <h4 class="serial-name">The Hinge</h4>
+
+          <!-- TikTok -->
+          <div class="serial-platform-card" style="border-left:4px solid #00f2fe">
+            <div class="sp-head">
+              <span class="sp-title">TikTok</span>
+              <span class="sp-pill">Short Reels</span>
             </div>
-            <span class="serial-plat">Spotify Podcast &amp; Web</span>
-            <div class="serial-cta">&rarr; Next: Check fixtures &amp; play prediction game</div>
+            <p class="sp-desc">Short reels, highlights, and quick updates.</p>
           </div>
-          <div class="serial-card">
-            <div>
-              <div class="serial-ch">Act III &middot; Ch 4</div>
-              <h4 class="serial-name">Match Day</h4>
+
+          <!-- Spotify -->
+          <div class="serial-platform-card" style="border-left:4px solid #1db954">
+            <div class="sp-head">
+              <span class="sp-title">Spotify</span>
+              <span class="sp-pill">Podcasts &amp; Audio</span>
             </div>
-            <span class="serial-plat">Stream &amp; Game</span>
-            <div class="serial-cta">&rarr; Next: Road to the Final ticket lottery</div>
+            <p class="sp-desc">Women's cricket podcasts, expert discussions, and predictions.</p>
           </div>
-          <div class="serial-card">
-            <div>
-              <div class="serial-ch">Act III &middot; Ch 5</div>
-              <h4 class="serial-name">The Legacy</h4>
+
+          <!-- YouTube -->
+          <div class="serial-platform-card" style="border-left:4px solid #ff0000">
+            <div class="sp-head">
+              <span class="sp-title">YouTube</span>
+              <span class="sp-pill">Flagship Shows</span>
             </div>
-            <span class="serial-plat">Newsletter &amp; Archive</span>
-            <div class="serial-cta">&orarr; Re-enters loop for the next tournament</div>
+            <p class="sp-desc">Documentary-style stories and our two original shows.</p>
           </div>
+        </div>
+
+        <div style="background:var(--mist);border-radius:12px;padding:14px 18px;font-size:14px;color:var(--slate);line-height:1.45;margin-top:20px;border-left:4px solid var(--yellow)">
+          <b style="color:var(--blue-d)">Continuous Audience Engagement:</b> Each platform delivers a different part of the story, keeping audiences engaged throughout the tournament without hitting a dead end.
         </div>
       </article>
 
@@ -1854,13 +1995,12 @@ const acts = [
     'Inside the squad',
     'Paid Streaming Launch'],
     cue:''},
-  {cls:'a2',img:IMG.batfocus,tag:'Act II',h:'Post-selection',when:'Analysis & the paid launch',li:[
+  {cls:'a2',img:IMG.batfocus,tag:'Act II',h:'Post-selection',when:'Analysis & the build-up',li:[
     'Expert analysis series',
-    'Historical & prediction podcast',
-    'Paid-streaming launch'],
+    'Historical & prediction podcast'],
     cue:''},
-  {cls:'a3',img:IMG.appeal,tag:'Act III',h:'Live event',when:'Coverage, data & the campaign',li:[
-    'One data sheet, many shows',
+  {cls:'a3',img:IMG.appeal,tag:'Act III',h:'Live event',when:'Live coverage & the campaign',li:[
+    'One live update page',
     'Immersion on the field',
     'Road to the Final'],
     cue:''},
