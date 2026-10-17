@@ -1171,6 +1171,34 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
   line-height: 1.3;
 }
 
+/* ===== MAKE IT REAL (feasibility) ===== */
+.mk-label{font-family:var(--cond);font-size:14px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--blue-l);margin:46px 0 16px;display:flex;align-items:center;gap:10px;word-break:keep-all}
+.mk-label::before{content:"";width:26px;height:3px;background:var(--yellow);border-radius:2px;flex:none}
+.mk-aud{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:860px){.mk-aud{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.mk-aud{grid-template-columns:1fr}}
+.mk-seg{background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:18px;box-shadow:0 6px 18px rgba(11,74,143,.05)}
+.mk-seg .ic{font-size:26px;line-height:1}
+.mk-seg h5{font-family:var(--cond);font-size:16.5px;font-weight:700;text-transform:uppercase;margin:10px 0 5px;color:var(--ink);letter-spacing:.3px;word-break:keep-all}
+.mk-seg p{margin:0;font-size:13.5px;line-height:1.38;color:var(--slate)}
+.mk-seg .plat{display:inline-block;margin-top:11px;font-family:var(--cond);font-size:11.5px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;color:var(--blue-l);background:var(--mist);border-radius:20px;padding:4px 11px}
+.mk-rev{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:860px){.mk-rev{grid-template-columns:1fr 1fr}}
+.mk-tile{border-radius:14px;padding:18px;color:#fff;display:flex;flex-direction:column}
+.mk-tile:nth-child(1){background:var(--blue)} .mk-tile:nth-child(2){background:var(--blue-l)} .mk-tile:nth-child(3){background:var(--grass-d)} .mk-tile:nth-child(4){background:var(--coral)}
+.mk-tile .ic{font-size:22px}
+.mk-tile h5{font-family:var(--cond);font-size:16px;font-weight:700;text-transform:uppercase;margin:7px 0 2px;letter-spacing:.3px;word-break:keep-all}
+.mk-tile p{margin:0;font-size:12.5px;line-height:1.32;color:rgba(255,255,255,.88)}
+.mk-break{background:var(--coral);color:#3a1507;border-radius:22px;padding:34px;position:relative;overflow:hidden}
+.mk-break h3{font-family:var(--disp);font-size:clamp(24px,3.2vw,38px);text-transform:uppercase;margin:0 0 22px;color:#3a1507;word-break:keep-all}
+.mk-bgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:760px){.mk-bgrid{grid-template-columns:1fr}.mk-break{padding:26px}}
+.mk-bcard{border-radius:14px;padding:22px}
+.mk-bcard.prob{background:#ffe9df}.mk-bcard.ans{background:var(--blue-d);color:#fff}
+.mk-bcard h4{font-family:var(--cond);font-size:19px;font-weight:700;text-transform:uppercase;margin:0 0 9px;word-break:keep-all;display:flex;align-items:center;gap:8px}
+.mk-bcard.prob h4{color:var(--coral)}.mk-bcard.ans h4{color:var(--yellow)}
+.mk-bcard p{margin:0;font-size:15px;line-height:1.42}.mk-bcard.prob p{color:#5a2a18}.mk-bcard.ans p{color:#eaf1fb}
+
 </style>
 </head>
 <body>
@@ -1183,6 +1211,7 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
     <li><a href="#principles">7 principles</a></li>
     <li><a href="#data">The data</a></li>
     <li><a href="#game">Play</a></li>
+    <li><a href="#make">Make it real</a></li>
     </ul>
 </div></nav>
 
@@ -2350,6 +2379,41 @@ footer .frow b{color:#fff;font-weight:700;font-size:18px}footer .frow span{color
     </div>
 
     <p class="dsource reveal">Sources: ESPNcricinfo, Wisden &amp; official match archives (Oct 2026).</p>
+  </div>
+</section>
+
+<section id="make" style="background:var(--mist)">
+  <div class="wrap">
+    <p class="eyebrow blue reveal">From framework to feasibility</p>
+    <h2 class="h-sec reveal d1"><span class="b" style="white-space:nowrap">Make it</span> <span class="y" style="white-space:nowrap">real</span></h2>
+    <p class="lead reveal d2">Before a commissioning editor buys the vision, they ask three plain questions: <b>who is this for, who pays, and where does it break?</b> Here they are, on one screen.</p>
+
+    <div class="mk-label reveal">Who it&rsquo;s for &mdash; four audiences that barely overlap</div>
+    <div class="mk-aud reveal d1">
+      <div class="mk-seg"><div class="ic">&#127758;</div><h5>The diaspora</h5><p>Bangladeshis abroad who rally hardest around the team &mdash; reached where they already are.</p><span class="plat">YouTube &middot; Meta</span></div>
+      <div class="mk-seg"><div class="ic">&#128241;</div><h5>Casual scrollers</h5><p>No cricket habit yet &mdash; a 15-second hook or a face stops the thumb.</p><span class="plat">Reels &middot; TikTok</span></div>
+      <div class="mk-seg"><div class="ic">&#127951;</div><h5>The diehards</h5><p>Here for depth: the master data sheet, tactics and match-by-match analysis.</p><span class="plat">Website &middot; Podcast</span></div>
+      <div class="mk-seg"><div class="ic">&#9994;</div><h5>New fans &mdash; women &amp; girls</h5><p>Here for role models and the story; held close by UGC and the ticket lottery.</p><span class="plat">Instagram &middot; Website</span></div>
+    </div>
+
+    <div class="mk-label reveal">Who pays &mdash; four revenue lines, no single point of failure</div>
+    <div class="mk-rev reveal d1">
+      <div class="mk-tile"><div class="ic">&#129309;</div><h5>Trial sponsorship</h5><p>Title the player-hunt &amp; selection coverage before a ball is bowled.</p></div>
+      <div class="mk-tile"><div class="ic">&#128202;</div><h5>Branded data</h5><p>The canonical sheet &amp; live widgets &mdash; sponsored and embeddable.</p></div>
+      <div class="mk-tile"><div class="ic">&#9654;</div><h5>Original paid shows</h5><p>Analysis &amp; docuseries behind a soft paywall.</p></div>
+      <div class="mk-tile"><div class="ic">&#127903;</div><h5>Subscribe &amp; win</h5><p>The ticket lottery drives sign-ups and retention.</p></div>
+    </div>
+
+    <div class="mk-label reveal">Where it breaks &mdash; named first, answered first</div>
+    <div class="mk-break reveal d1">
+      <h3>The two honest limits.</h3>
+      <div class="mk-bgrid">
+        <div class="mk-bcard prob"><h4>&#9888; The paywall drop-off</h4><p>A casual fan hits paid streaming and bounces &mdash; the weakest link in the funnel.</p></div>
+        <div class="mk-bcard ans"><h4>Kept inside the loop</h4><p>The free data sheet, prediction game and ticket lottery mean the paywall is never the only way forward.</p></div>
+        <div class="mk-bcard prob"><h4>&#9888; We don&rsquo;t own the match rights</h4><p>ICC and its broadcasters hold the live feed &mdash; an independent newsroom can&rsquo;t stream the games.</p></div>
+        <div class="mk-bcard ans"><h4>So we sell around it</h4><p>The paid layer is <b>original programming</b> &mdash; analysis, docuseries and the data product &mdash; built around the feed, never pretending to be it.</p></div>
+      </div>
+    </div>
   </div>
 </section>
 
